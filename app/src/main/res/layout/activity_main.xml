@@ -77,7 +77,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="MON"
+                android:text="월"
                 android:textAlignment="center"
                 android:textColor="#756F6F"
                 android:textSize="15sp" />
@@ -86,7 +86,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TUE"
+                android:text="화"
                 android:textAlignment="center"
                 android:textColor="#756F6F"
                 android:textSize="15sp" />
@@ -95,7 +95,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="WED"
+                android:text="수"
                 android:textAlignment="center"
                 android:textColor="#756F6F"
                 android:textSize="15sp" />
@@ -104,7 +104,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="THU"
+                android:text="목"
                 android:textAlignment="center"
                 android:textColor="#756F6F"
                 android:textSize="15sp" />
@@ -113,7 +113,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="FRI"
+                android:text="금"
                 android:textAlignment="center"
                 android:textColor="#756F6F"
                 android:textSize="15sp" />
@@ -122,7 +122,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="SAT"
+                android:text="토"
                 android:textAlignment="center"
                 android:textColor="#756F6F"
                 android:textSize="15sp" />
@@ -131,7 +131,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="SUN"
+                android:text="일"
                 android:textAlignment="center"
                 android:textColor="#756F6F"
                 android:textSize="15sp" />
@@ -226,15 +226,16 @@
         android:layout_width="200dp"
         android:layout_height="match_parent"
         android:background="@drawable/blur"
-        android:visibility="gone"
+        android:visibility="visible"
         android:orientation="vertical"
-        android:padding="25dp">
+        android:padding="15sp">
 
         <ImageView
             android:id="@+id/backMenu"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:layout_marginTop="20dp"
             android:layout_gravity="right"
             android:onClick="backMenu"/>
 
