@@ -226,7 +226,7 @@
         android:layout_width="200dp"
         android:layout_height="match_parent"
         android:background="@drawable/blur"
-        android:visibility="visible"
+        android:visibility="gone"
         android:orientation="vertical"
         android:padding="15sp">
 
