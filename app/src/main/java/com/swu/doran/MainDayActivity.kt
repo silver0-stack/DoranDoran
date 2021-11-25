@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 
 @SuppressLint("WrongViewCast")
@@ -13,9 +14,9 @@ class MainDayActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_day)
 
-        val scheduleBtn = findViewById<Button>(R.id.scheduleBtn)
-        val familyBtn = findViewById<Button>(R.id.familyBtn)
-        val gameBtn = findViewById<Button>(R.id.gameBtn)
+        val scheduleBtn = findViewById<ImageButton>(R.id.scheduleBtn)
+        val familyBtn = findViewById<ImageButton>(R.id.familyBtn)
+        val gameBtn = findViewById<ImageButton>(R.id.gameBtn)
 
         scheduleBtn.setOnClickListener{
             val intent = Intent(this, ScheduleWritingActivity::class.java)

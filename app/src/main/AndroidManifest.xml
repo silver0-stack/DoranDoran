@@ -11,7 +11,7 @@
         android:theme="@style/Theme.Doran">
 
         <activity
-            android:name=".MainActivity"
+            android:name=".MainDayActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainCalendarActivity"/>
-        <activity android:name=".MainDayActivity"/>
+        <activity android:name=".MainActivity"/>
         <activity android:name=".ScheduleWritingActivity"/>
         <activity android:name=".FamilyWriting"/>
         <activity android:name=".GameWriting"/>
