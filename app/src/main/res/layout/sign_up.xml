@@ -18,7 +18,7 @@
             android:textStyle="bold"/>
 
         <EditText
-            android:id="@+id/userId"
+            android:id="@+id/userEmail"
             android:background="@drawable/edittext_bg"
             android:layout_width="match_parent"
             android:layout_height="55dp"
