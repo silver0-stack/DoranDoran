@@ -81,6 +81,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"/>
                         <ImageView
+                            android:id="@+id/scheduleBtn"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:src="@drawable/ic_launcher_foreground"
@@ -125,6 +126,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"/>
                         <ImageView
+                            android:id="@+id/familyBtn"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:src="@drawable/ic_launcher_foreground"
@@ -169,6 +171,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"/>
                         <ImageView
+                            android:id="@+id/gameBtn"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:src="@drawable/ic_launcher_foreground"
