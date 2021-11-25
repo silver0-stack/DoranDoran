@@ -80,11 +80,14 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:layout_weight="1"/>
-                        <ImageView
+                        <ImageButton
+                            android:id="@+id/scheduleBtn"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:src="@drawable/ic_launcher_foreground"
-                            android:layout_gravity="center_vertical" />
+                            android:layout_gravity="center_vertical"
+                            android:scaleType="fitXY"
+                            android:background="@android:color/transparent"/>
                     </LinearLayout>
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -124,11 +127,14 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:layout_weight="1"/>
-                        <ImageView
+                        <ImageButton
+                            android:id="@+id/familyBtn"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:src="@drawable/ic_launcher_foreground"
-                            android:layout_gravity="center_vertical" />
+                            android:layout_gravity="center_vertical"
+                            android:scaleType="fitXY"
+                            android:background="@android:color/transparent"/>
                     </LinearLayout>
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -168,11 +174,14 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:layout_weight="1"/>
-                        <ImageView
+                        <ImageButton
+                            android:id="@+id/gameBtn"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:src="@drawable/ic_launcher_foreground"
-                            android:layout_gravity="center_vertical" />
+                            android:layout_gravity="center_vertical"
+                            android:scaleType="fitXY"
+                            android:background="@android:color/transparent"/>
                     </LinearLayout>
 
                     <androidx.recyclerview.widget.RecyclerView

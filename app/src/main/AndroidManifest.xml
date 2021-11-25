@@ -8,21 +8,21 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Doran"
-        >
+        android:theme="@style/Theme.Doran">
 
-        <activity android:name=".MainCalendarActivity"/>
         <activity
-            android:name=".MainActivity"
+            android:name=".MainDayActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
+        <activity android:name=".MainCalendarActivity"/>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".ScheduleWritingActivity"/>
+        <activity android:name=".FamilyWriting"/>
+        <activity android:name=".GameWriting"/>
     </application>
-
 </manifest>
