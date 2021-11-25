@@ -6,10 +6,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import java.util.*
-import android.view.Gravity
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import java.lang.String.format
+import java.lang.Exception
+import java.text.DateFormat
 import java.text.SimpleDateFormat
 
 
@@ -20,9 +20,9 @@ class MainCalendarActivity : AppCompatActivity() {
         setContentView(R.layout.main_calendar)
 
         val spinner = findViewById<Spinner>(R.id.spinner)
-        val inflater:LayoutInflater=layoutInflater
-        val view=inflater.inflate(R.layout.main_day,null)
-        val clickDate=view.findViewById<TextView>(R.id.clickDate)
+        val inflater: LayoutInflater = layoutInflater
+        val view = inflater.inflate(R.layout.main_day, null)
+        val clickDate = view.findViewById<TextView>(R.id.clickDate)
 
 
         // get a calendar instance
@@ -30,15 +30,27 @@ class MainCalendarActivity : AppCompatActivity() {
         val calendarView = findViewById<CalendarView>(R.id.calendarView)
         //날짜 클릭 이벤트 리스너
         calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
+            //달력 날짜를 선택한 날짜로 설정
+            calendar.set(year,month,dayOfMonth)
+            //그 날짜를 선택한 날짜로 설정
+            calendarView.date=calendar.timeInMillis
             //해당 날짜의 일정 추가...
             //메인캘린더액티비라고 다 같은 게 아님
             //클릭한 날짜마다 다른 레아아웃으로 쳐야함..
-            val sdf= SimpleDateFormat("MM월 dd일")
-            try {
-                clickDate.text=String.format("$month 월 $dayOfMonth 일",month,dayOfMonth)
-            }catch (e:Exception ){
+
+            val oformat:DateFormat=  SimpleDateFormat("MM월 dd일") //outputFormat
+            val iformat:DateFormat=SimpleDateFormat("yyyy-MM-dd") //inputFormat
+            val date:Date=iformat.parse(calendarView.isSelected.toString())
+            try{
+                clickDate.text =String.format("%d-%d-%d", year,month+1,dayOfMonth)
+            }catch (e:Exception){
                 e.printStackTrace()
             }
+
+
+
+
+
 
             val intent = Intent(this@MainCalendarActivity, MainDayActivity::class.java)
             startActivity(intent)

@@ -44,13 +44,12 @@
                     android:gravity="center|left"/>
                 <TextView
                     android:id="@+id/clickDate"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="MM월 dd일"
                     android:textSize="20sp"
                     android:textColor="@color/black"
-                    android:layout_gravity="left"
-                    tools:ignore="RtlHardcoded" />
+                    android:layout_gravity="left" />
             </LinearLayout>
 
             <LinearLayout
