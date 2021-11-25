@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="my_array">
-        <item>아이템0</item>
-        <item>아이템1</item>
-        <item>아이템2</item>
-        <item>아이템3</item>
-        <item>아이템4</item>
+        <item>전체 보기</item>
+        <item>오늘의 일정</item>
+        <item>오늘의 가족 이야기</item>
+        <item>진행 중인 내기</item>
     </string-array>
 </resources>

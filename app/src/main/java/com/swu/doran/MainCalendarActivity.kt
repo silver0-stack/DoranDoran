@@ -4,29 +4,48 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.CalendarView
-import android.widget.LinearLayout
-import androidx.appcompat.app.AppCompatActivity
-import java.text.DateFormat
 import java.util.*
-import android.widget.PopupWindow
-import android.view.MotionEvent
-
 import android.view.Gravity
-import android.view.View.OnTouchListener
+import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 
 
-class MainCalendarActivity : AppCompatActivity() {
-
+class MainCalendarActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_calendar)
+
+        val spinner = findViewById<Spinner>(R.id.spinner)
 
         // get a calendar instance
         val calendar = Calendar.getInstance()
         val calendarView = findViewById<CalendarView>(R.id.calendarView)
         calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
 
+
+        }
+
+        //어댑터 설정 -resource-array.xml에 있는 아이템 목록을 추가한다
+        spinner.adapter=ArrayAdapter.createFromResource(this,R.array.my_array,android.R.layout.simple_spinner_item)
+        //아이템 선택 리스너
+        spinner.onItemSelectedListener=object:AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                when (position) {
+                   //선택 안함
+                    0->{}
+                    1->{}
+                    2->{}
+                    3->{}
+
+                }                }
 
         }
 
