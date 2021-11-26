@@ -162,7 +162,7 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun moveMainPage(currentUser: FirebaseUser?) {
         if (currentUser != null) {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, SelectProfileActivity::class.java))
             finish()
         }
     }

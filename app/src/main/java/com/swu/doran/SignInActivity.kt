@@ -31,7 +31,7 @@ class SignInActivity : AppCompatActivity() {
     // 유저정보 넘겨주고 메인 액티비티 호출
     private fun moveMainPage(currentUser: FirebaseUser?) {
         if (currentUser != null) {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, SelectProfileActivity::class.java))
             finish()
         }
     }
