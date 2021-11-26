@@ -10,8 +10,6 @@ class OnBoardingActivity:AppCompatActivity() {
         setContentView(R.layout.onboarding)
 
 
-
-
     }
 
     fun signIn(view: android.view.View) {
