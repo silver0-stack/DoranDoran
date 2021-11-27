@@ -3,6 +3,7 @@ package com.swu.doran
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import java.util.*
@@ -26,23 +27,14 @@ class MainCalendarActivity : AppCompatActivity() {
 
 
         // get a calendar instance
-        val calendar = Calendar.getInstance()
+        val cal = Calendar.getInstance()
         val calendarView = findViewById<CalendarView>(R.id.calendarView)
         //날짜 클릭 이벤트 리스너
         calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
-            //해당 날짜의 일정 추가...
-            //메인캘린더액티비라고 다 같은 게 아님
-            //클릭한 날짜마다 다른 레아아웃으로 쳐야함..
-            val sdf= SimpleDateFormat("MM월 dd일")
-            try {
-                clickDate.text=String.format("$month 월 $dayOfMonth 일",month,dayOfMonth)
-            }catch (e:Exception ){
-                e.printStackTrace()
-            }
-
             val intent = Intent(this@MainCalendarActivity, MainDayActivity::class.java)
+            intent.putExtra("month", (month+1).toString())
+            intent.putExtra("day", dayOfMonth.toString())
             startActivity(intent)
-
         }
 
         //어댑터 설정 -resource-array.xml에 있는 아이템 목록을 추가한다

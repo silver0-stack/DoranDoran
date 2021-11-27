@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
 import java.util.*
 
-//test
 class MainActivity : AppCompatActivity() {
 
     @SuppressLint("SimpleDateFormat")
