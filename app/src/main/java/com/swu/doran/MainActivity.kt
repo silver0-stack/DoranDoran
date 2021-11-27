@@ -29,18 +29,18 @@ class MainActivity : AppCompatActivity() {
 
    }
 
-    fun settingsMenu(view: android.view.View) {
+    fun settingsMenu(view: View) {
         val settingsMenu=findViewById<LinearLayout>(R.id.settingsMenu)
         settingsMenu.visibility= View.VISIBLE
     }
 
-    fun backMenu(view: android.view.View) {
+    fun clearMenu(view: View) {
         val settingsMenu=findViewById<LinearLayout>(R.id.settingsMenu)
         settingsMenu.visibility= View.GONE
 
     }
 
-    fun fullCal(view: android.view.View) {
+    fun fullCal(view: View) {
         val intent= Intent(this,MainCalendarActivity::class.java)
         startActivity(intent)
     }

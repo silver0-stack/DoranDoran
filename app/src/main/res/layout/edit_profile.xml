@@ -11,10 +11,10 @@
         android:padding="20dp">
 
         <ImageView
+            android:id="@+id/clear"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:src="@drawable/ic_baseline_clear_24"
-            android:onClick="clear"/>
+            android:src="@drawable/ic_baseline_clear_24" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -35,17 +35,17 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="삭제"
-            android:layout_marginEnd="15dp"
+            android:layout_marginEnd="20dp"
             android:textColor="@color/black"
-            android:onClick="complete_Profile_Modification"/>
+            android:onClick="deleteProfile"/>
 
         <TextView
+            android:id="@+id/completeProfileEdit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="완료"
-            android:textColor="@color/black"
-            android:onClick="complete_Profile_Modification"/>
+            android:textColor="@color/black" />
 
 
     </LinearLayout>

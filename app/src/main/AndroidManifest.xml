@@ -29,7 +29,9 @@
         <activity android:name=".MainActivity"/>
         <activity android:name=".SignInActivity"/>
         <activity android:name=".SignUpActivity"/>
-        <activity android:name=".SelectProfileActivity"/>
-        <activity android:name=".ModifyProfileActivity"/>
+        <activity android:name=".profile.start.ProfileMenuActivity"/>
+        <activity android:name=".profile.edit.ProfileEditActivity"/>
+        <activity android:name=".profile.edit.ProfileSelectActivity"/>
+
     </application>
 </manifest>

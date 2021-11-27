@@ -1,4 +1,4 @@
-package com.swu.doran
+package com.swu.doran.profile.start
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -9,9 +9,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.swu.doran.R
 
-class ProfileRVAdapter(private val context: Context, private val dataList: ArrayList<ProfileData>) :
-    RecyclerView.Adapter<ProfileRVAdapter.ItemViewHolder>() {
+class ProfileAdapter(private val context: Context, private val dataList: ArrayList<ProfileData>) :
+    RecyclerView.Adapter<ProfileAdapter.ItemViewHolder>() {
 
     var mPosition = 0
 
@@ -23,11 +24,13 @@ class ProfileRVAdapter(private val context: Context, private val dataList: Array
         mPosition = Position
     }
 
+
     @SuppressLint("NotifyDataSetChanged")
     fun addItem(profiledata: ProfileData) {
         dataList.add(profiledata)
         notifyDataSetChanged()  //갱신처리
     }
+
 
     @SuppressLint("NotifyDataSetChanged")
     fun removeItem(position: Int) {
@@ -66,14 +69,14 @@ class ProfileRVAdapter(private val context: Context, private val dataList: Array
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): ProfileRVAdapter.ItemViewHolder {
+    ): ItemViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.profile_item, parent, false)
         return ItemViewHolder(view)
 
     }
 
 
-    override fun onBindViewHolder(holder: ProfileRVAdapter.ItemViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         holder.bind(dataList[position], context)
         holder.itemView.setOnClickListener { view ->
             setPosition(position)

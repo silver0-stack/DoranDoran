@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.swu.doran.profile.start.ProfileMenuActivity
 
 class SignInActivity : AppCompatActivity() {
     lateinit var mAuth: FirebaseAuth
@@ -31,7 +32,7 @@ class SignInActivity : AppCompatActivity() {
     // 유저정보 넘겨주고 메인 액티비티 호출
     private fun moveMainPage(currentUser: FirebaseUser?) {
         if (currentUser != null) {
-            startActivity(Intent(this, SelectProfileActivity::class.java))
+            startActivity(Intent(this, ProfileMenuActivity::class.java))
             finish()
         }
     }

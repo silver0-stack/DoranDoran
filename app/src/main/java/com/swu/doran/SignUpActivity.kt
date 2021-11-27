@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import androidx.core.content.ContextCompat
+import com.swu.doran.profile.start.ProfileMenuActivity
 
 
 class SignUpActivity : AppCompatActivity() {
@@ -162,7 +163,7 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun moveMainPage(currentUser: FirebaseUser?) {
         if (currentUser != null) {
-            startActivity(Intent(this, SelectProfileActivity::class.java))
+            startActivity(Intent(this, ProfileMenuActivity::class.java))
             finish()
         }
     }

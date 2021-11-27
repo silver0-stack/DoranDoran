@@ -1,4 +1,4 @@
-package com.swu.doran
+package com.swu.doran.profile.start
 
 /*profile_item 에 넣은 data class*/
 data class ProfileData(

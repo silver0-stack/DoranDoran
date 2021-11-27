@@ -24,8 +24,10 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/drawable/edittext_bg.xml" value="0.17777777777777778" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/drawable/edittext_rightcheck.xml" value="0.2307017543859649" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/drawable/edittext_wrongcheck.xml" value="0.17777777777777778" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/activity_main.xml" value="0.12222222222222222" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/drawable/main_calview.xml" value="0.3087719298245614" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/calendar_popup.xml" value="0.30833333333333335" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/edit_profile.xml" value="0.18" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/main_calendar.xml" value="0.30833333333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/main_day.xml" value="0.30833333333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/main_day_card_game.xml" value="0.24956140350877193" />
@@ -33,7 +35,11 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/onboarding.xml" value="0.30833333333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/onbroading.xml" value="0.24956140350877193" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/prodile_item.xml" value="0.2951754385964912" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/profile_edit_item.xml" value="0.30833333333333335" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/profile_item.xml" value="0.28804347826086957" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/profile_select.xml" value="0.24956140350877193" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/profile_start.xml" value="0.30833333333333335" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/select_profile_item.xml" value="0.27807017543859647" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/sign_in.xml" value="0.24956140350877193" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/sign_up.xml" value="0.24956140350877193" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/update_profile.xml" value="0.33" />
