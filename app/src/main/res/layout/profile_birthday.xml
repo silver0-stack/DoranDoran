@@ -52,21 +52,11 @@
             android:layout_marginLeft="25dp">
 
         </TextView>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="이름을 입력해주세요"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            android:padding="5dp"
-            android:layout_marginLeft="25dp"
-            >
-        </TextView>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="나를 잘 표현할 수 있는"
+            android:text="가족들의 생일을 기억해보고"
             android:textSize="14dp"
             android:textStyle="normal"
             android:textColor="#858585"
@@ -78,7 +68,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="별명이나 이름이면 좋을 것 같아요!"
+            android:text="챙겨주는 것은 어떨까요?"
             android:textSize="14dp"
             android:textStyle="normal"
             android:textColor="#858585"
@@ -88,6 +78,35 @@
         </TextView>
 
 
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <DatePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner">
+
+        </DatePicker>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="bottom"
+        android:layout_marginBottom="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 / 4"
+            android:textStyle="normal"
+            android:textColor="#8A8A8A"
+            >
+
+        </TextView>
     </LinearLayout>
 
 

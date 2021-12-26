@@ -11,6 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.swu.doran.MainActivity
 import com.swu.doran.R
 import com.swu.doran.SignInActivity
 import com.swu.doran.profile.add.Profile_name
@@ -27,6 +28,22 @@ open class ProfileMenuActivity : AppCompatActivity() {
         val profile_add = findViewById<ImageView>(R.id.profile_add)
         profile_add.setOnClickListener{
             val intent= Intent(this, Profile_name::class.java)
+            startActivity(intent)
+        }
+
+        val emoji_1 = findViewById<ImageView>(R.id.emoji_1)
+        emoji_1.setOnClickListener{
+            val intent=Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+        val emoji_2 = findViewById<ImageView>(R.id.emoji_2)
+        emoji_2.setOnClickListener{
+            val intent=Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+        val emoji_3 = findViewById<ImageView>(R.id.emoji_3)
+        emoji_3.setOnClickListener{
+            val intent=Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }

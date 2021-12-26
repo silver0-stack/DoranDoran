@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Doran">
         <activity
+            android:name=".profile.add.Profile_personality"
+            android:exported="true" />
+        <activity
             android:name=".profile.add.Profile_birthday"
             android:exported="true" />
         <activity

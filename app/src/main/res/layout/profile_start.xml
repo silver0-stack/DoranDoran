@@ -35,6 +35,7 @@
         android:padding="10dp">
 
         <ImageView
+            android:id="@+id/emoji_1"
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:background="@drawable/emoji_father"
@@ -43,6 +44,7 @@
             >
         </ImageView>
         <ImageView
+            android:id="@+id/emoji_2"
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:background="@drawable/emoji_mother"
@@ -51,6 +53,7 @@
             >
         </ImageView>
         <ImageView
+            android:id="@+id/emoji_3"
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:background="@drawable/emoji_son_1"
