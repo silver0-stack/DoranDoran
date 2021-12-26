@@ -9,29 +9,43 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Doran">
-
+        <activity
+            android:name=".profile.add.Profile_personality"
+            android:exported="true" />
+        <activity
+            android:name=".profile.add.Profile_birthday"
+            android:exported="true" />
+        <activity
+            android:name=".profile.add.Profile_select_emoji"
+            android:exported="true" />
+        <activity
+            android:name=".profile.add.Profile_emoji"
+            android:exported="true" />
+        <activity
+            android:name=".profile.add.Profile_name"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:usesCleartextTraffic="true"
+            android:usesCleartextTraffic="true" />
+        <activity
+            android:name=".OnBoardingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".OnBoardingActivity"/>
-        <activity android:name=".MainDayActivity"/>
-        <activity android:name=".ScheduleWritingActivity"/>
-        <activity android:name=".FamilyWriting"/>
-        <activity android:name=".GameWriting"/>
-        <activity android:name=".MainCalendarActivity"/>
-        <activity android:name=".SignInActivity"/>
-        <activity android:name=".SignUpActivity"/>
-        <activity android:name=".profile.start.ProfileMenuActivity"/>
-        <activity android:name=".profile.edit.ProfileEditActivity"/>
-        <activity android:name=".profile.edit.ProfileSelectActivity"/>
-
+        <activity android:name=".SignInActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".MainDayActivity" />
+        <activity android:name=".ScheduleWritingActivity" />
+        <activity android:name=".FamilyWriting" />
+        <activity android:name=".GameWriting" />
+        <activity android:name=".MainCalendarActivity" />
+        <activity android:name=".profile.start.ProfileMenuActivity" />
+        <activity android:name=".profile.edit.ProfileEditActivity" />
+        <activity android:name=".profile.edit.ProfileSelectActivity" />
     </application>
+
 </manifest>
