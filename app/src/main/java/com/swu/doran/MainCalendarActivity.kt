@@ -2,6 +2,7 @@ package com.swu.doran
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.drawable.ClipDrawable
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -10,17 +11,54 @@ import java.util.*
 import android.view.Gravity
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import java.lang.String.format
 import java.text.SimpleDateFormat
 
 
 class MainCalendarActivity : AppCompatActivity() {
-    @SuppressLint("InflateParams")
+    private lateinit var recyclerView_day: RecyclerView
+    private lateinit var viewAdapter_day: RecyclerView.Adapter<*>
+    private  lateinit var viewManager_day: RecyclerView.LayoutManager
+
+    private lateinit var recyclerView_family: RecyclerView
+    private lateinit var viewAdapter_family: RecyclerView.Adapter<*>
+    private  lateinit var viewManager_family: RecyclerView.LayoutManager
+
+    private lateinit var recyclerView_game: RecyclerView
+    private lateinit var viewAdapter_game: RecyclerView.Adapter<*>
+    private  lateinit var viewManager_game: RecyclerView.LayoutManager
+
+    @SuppressLint("InflateParams", "WrongConstant")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_calendar)
 
-        val spinner = findViewById<Spinner>(R.id.spinner)
+        viewManager_day = LinearLayoutManager(this, RecyclerView.HORIZONTAL, true)
+        viewAdapter_day = MainDayAdapter()
+        recyclerView_day = findViewById<RecyclerView>(R.id.recyclerview_day).apply{
+            setHasFixedSize(true)
+            layoutManager = viewManager_day
+            adapter = viewAdapter_day
+        }
+
+        viewManager_family = LinearLayoutManager(this, RecyclerView.HORIZONTAL, true)
+        viewAdapter_family = MainfamilyAdapter()
+        recyclerView_family = findViewById<RecyclerView>(R.id.recyclerview_family).apply{
+            setHasFixedSize(true)
+            layoutManager = viewManager_family
+            adapter = viewAdapter_family
+        }
+
+        viewManager_game = LinearLayoutManager(this, RecyclerView.HORIZONTAL, true)
+        viewAdapter_game = MaingameAdapter()
+        recyclerView_game = findViewById<RecyclerView>(R.id.recyclerview_game).apply{
+            setHasFixedSize(true)
+            layoutManager = viewManager_game
+            adapter = viewAdapter_game
+        }
+
         val inflater:LayoutInflater=layoutInflater
         val view=inflater.inflate(R.layout.main_day,null)
         val clickDate=view.findViewById<TextView>(R.id.clickDate)
@@ -36,38 +74,6 @@ class MainCalendarActivity : AppCompatActivity() {
             intent.putExtra("day", dayOfMonth.toString())
             startActivity(intent)
         }
-
-        //어댑터 설정 -resource-array.xml에 있는 아이템 목록을 추가한다
-        spinner.adapter = ArrayAdapter.createFromResource(
-            this,
-            R.array.my_array,
-            android.R.layout.simple_spinner_item
-        )
-        //아이템 선택 리스너
-        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?,
-                position: Int,
-                id: Long
-            ) {
-                when (position) {
-                    //선택 안함
-                    0 -> {
-                    }
-                    1 -> {
-                    }
-                    2 -> {
-                    }
-                    3 -> {
-                    }
-
-                }
-            }
 
         }
 
@@ -97,4 +103,3 @@ class MainCalendarActivity : AppCompatActivity() {
 //        }
 //
 //    }
-}
