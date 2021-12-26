@@ -65,7 +65,7 @@ class MainCalendarActivity : AppCompatActivity() {
 
 
         // get a calendar instance
-        val cal = Calendar.getInstance()
+        Calendar.getInstance()
         val calendarView = findViewById<CalendarView>(R.id.calendarView)
         //날짜 클릭 이벤트 리스너
         calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
