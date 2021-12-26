@@ -34,7 +34,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/ic_launcher_foreground"
+                    android:src="@drawable/icon_game"
                     android:layout_marginRight="10dp"/>
                 <TextView
                     android:id="@+id/game_date"
@@ -49,7 +49,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/ic_launcher_foreground"
+                    android:src="@drawable/icon_game"
                     android:layout_marginRight="10dp"/>
                 <TextView
                     android:id="@+id/game_text"
@@ -79,12 +79,12 @@
                 android:id="@+id/game_image1"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/main_fullbtn"/>
+                android:background="@drawable/emoji_daughter_2"/>
             <ImageView
                 android:id="@+id/game_image2"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/main_fullbtn"
+                android:background="@drawable/emoji_mother"
                 android:layout_marginLeft="10dp"/>
         </LinearLayout>
 
