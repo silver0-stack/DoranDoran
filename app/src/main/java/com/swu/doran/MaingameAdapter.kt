@@ -36,8 +36,8 @@ class MaingameAdapter() :
         holder.gamename.setText("김지원 10키로 다이어트")
         holder.gamedate.setText("2021년 11월 1일 ~ 2021년 12월 5일")
         holder.gametext.setText("원하는 가방 하나 사주기")
-        holder.gameimage1.setImageResource(R.drawable.main_fullbtn)
-        holder.gameimage2.setImageResource(R.drawable.main_fullbtn)
+        //holder.gameimage1.setImageResource(R.drawable.main_fullbtn)
+        //holder.gameimage2.setImageResource(R.drawable.main_fullbtn)
     }
 
     // 3. Return the size of your dataset (invoked by the layout manager)

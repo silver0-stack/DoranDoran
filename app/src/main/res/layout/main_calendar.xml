@@ -70,7 +70,7 @@
                             <ImageView
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
-                                android:src="@drawable/ic_launcher_foreground"
+                                android:src="@drawable/icon_schedule"
                                 android:layout_gravity="center_vertical" />
                             <TextView
                                 android:layout_width="wrap_content"
@@ -87,7 +87,7 @@
                                 android:id="@+id/scheduleBtn"
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
-                                android:src="@drawable/ic_launcher_foreground"
+
                                 android:layout_gravity="center_vertical"
                                 android:scaleType="fitXY"
                                 android:background="@android:color/transparent"/>
@@ -117,7 +117,7 @@
                             <ImageView
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
-                                android:src="@drawable/ic_launcher_foreground"
+                                android:src="@drawable/icon_family"
                                 android:layout_gravity="center_vertical" />
                             <TextView
                                 android:layout_width="wrap_content"
@@ -134,7 +134,7 @@
                                 android:id="@+id/familyBtn"
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
-                                android:src="@drawable/ic_launcher_foreground"
+
                                 android:layout_gravity="center_vertical"
                                 android:scaleType="fitXY"
                                 android:background="@android:color/transparent"/>
@@ -164,7 +164,7 @@
                             <ImageView
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
-                                android:src="@drawable/ic_launcher_foreground"
+                                android:src="@drawable/icon_game"
                                 android:layout_gravity="center_vertical" />
                             <TextView
                                 android:layout_width="wrap_content"
@@ -181,7 +181,6 @@
                                 android:id="@+id/gameBtn"
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
-                                android:src="@drawable/ic_launcher_foreground"
                                 android:layout_gravity="center_vertical"
                                 android:scaleType="fitXY"
                                 android:background="@android:color/transparent"/>

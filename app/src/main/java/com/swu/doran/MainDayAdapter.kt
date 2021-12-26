@@ -36,8 +36,8 @@ class MainDayAdapter() :
         holder.dayname.setText("엄마 생일파티")
         holder.daydate.setText("[11월 5일] 17시 ~ 19시")
         holder.daylocation.setText("자연별곡 용산점")
-        holder.dayimage1.setImageResource(R.drawable.main_fullbtn)
-        holder.dayimage2.setImageResource(R.drawable.main_fullbtn)
+        //holder.dayimage1.setImageResource(R.drawable.main_fullbtn)
+        //holder.dayimage2.setImageResource(R.drawable.main_fullbtn)
     }
 
     // 3. Return the size of your dataset (invoked by the layout manager)

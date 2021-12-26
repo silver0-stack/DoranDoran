@@ -79,18 +79,19 @@
             android:id="@+id/day_image1"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/emoji_father"/>
+            android:src="@drawable/emoji_father"
+            android:layout_marginLeft="10dp"/>
         <ImageView
             android:id="@+id/day_image2"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/emoji_mother"
+            android:src="@drawable/emoji_mother"
             android:layout_marginLeft="10dp"/>
         <ImageView
             android:id="@+id/day_image3"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/emoji_son_3"
+            android:src="@drawable/emoji_son_1"
             android:layout_marginLeft="10dp"/>
 
     </LinearLayout>

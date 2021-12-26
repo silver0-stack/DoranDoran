@@ -82,9 +82,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp"
         android:gravity="center"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="10dp">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="35dp"
@@ -117,13 +117,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp"
-        android:gravity="center">
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_marginRight="10dp">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="35dp"
             android:background="@drawable/edittext_bg"
-            android:text="감성적인"
+            android:text="수줍은"
             android:textColor="#000000"
             android:textStyle="normal"
             android:layout_marginRight="20dp">
@@ -132,7 +133,7 @@
             android:layout_width="wrap_content"
             android:layout_height="35dp"
             android:background="@drawable/edittext_bg"
-            android:text="현실적인"
+            android:text="엄격한"
             android:textColor="#000000"
             android:textStyle="normal"
             android:layout_marginRight="20dp">
@@ -141,7 +142,7 @@
             android:layout_width="wrap_content"
             android:layout_height="35dp"
             android:background="@drawable/edittext_bg"
-            android:text="현실적인"
+            android:text="수다스러운"
             android:textColor="#000000"
             android:textStyle="normal">
         </Button>
@@ -151,13 +152,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp"
-        android:gravity="center">
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_marginLeft="10dp">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="35dp"
             android:background="@drawable/edittext_bg"
-            android:text="현실적인"
+            android:text="고집있는"
             android:textColor="#000000"
             android:textStyle="normal"
             android:layout_marginRight="20dp">
@@ -166,7 +168,7 @@
             android:layout_width="wrap_content"
             android:layout_height="35dp"
             android:background="@drawable/edittext_bg"
-            android:text="현실적인"
+            android:text="변덕스러운"
             android:textColor="#000000"
             android:textStyle="normal"
             android:layout_marginRight="20dp">
@@ -175,7 +177,43 @@
             android:layout_width="wrap_content"
             android:layout_height="35dp"
             android:background="@drawable/edittext_bg"
-            android:text="현실적인"
+            android:text="까다로운"
+            android:textColor="#000000"
+            android:textStyle="normal">
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_marginRight="10dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/edittext_bg"
+            android:text="긍적적인"
+            android:textColor="#000000"
+            android:textStyle="normal"
+            android:layout_marginRight="20dp">
+        </Button>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/edittext_bg"
+            android:text="내성적인"
+            android:textColor="#000000"
+            android:textStyle="normal"
+            android:layout_marginRight="20dp">
+        </Button>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/edittext_bg"
+            android:text="즉흥적인"
             android:textColor="#000000"
             android:textStyle="normal">
         </Button>

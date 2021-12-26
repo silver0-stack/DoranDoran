@@ -79,12 +79,12 @@
                 android:id="@+id/game_image1"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:background="@drawable/emoji_daughter_2"/>
+                android:background="@drawable/emoji_daughter_1"/>
             <ImageView
                 android:id="@+id/game_image2"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:background="@drawable/emoji_mother"
+                android:background="@drawable/emoji_father"
                 android:layout_marginLeft="10dp"/>
         </LinearLayout>
 
