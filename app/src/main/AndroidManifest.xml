@@ -11,7 +11,7 @@
         android:theme="@style/Theme.Doran">
 
         <activity
-            android:name="MainCalendarActivity"
+            android:name="OnBoardingActivity"
             android:usesCleartextTraffic="true"
             android:exported="true">
             <intent-filter>
@@ -21,7 +21,7 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".OnBoardingActivity"/>
+        <activity android:name=".MainCalendarActivity"/>
         <activity android:name=".MainDayActivity"/>
         <activity android:name=".ScheduleWritingActivity"/>
         <activity android:name=".FamilyWriting"/>
