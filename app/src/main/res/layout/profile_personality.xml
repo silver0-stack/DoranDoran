@@ -86,27 +86,30 @@
         android:layout_marginTop="70dp"
         android:layout_marginLeft="10dp">
         <Button
+            android:id="@+id/personality_btn_1"
             android:layout_width="wrap_content"
             android:layout_height="35dp"
-            android:background="@drawable/edittext_bg"
+            android:background="@drawable/select_personailty"
             android:text="현실적인"
             android:textColor="#000000"
             android:textStyle="normal"
             android:layout_marginRight="20dp">
         </Button>
         <Button
+            android:id="@+id/personality_btn_2"
             android:layout_width="wrap_content"
             android:layout_height="35dp"
-            android:background="@drawable/edittext_bg"
+            android:background="@drawable/select_personailty"
             android:text="감성적인"
             android:textColor="#000000"
             android:textStyle="normal"
             android:layout_marginRight="20dp">
         </Button>
         <Button
+            android:id="@+id/personality_btn_3"
             android:layout_width="wrap_content"
             android:layout_height="35dp"
-            android:background="@drawable/edittext_bg"
+            android:background="@drawable/select_personailty"
             android:text="짜증이 많은"
             android:textColor="#000000"
             android:textStyle="normal">
