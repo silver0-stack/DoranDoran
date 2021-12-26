@@ -5,44 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="20dp">
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
-
-        <TextView
-            android:id="@+id/addProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="추가"
-            android:layout_marginEnd="25dp"
-            android:textColor="@color/black" />
-
-        <TextView
-            android:id="@+id/EditProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="수정"
-            android:textColor="@color/black" />
-
-    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:gravity="center"
-        android:text="입장할 프로필을 선택하세요"
+        android:text="프로필을 선택하세요"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
 
+    <!---
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/profile_rv"
         android:layout_width="match_parent"
@@ -50,6 +24,56 @@
         android:layout_marginTop="130dp"
         android:orientation="vertical"
         tools:listitem="@layout/profile_item" />
+         - -->
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/emoji_father"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            >
+        </ImageView>
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/emoji_mother"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            >
+        </ImageView>
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/emoji_son_1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            >
+        </ImageView>
+        <ImageView
+            android:id="@+id/profile_add"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/icon_profile_add"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            >
+        </ImageView>
+
+
+
+    </LinearLayout>
+
+
+
 
 
 </FrameLayout>

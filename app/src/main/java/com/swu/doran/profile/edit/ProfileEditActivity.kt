@@ -17,13 +17,17 @@ import com.swu.doran.profile.start.ProfileMenuActivity
 
 /*아이템 수정하는 액티비티*/
 class ProfileEditActivity : ProfileMenuActivity(){
-    lateinit var profileName: EditText
-    lateinit var completeProfileEdit: TextView
-    lateinit var clear: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.edit_profile)
+    }
+    /*
+    lateinit var profileName: EditText
+    lateinit var completeProfileEdit: TextView
+    lateinit var clear: ImageView
+
+
 
 
         clear = findViewById(R.id.clear)
@@ -61,5 +65,7 @@ class ProfileEditActivity : ProfileMenuActivity(){
     fun deleteProfile(view: android.view.View) {
 
     }
+
+     */
 
 }

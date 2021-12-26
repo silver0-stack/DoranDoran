@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile.add.Profile_birthday"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:text="이전">
+
+        </TextView>
+        <TextView
+            android:id="@+id/next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:text="다음"
+            android:layout_marginLeft="330dp"
+            >
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="자신의 생일을 입력해주세요"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:padding="5dp"
+            android:layout_marginLeft="25dp">
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="이름을 입력해주세요"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:padding="5dp"
+            android:layout_marginLeft="25dp"
+            >
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="나를 잘 표현할 수 있는"
+            android:textSize="14dp"
+            android:textStyle="normal"
+            android:textColor="#858585"
+            android:padding="5dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            >
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="별명이나 이름이면 좋을 것 같아요!"
+            android:textSize="14dp"
+            android:textStyle="normal"
+            android:textColor="#858585"
+            android:padding="5dp"
+            android:layout_marginLeft="25dp"
+            >
+        </TextView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

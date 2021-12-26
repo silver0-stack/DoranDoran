@@ -2,6 +2,8 @@ package com.swu.doran
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class OnBoardingActivity:AppCompatActivity() {
@@ -9,15 +11,25 @@ class OnBoardingActivity:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.onboarding)
 
+        val signIn_btn = findViewById<Button>(R.id.signIn_btn)
+        val signUp_btn = findViewById<TextView>(R.id.signUp_btn)
+
+        signIn_btn.setOnClickListener{
+            val intent= Intent(this,SignInActivity::class.java)
+            startActivity(intent)
+        }
+        signUp_btn.setOnClickListener{
+            val intent= Intent(this,SignUpActivity::class.java)
+            startActivity(intent)
+        }
+
 
     }
 
     fun signIn(view: android.view.View) {
-        val intent= Intent(this,SignInActivity::class.java)
-        startActivity(intent)
+
     }
     fun signUp(view: android.view.View) {
-        val intent= Intent(this,SignUpActivity::class.java)
-        startActivity(intent)
+
     }
 }

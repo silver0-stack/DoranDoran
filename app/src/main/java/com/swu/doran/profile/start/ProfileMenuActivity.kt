@@ -6,16 +6,31 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.swu.doran.R
+import com.swu.doran.SignInActivity
+import com.swu.doran.profile.add.Profile_name
 import com.swu.doran.profile.edit.ProfileEditActivity
 import com.swu.doran.profile.edit.ProfileSelectActivity
 
 
 open class ProfileMenuActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.profile_start)
+
+        val profile_add = findViewById<ImageView>(R.id.profile_add)
+        profile_add.setOnClickListener{
+            val intent= Intent(this, Profile_name::class.java)
+            startActivity(intent)
+        }
+    }
+    /*
     lateinit var inflater: LayoutInflater
     lateinit var view: View
     lateinit var addProfile: TextView
@@ -26,15 +41,13 @@ open class ProfileMenuActivity : AppCompatActivity() {
     var clickcount=-1
     val adapter= ProfileAdapter(this,list)
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.profile_start)
+
 
 
         list = ArrayList()
-        addProfile=findViewById(R.id.addProfile)
-        profile_rv=findViewById(R.id.profile_rv)
-        EditProfile=findViewById(R.id.EditProfile)
+        //addProfile=findViewById(R.id.addProfile)
+       // profile_rv=findViewById(R.id.profile_rv)
+       // EditProfile=findViewById(R.id.EditProfile)
 
         profile_rv.adapter=adapter
         val layout=LinearLayoutManager(this)
@@ -65,5 +78,7 @@ open class ProfileMenuActivity : AppCompatActivity() {
 
         }
     }
+    */
+
 
 }

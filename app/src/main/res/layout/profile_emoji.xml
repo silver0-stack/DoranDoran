@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile.add.Profile_emoji"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:text="이전">
+
+        </TextView>
+        <TextView
+            android:id="@+id/next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:text="다음"
+            android:layout_marginLeft="330dp"
+            >
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="저희 서비스에서 사용할 "
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:padding="5dp"
+            android:layout_marginLeft="25dp">
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="프로필 이미지를 선택해주세요"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:padding="5dp"
+            android:layout_marginLeft="25dp"
+            >
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="나를 잘 표현할 수 있는"
+            android:textSize="14dp"
+            android:textStyle="normal"
+            android:textColor="#858585"
+            android:padding="5dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            >
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="이미지이면 좋을 것 같아요!"
+            android:textSize="14dp"
+            android:textStyle="normal"
+            android:textColor="#858585"
+            android:padding="5dp"
+            android:layout_marginLeft="25dp"
+            >
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/button_bg"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            >
+        </ImageView>
+        <TextView
+            android:id="@+id/select_emoji_btn"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:text="이미지 선택하기 >"
+            android:textSize="15dp"
+            android:textColor="#000000">
+        </TextView>
+
+    </LinearLayout>
+</LinearLayout>
