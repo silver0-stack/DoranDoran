@@ -93,6 +93,7 @@
                     </LinearLayout>
 
                     <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview_day"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
@@ -140,6 +141,7 @@
                     </LinearLayout>
 
                     <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview_family"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
@@ -187,6 +189,7 @@
                     </LinearLayout>
 
                     <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview_game"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 

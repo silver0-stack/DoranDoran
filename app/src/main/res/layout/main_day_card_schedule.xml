@@ -22,6 +22,7 @@
         android:layout_margin="15dp">
 
         <TextView
+            android:id="@+id/day_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="엄마 생일파티"
@@ -36,6 +37,7 @@
                 android:src="@drawable/ic_launcher_foreground"
                 android:layout_marginRight="10dp"/>
             <TextView
+                android:id="@+id/day_date"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="17:00 PM" />
@@ -50,6 +52,7 @@
                 android:src="@drawable/ic_launcher_foreground"
                 android:layout_marginRight="10dp"/>
             <TextView
+                android:id="@+id/day_location"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="레스토랑" />
@@ -73,15 +76,18 @@
         android:layout_margin="15dp">
 
         <ImageView
+            android:id="@+id/day_image1"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/main_fullbtn"/>
         <ImageView
+            android:id="@+id/day_image2"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/main_fullbtn"
             android:layout_marginLeft="10dp"/>
         <ImageView
+            android:id="@+id/day_image3"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/main_fullbtn"

@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
 import java.util.*
 
-//test
 class MainActivity : AppCompatActivity() {
 
     @SuppressLint("SimpleDateFormat")
@@ -34,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         settingsMenu.visibility= View.VISIBLE
     }
 
-    fun backMenu(view: View) {
+    fun clearMenu(view: View) {
         val settingsMenu=findViewById<LinearLayout>(R.id.settingsMenu)
         settingsMenu.visibility= View.GONE
 

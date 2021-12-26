@@ -11,18 +11,27 @@
         android:theme="@style/Theme.Doran">
 
         <activity
-            android:name=".MainActivity"
+            android:name="OnBoardingActivity"
+            android:usesCleartextTraffic="true"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity android:name=".MainCalendarActivity"/>
         <activity android:name=".MainDayActivity"/>
         <activity android:name=".ScheduleWritingActivity"/>
         <activity android:name=".FamilyWriting"/>
         <activity android:name=".GameWriting"/>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".SignInActivity"/>
+        <activity android:name=".SignUpActivity"/>
+        <activity android:name=".profile.start.ProfileMenuActivity"/>
+        <activity android:name=".profile.edit.ProfileEditActivity"/>
+        <activity android:name=".profile.edit.ProfileSelectActivity"/>
+
     </application>
 </manifest>
