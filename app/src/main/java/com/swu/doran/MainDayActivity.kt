@@ -62,7 +62,7 @@ class MainDayActivity : AppCompatActivity() {
         val month = intent.getStringExtra("month")
         val day = intent.getStringExtra("day")
 
-        date.setText(month+"월 "+day+"일")
+        date.text = month+"월 "+day+"일"
 
         scheduleBtn.setOnClickListener{
             val intent = Intent(this, ScheduleWritingActivity::class.java)

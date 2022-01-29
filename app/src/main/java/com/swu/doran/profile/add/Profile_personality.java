@@ -2,6 +2,7 @@ package com.swu.doran.profile.add;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -40,6 +41,7 @@ public class Profile_personality extends AppCompatActivity implements View.OnCli
         personality_btn_3.setOnClickListener(this);
     }
 
+    @SuppressLint("NonConstantResourceId")
     public void onClick(View v){
         switch (v.getId()){
             case R.id.personality_btn_1:

@@ -46,6 +46,8 @@
         <activity android:name=".profile.start.ProfileMenuActivity" />
         <activity android:name=".profile.edit.ProfileEditActivity" />
         <activity android:name=".profile.edit.ProfileSelectActivity" />
+        <activity android:name=".AddIssueActivity"/>
+
     </application>
 
 </manifest>

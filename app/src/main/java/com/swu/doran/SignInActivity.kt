@@ -2,6 +2,7 @@ package com.swu.doran
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -23,11 +24,11 @@ class SignInActivity : AppCompatActivity() {
 
     }
 
-//    // 로그아웃하지 않을 시 자동 로그인 , 회원가입시 바로 로그인 됨
-//    public override fun onStart() {
-//        super.onStart()
-//        moveMainPage(mAuth.currentUser)
-//    }
+    // 로그아웃하지 않을 시 자동 로그인 , 회원가입시 바로 로그인 됨
+    public override fun onStart() {
+        super.onStart()
+        moveMainPage(mAuth.currentUser)
+    }
 
     // 유저정보 넘겨주고 메인 액티비티 호출
     private fun moveMainPage(currentUser: FirebaseUser?) {
@@ -38,12 +39,12 @@ class SignInActivity : AppCompatActivity() {
     }
 
     //비번잊음 메소드
-    fun forgetPW(view: android.view.View) {
+    fun forgetPW(view:View) {
 
     }
 
     //로그인 버튼 메소드
-    fun signInComplete(view: android.view.View) {
+    fun signInComplete(view: View) {
         signIn(Email.text.toString().trim(), pw.text.toString().trim())
     }
 
@@ -66,7 +67,7 @@ class SignInActivity : AppCompatActivity() {
     }
 
     //회원가입 메소드
-    fun signUp(view: android.view.View) {
+    fun signUp(view:View) {
         startActivity(Intent(this, SignUpActivity::class.java))
     }
     //로그아웃
