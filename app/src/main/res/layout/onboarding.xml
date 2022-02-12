@@ -4,45 +4,55 @@
     android:layout_height="match_parent"
     android:gravity="bottom"
     android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3.5"
+        android:src="@drawable/bg_main" />
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:orientation="vertical"
         android:padding="15dp">
+
         <Button
             android:id="@+id/signIn_btn"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@drawable/button_bg"
+            android:onClick="signIn"
             android:text="로그인"
             android:textColor="@color/black"
-            android:textSize="18sp"
-            android:onClick="signIn">
-        </Button>
+            android:textSize="16sp" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="30dp"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="새로운 계정을 만드시겠습니까?"
-                android:textColor="@color/black">
-            </TextView>
+                android:textColor="@color/black" />
+
             <TextView
                 android:id="@+id/signUp_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:onClick="signUp"
                 android:text="회원가입"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_marginStart="10dp"
-                android:onClick="signUp">
-            </TextView>
+                android:textStyle="bold" />
+
         </LinearLayout>
     </LinearLayout>
 

@@ -26,10 +26,4 @@ class OnBoardingActivity:AppCompatActivity() {
 
     }
 
-    fun signIn(view: android.view.View) {
-
-    }
-    fun signUp(view: android.view.View) {
-
-    }
 }

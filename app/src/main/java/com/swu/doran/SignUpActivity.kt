@@ -34,12 +34,9 @@ class SignUpActivity : AppCompatActivity() {
         Email = findViewById(R.id.userEmail)
         PW = findViewById(R.id.userPW)
         PW_confirm = findViewById(R.id.userPW_confirm)
-        nickname = findViewById(R.id.userNickName)
-
         emailCheck = findViewById(R.id.emailCheck)
         pwCheck = findViewById(R.id.pwCheck)
         pw_confirmCheck = findViewById(R.id.pw_confirmCheck)
-        nicknameCheck = findViewById(R.id.nicknameCheck)
 
 
         //이메일 확인하기
@@ -99,23 +96,6 @@ class SignUpActivity : AppCompatActivity() {
 
             // EditText 입력이 끝난 후
             override fun afterTextChanged(s: Editable?) {
-            }
-        })
-        //닉네임 확인하기
-        nickname.addTextChangedListener(object : TextWatcher {
-            // EditText에 문자 입력 전
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-            }
-
-            // EditText에 변화가 있을 경우
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            }
-
-            // EditText 입력이 끝난 후
-            override fun afterTextChanged(s: Editable?) {
-                nickname.setBackgroundDrawable(ContextCompat.getDrawable(this@SignUpActivity, R.drawable.edittext_rightcheck))
-                nicknameCheck.visibility = View.VISIBLE
-
             }
         })
 

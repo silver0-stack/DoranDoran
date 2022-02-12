@@ -47,6 +47,9 @@
         <activity android:name=".profile.edit.ProfileEditActivity" />
         <activity android:name=".profile.edit.ProfileSelectActivity" />
         <activity android:name=".AddIssueActivity"/>
+        <activity android:name=".password.PasswordAppActivity"/>
+        <activity android:name=".password.PasswordEmailActivity"/>
+        <activity android:name=".password.EmailToSignIn"/>
 
     </application>
 

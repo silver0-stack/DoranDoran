@@ -15,9 +15,9 @@
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="650dp"
-                android:layout_marginTop="200dp"
+                android:layout_marginTop="300dp"
                 android:background="@drawable/main_calview"
-                android:padding="25dp">
+                android:padding="30dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -157,49 +157,6 @@
                         android:textColorHint="#A6A6A6"
                         android:textSize="15sp" />
 
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="닉네임"
-                        android:textColor="@color/black"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/nicknameCheck"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:text="✔"
-                        android:textSize="15sp"
-                        android:visibility="gone" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:orientation="vertical">
-
-                    <EditText
-                        android:id="@+id/userNickName"
-                        android:layout_width="match_parent"
-                        android:layout_height="55dp"
-                        android:background="@drawable/edittext_bg"
-                        android:hint="닉네임을 입력하세요"
-                        android:inputType="text"
-                        android:paddingStart="15dp"
-                        android:textColor="@color/black"
-                        android:textColorHint="#A6A6A6"
-                        android:textSize="15sp" />
 
                     <Button
                         android:id="@+id/signUp_btn"
@@ -210,8 +167,37 @@
                         android:onClick="signUpComplete"
                         android:text="회원가입"
                         android:textColor="@color/black"
-                        android:textSize="18sp"
+                        android:textSize="15sp"
                         android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="계정이 이미 있으십니까?"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/signUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="로그인 하러가기"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:onClick="signUp"/>
+
+
                 </LinearLayout>
             </TableLayout>
 
