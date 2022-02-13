@@ -18,12 +18,9 @@ public class Profile_birthday extends AppCompatActivity {
         setContentView(R.layout.profile_birthday);
 
         next_btn=findViewById(R.id.next_btn);
-        next_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Profile_personality.class);
-                startActivity(intent);
-            }
+        next_btn.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(),Profile_personality.class);
+            startActivity(intent);
         });
     }
 }
