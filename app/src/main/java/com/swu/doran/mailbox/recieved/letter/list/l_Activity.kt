@@ -30,7 +30,7 @@ class l_Activity:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.recieved_letter_list)
 
-        datas = (intent.getSerializableExtra("data") as m_Data?)!!
+        datas = (intent.getSerializableExtra("data") as? m_Data?)!!
 
         img = findViewById(R.id.img)
         name = findViewById(R.id.name)
@@ -69,7 +69,11 @@ class l_Activity:AppCompatActivity() {
         super.onBackPressed()
     }
 
+    //intent putextra-img,name,accumulated,badge
     fun scrapBtn(view: android.view.View) {
-        startActivity(Intent(this,s_Activity::class.java))
+        Intent(this, s_Activity::class.java).apply {
+            putExtra("data",datas)
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        }.run {startActivity(this) }
     }
 }

@@ -15,7 +15,6 @@ class l_contentsActivity : AppCompatActivity() {
     lateinit var name: TextView
     lateinit var date: TextView
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.received_letter_contents)
@@ -28,7 +27,8 @@ class l_contentsActivity : AppCompatActivity() {
         date = findViewById(R.id.datesent)
 
         Glide.with(this).load(l_datas.img).into(img)
-        name.text = l_datas.name
+        val user_name=l_datas.name.split(' ')
+        name.text = user_name[0]
         date.text = l_datas.date
 
     }
