@@ -41,7 +41,8 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:src="@drawable/star" />
+                android:src="@drawable/star"
+                android:onClick="toScrap"/>
 
 
         </LinearLayout>
@@ -59,26 +60,26 @@
                 android:text="받은 편지함"
                 android:layout_marginEnd="10dp"
                 android:layout_gravity="center"
-                android:background="@drawable/mailbox_click_btn" />
+                android:background="@drawable/mailbox_btn"
+                android:onClick="toReceivedLetter"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="보낸 편지함"
                 android:layout_gravity="center"
-                android:background="@drawable/mailbox_btn"
-                android:onClick="toSentLetter"/>
+                android:background="@drawable/mailbox_click_btn" />
 
 
         </LinearLayout>
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/received_member"
+        android:id="@+id/sent_member"
         android:layout_marginTop="20dp"
         android:scrollbars="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/recieved_member_item"
+        tools:listitem="@layout/sent_member_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

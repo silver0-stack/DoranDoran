@@ -1,11 +1,14 @@
 package com.swu.doran.mailbox.recieved.member
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.swu.doran.R
+import com.swu.doran.mailbox.sent.letter.list.L_Activity
+import com.swu.doran.mailbox.sent.member.M_Activity
 
 class m_Activity : AppCompatActivity() {
     lateinit var recyclerview: RecyclerView
@@ -18,7 +21,7 @@ class m_Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.recieved_mailbox)
 
-        recyclerview = findViewById(R.id.mailbox_member)
+        recyclerview = findViewById(R.id.received_member)
         initRecycler()
     }
 
@@ -42,5 +45,10 @@ class m_Activity : AppCompatActivity() {
 
     fun back(view: android.view.View) {
         super.onBackPressed()
+    }
+
+    //보낸편지함버튼
+    fun toSentLetter(view: android.view.View) {
+        startActivity(Intent(this, M_Activity::class.java))
     }
 }

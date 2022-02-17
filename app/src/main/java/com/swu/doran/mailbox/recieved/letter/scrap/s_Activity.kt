@@ -34,7 +34,7 @@ class s_Activity:AppCompatActivity() {
 
     //cant solve error..
     fun listBtn(view: android.view.View) {
-        //startActivity(Intent(this,l_Activity::class.java))
+        //startActivity(Intent(this,L_Activity::class.java))
         super.onBackPressed()
     }
 

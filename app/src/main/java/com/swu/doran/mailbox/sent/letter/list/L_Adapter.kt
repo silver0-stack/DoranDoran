@@ -1,4 +1,4 @@
-package com.swu.doran.mailbox.recieved.letter.list
+package com.swu.doran.mailbox.sent.letter.list
 
 import android.content.Context
 import android.content.Intent
@@ -11,19 +11,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.swu.doran.R
 
-class l_Adapter(private val context: Context) : RecyclerView.Adapter<l_Adapter.ViewHolder>() {
+class L_Adapter(private val context: Context) : RecyclerView.Adapter<L_Adapter.ViewHolder>() {
 
-    var datas = mutableListOf<l_Data>()
+    var datas = mutableListOf<L_Data>()
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val img: ImageView = itemView.findViewById(R.id.img)
         private val name: TextView = itemView.findViewById(R.id.name)
         private val date: TextView = itemView.findViewById(R.id.timesent)
-        private val scrap: ImageView = itemView.findViewById(R.id.scrap)
 
-        fun bind(item: l_Data) {
+        fun bind(item: L_Data) {
             Glide.with(itemView).load(item.img).into(img)
-            Glide.with(itemView).load(item.scrap).into(scrap)
             name.text = item.name
             date.text = item.date
 
@@ -31,7 +29,7 @@ class l_Adapter(private val context: Context) : RecyclerView.Adapter<l_Adapter.V
             //move from list to contents
             //name,date 출력
             itemView.setOnClickListener {
-                Intent(context, l_ContentsActivity::class.java).apply {
+                Intent(context, L_ContentsActivity::class.java).apply {
                     putExtra("data", item)
                     addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 }.run { context.startActivity(this) }
@@ -40,12 +38,12 @@ class l_Adapter(private val context: Context) : RecyclerView.Adapter<l_Adapter.V
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): l_Adapter.ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.received_list_item, parent, false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): L_Adapter.ViewHolder {
+        val view = LayoutInflater.from(context).inflate(R.layout.sent_list_item, parent, false)
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: l_Adapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: L_Adapter.ViewHolder, position: Int) {
         holder.bind(datas[position])
     }
 

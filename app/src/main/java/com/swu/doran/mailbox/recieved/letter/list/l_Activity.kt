@@ -26,11 +26,12 @@ class l_Activity:AppCompatActivity() {
     private lateinit var adapter: l_Adapter //adapter 객체 먼저 선언해주기!
     private var layoutmanager: RecyclerView.LayoutManager? = null
     val l_datas = mutableListOf<l_Data>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.recieved_letter_list)
 
-        datas = (intent.getSerializableExtra("data") as? m_Data?)!!
+        datas = intent.getSerializableExtra("data") as m_Data
 
         img = findViewById(R.id.img)
         name = findViewById(R.id.name)
@@ -42,13 +43,14 @@ class l_Activity:AppCompatActivity() {
         accumulated.text = datas.accumulated.toString()
         badge.text =datas.badge
 
-        recyclerview = findViewById(R.id.received_letter_list)
+
         initRecycler()
 
     }
 
     @SuppressLint("NotifyDataSetChanged")
     private fun initRecycler() {
+        recyclerview = findViewById(R.id.received_letter_list)
         adapter = l_Adapter(this)
         layoutmanager= LinearLayoutManager(this)
         recyclerview.setHasFixedSize(true)

@@ -9,7 +9,7 @@ import com.bumptech.glide.Glide
 import com.swu.doran.R
 import com.swu.doran.mailbox.recieved.member.m_Data
 
-class l_contentsActivity : AppCompatActivity() {
+class l_ContentsActivity : AppCompatActivity() {
     lateinit var l_datas: l_Data
     lateinit var img: ImageView
     lateinit var name: TextView

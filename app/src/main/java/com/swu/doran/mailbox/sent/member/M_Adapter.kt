@@ -1,4 +1,4 @@
-package com.swu.doran.mailbox.recieved.member
+package com.swu.doran.mailbox.sent.member
 
 import android.content.Context
 import android.content.Intent
@@ -11,28 +11,26 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.swu.doran.R
-import com.swu.doran.mailbox.recieved.letter.list.l_Activity
+import com.swu.doran.mailbox.sent.letter.list.L_Activity
 
-class m_Adapter(private val context: Context) : RecyclerView.Adapter<m_Adapter.ViewHolder>() {
+class M_Adapter(private val context: Context) : RecyclerView.Adapter<M_Adapter.ViewHolder>() {
 
-    var datas = mutableListOf<m_Data>()
+    var datas = mutableListOf<M_Data>()
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val img: ImageView = itemView.findViewById(R.id.img)
         private val name: TextView = itemView.findViewById(R.id.name)
-        private val accumulated:TextView=itemView.findViewById(R.id.accumulated)
-        private val badge: Button = itemView.findViewById(R.id.badge)
-        //
-        fun bind(item: m_Data) {
+        private val accumulated: TextView =itemView.findViewById(R.id.accumulated)
+
+        fun bind(item: M_Data) {
             Glide.with(itemView).load(item.img).into(img)
             name.text= item.name
             accumulated.text= item.accumulated.toString()
-            badge.text= item.badge
 
             //멤버 아이템 클릭 리스너
             //멤버데이터에서 이미지,이름,누적개수,뱃지 추출
             itemView.setOnClickListener {
-                Intent(context, l_Activity::class.java).apply {
+                Intent(context, L_Activity::class.java).apply {
                     putExtra("data", item)
                     addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 }.run {
@@ -43,12 +41,12 @@ class m_Adapter(private val context: Context) : RecyclerView.Adapter<m_Adapter.V
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): m_Adapter.ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.recieved_member_item, parent, false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): M_Adapter.ViewHolder {
+        val view = LayoutInflater.from(context).inflate(R.layout.sent_member_item, parent, false)
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: m_Adapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: M_Adapter.ViewHolder, position: Int) {
         holder.bind(datas[position])
     }
 

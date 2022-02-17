@@ -2,8 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <LinearLayout
@@ -16,11 +14,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="17dp">
+            android:padding="15dp">
 
             <ImageView
                 android:layout_width="30dp"
-                android:layout_height="23dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:onClick="back"
                 android:src="@drawable/icon_back" />
@@ -30,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
-                android:text="받은 편지함"
+                android:text="보낸 편지함"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -51,7 +49,7 @@
 
             <TextView
                 android:id="@+id/name"
-                android:layout_width="wrap_content"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
@@ -59,64 +57,60 @@
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/accumulated"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="15dp"
-                android:text="n"
-                android:textSize="15sp" />
 
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/badge"
-                android:layout_width="50dp"
+            <ImageView
+                android:id="@+id/send"
+                android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_gravity="center"
-                android:background="@drawable/mailbox_click_btn"
-                android:text="+ n"
-                android:textColor="@color/white" />
+                android:src="@drawable/message"
+                android:onClick="sendLetter"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="17dp">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginEnd="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/mailbox_click_btn"
-                android:text="목록" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="@drawable/mailbox_btn"
-                android:onClick="scrapBtn"
-                android:text="보관함" />
-
-
-        </LinearLayout>
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/received_letter_list"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:scrollbars="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/received_list_item" />
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:padding="17dp">
+
+        <TextView
+            android:id="@+id/received_letter_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/received_letter_contents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Said I'ma give you some instructions
+That you can't be scared to try
+I want you to touch it softly
+Like the way you do my mind
+It got body and it's smooth to touch
+The same way as my skin
+But don't you be scared"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/datesent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="yyyy.MM.dd" />
+    </LinearLayout>
+
+
 </LinearLayout>

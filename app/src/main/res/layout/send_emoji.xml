@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
-                android:text="받은 편지함"
+                android:text="이모티콘 보내기"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -59,64 +59,58 @@
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/accumulated"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="15dp"
-                android:text="n"
-                android:textSize="15sp" />
-
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/badge"
-                android:layout_width="50dp"
+            <ImageView
+                android:id="@+id/send"
+                android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_gravity="center"
-                android:background="@drawable/mailbox_click_btn"
-                android:text="+ n"
-                android:textColor="@color/white" />
+                android:src="@drawable/message"
+                android:onClick="sendEmoji"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="17dp">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginEnd="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/mailbox_click_btn"
-                android:text="목록" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="@drawable/mailbox_btn"
-                android:onClick="scrapBtn"
-                android:text="보관함" />
-
-
-        </LinearLayout>
     </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/received_letter_list"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:scrollbars="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/received_list_item" />
+        android:padding="20dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/emoji_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/emoji_father"
+            android:onClick="send_emoji"/>
+        <ImageView
+            android:id="@+id/emoji_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/emoji_mother"
+            android:onClick="send_emoji"/>
+        <ImageView
+            android:id="@+id/emoji_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/emoji_daughter_1"
+            android:onClick="send_emoji"/>
+        <ImageView
+            android:id="@+id/emoji_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/emoji_son_1"
+            android:onClick="send_emoji"/>
+    </LinearLayout>
+
+
 </LinearLayout>
