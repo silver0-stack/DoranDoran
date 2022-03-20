@@ -49,9 +49,17 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/sign_up.xml" value="0.24956140350877193" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/update_profile.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3496376811594203" />
+        <entry key="app/src/main/res/layout/edit_profile.xml" value="0.19300911854103345" />
         <entry key="app/src/main/res/layout/family_writing.xml" value="0.3496376811594203" />
+        <entry key="app/src/main/res/layout/game_writing.xml" value="0.19300911854103345" />
+        <entry key="app/src/main/res/layout/letter_list_item.xml" value="0.19300911854103345" />
+        <entry key="app/src/main/res/layout/mailbox_member_item.xml" value="0.19300911854103345" />
         <entry key="app/src/main/res/layout/main_calendar.xml" value="0.3496376811594203" />
+        <entry key="app/src/main/res/layout/profile_birthday.xml" value="0.19300911854103345" />
+        <entry key="app/src/main/res/layout/profile_personality.xml" value="0.19300911854103345" />
+        <entry key="app/src/main/res/layout/received_letter_contents.xml" value="0.19300911854103345" />
         <entry key="app/src/main/res/layout/schedule_writing.xml" value="0.3496376811594203" />
+        <entry key="app/src/main/res/menu/drawer_menu.xml" value="0.396875" />
       </map>
     </option>
   </component>

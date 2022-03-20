@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view"
+    >
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/menu_profile"
+            android:icon="@drawable/main_profile"
+            android:title="프로필">
+        </item>
+        <item android:id="@+id/menu_talk"
+            android:icon="@drawable/main_chat"
+            android:title="가족 톡">
+        </item>
+        <item android:id="@+id/menu_mailbox"
+            android:icon="@drawable/main_mailbox"
+            android:title="우체통">
+        </item>
+        <item android:id="@+id/menu_rule"
+            android:icon="@drawable/main_mailbox"
+            android:title="가족 규칙">
+        </item>
+        <item android:id="@+id/menu_set"
+            android:icon="@drawable/main_set"
+            android:title="설정">
+        </item>
+
+
+    </group>
+</menu>
