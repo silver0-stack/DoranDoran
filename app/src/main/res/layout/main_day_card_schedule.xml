@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+<com.google.android.material.card.MaterialCardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_gravity="center"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     card_view:cardCornerRadius="20dp"
+    android:outlineSpotShadowColor="#F66C6C"
+    android:outlineAmbientShadowColor="#F66C6C"
     android:layout_margin="10dp"
-    android:outlineSpotShadowColor="#FA9183"
-    android:outlineAmbientShadowColor="#FA9183"
     android:orientation="vertical">
 
 <LinearLayout
@@ -19,22 +19,47 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_margin="15dp">
+        android:layout_margin="20dp">
 
-        <TextView
-            android:id="@+id/day_name"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="엄마 생일파티"
-            android:textColor="@color/black"/>
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/day_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="엄마 생일파티"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="@color/black"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right">
+                <ImageButton
+                    android:id="@+id/schedule_checked"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:duplicateParentState="true"
+                    android:background="@drawable/schedule_checked"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/icon_schedule"
+                android:src="@drawable/schedule_write_time"
                 android:layout_marginRight="10dp"/>
             <TextView
                 android:id="@+id/day_date"
@@ -49,13 +74,13 @@
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/icon_schedule"
+                android:src="@drawable/schedule_write_location"
                 android:layout_marginRight="10dp"/>
             <TextView
                 android:id="@+id/day_location"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="레스토랑" />
+                android:text="자연 별곡 용산점" />
         </LinearLayout>
 
         <View
@@ -67,7 +92,10 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#33C4C4C4"/>
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#F66C6C"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -100,4 +128,4 @@
 
 
 
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>

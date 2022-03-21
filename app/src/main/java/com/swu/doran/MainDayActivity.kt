@@ -5,6 +5,7 @@ import android.content.Intent
 import android.graphics.drawable.ClipDrawable.HORIZONTAL
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -28,6 +29,7 @@ class MainDayActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_day)
+
 
         viewManager_day = LinearLayoutManager(this, HORIZONTAL, true)
         viewAdapter_day = MainDayAdapter()
@@ -56,6 +58,7 @@ class MainDayActivity : AppCompatActivity() {
         val scheduleBtn = findViewById<ImageButton>(R.id.scheduleBtn)
         val familyBtn = findViewById<ImageButton>(R.id.familyBtn)
         val gameBtn = findViewById<ImageButton>(R.id.gameBtn)
+        val icon_back =findViewById<ImageButton>(R.id.back)
 
         val date = findViewById<TextView>(R.id.clickDate)
 
@@ -78,6 +81,12 @@ class MainDayActivity : AppCompatActivity() {
             val intent = Intent(this, GameWriting::class.java)
             startActivity(intent)
         }
+
+        icon_back.setOnClickListener{
+            val intent = Intent(this, MainCalendarActivity::class.java)
+            startActivity(intent)
+        }
+
 
 
     }

@@ -1,69 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:background="#F0F0F0">
+    android:background="#FCFBF7">
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:orientation="vertical"
+        android:background="@drawable/background_calendar2"
+        android:elevation="10dp">
 
-        <ImageButton
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@drawable/icon_back"
-            android:scaleType="fitCenter"
-            android:layout_gravity="left"
-            android:background="@android:color/transparent"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/icon_back"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="우리의 하루"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="1dp"
+                android:layout_gravity="center">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="20dp">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/icon_schedule">
+            </ImageView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:id="@+id/clickDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="YY년 MM월 dd일"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+
     </LinearLayout>
+
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_margin="15dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Date"
-                    android:textSize="15dp"
-                    android:textColor="@color/black"
-                    android:gravity="center|left"/>
-                <TextView
-                    android:id="@+id/clickDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="MM월 dd일"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:layout_gravity="left" />
-            </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_margin="15dp">
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -75,7 +112,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="오늘의 일정"
+                            android:text="우리 가족 일정"
                             android:textColor="#000000"
                             android:layout_gravity="center_vertical"
                             android:layout_marginHorizontal="5dp"/>
@@ -85,8 +122,8 @@
                             android:layout_weight="1"/>
                         <ImageButton
                             android:id="@+id/scheduleBtn"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/icon_writing"
                             android:layout_gravity="center_vertical"
                             android:scaleType="fitXY"
@@ -123,7 +160,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="오늘의 가족 이야기"
+                            android:text="우리 가족 기록"
                             android:textColor="#000000"
                             android:layout_gravity="center_vertical"
                             android:layout_marginHorizontal="5dp"/>
@@ -133,8 +170,8 @@
                             android:layout_weight="1"/>
                         <ImageButton
                             android:id="@+id/familyBtn"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/icon_writing"
                             android:layout_gravity="center_vertical"
                             android:scaleType="fitXY"
@@ -171,7 +208,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="진행중인 내기"
+                            android:text="우리 가족 내기"
                             android:textColor="#000000"
                             android:layout_gravity="center_vertical"
                             android:layout_marginHorizontal="5dp"/>
@@ -181,8 +218,8 @@
                             android:layout_weight="1"/>
                         <ImageButton
                             android:id="@+id/gameBtn"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/icon_writing"
                             android:layout_gravity="center_vertical"
                             android:scaleType="fitXY"

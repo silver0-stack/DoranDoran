@@ -6,8 +6,8 @@
     android:layout_height="wrap_content"
     card_view:cardCornerRadius="20dp"
     android:layout_margin="10dp"
-    android:outlineSpotShadowColor="#F7A700"
-    android:outlineAmbientShadowColor="#F7A700"
+    android:outlineSpotShadowColor="#9FC089"
+    android:outlineAmbientShadowColor="#9FC089"
     android:orientation="vertical">
 
     <LinearLayout
@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginHorizontal="15dp"
-            android:layout_marginTop="10dp">
+            android:layout_margin="20dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -33,36 +33,49 @@
                     android:src="@drawable/emoji_mother"
                     android:layout_marginRight="10dp"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+
 
                     <TextView
                         android:id="@+id/family_name"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="엄마 생일파티"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:layout_gravity="center"
                         android:textColor="@color/black" />
-                    <TextView
-                        android:id="@+id/family_date"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="11월 3일 10시 28분"
-                        android:textSize="10dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/record_smilebf"
+                        android:layout_marginRight="10dp"/>
                 </LinearLayout>
+
+
             </LinearLayout>
 
-            <View
+
+            <TextView
+                android:id="@+id/family_date"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"/>
+                android:layout_height="wrap_content"
+                android:text="11월 3일 10시 28분"
+                android:layout_marginTop="5dp"
+                android:textSize="12dp"/>
 
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#33C4C4C4"/>
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="#9FC089"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -74,6 +87,8 @@
                 android:id="@+id/family_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="@color/black"
                 android:text="오늘 생일파티 진짜 개꿀잼!"/>
             </LinearLayout>
         </LinearLayout>
