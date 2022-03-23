@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.swu.doran">
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Doran">
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false" />
         <activity
             android:name=".profile.add.Profile_personality"
             android:exported="true" />
@@ -46,18 +51,14 @@
         <activity android:name=".profile.start.ProfileMenuActivity" />
         <activity android:name=".profile.edit.ProfileEditActivity" />
         <activity android:name=".profile.edit.ProfileSelectActivity" />
-        <activity android:name=".AddIssueActivity"/>
-        <activity android:name=".password.PasswordAppActivity"/>
-        <activity android:name=".password.PasswordEmailActivity"/>
-        <activity android:name=".password.EmailToSignIn"/>
-        <activity android:name=".mailbox.recieved.member.m_Activity"/>
-        <activity android:name=".mailbox.recieved.letter.list.l_contentsActivity"/>
-        <activity android:name=".mailbox.recieved.letter.scrap.s_Activity"/>
-        <activity android:name=".mailbox.recieved.letter.list.l_Activity"/>
-
-
-
-
+        <activity android:name=".AddIssueActivity" />
+        <activity android:name=".password.PasswordAppActivity" />
+        <activity android:name=".password.PasswordEmailActivity" />
+        <activity android:name=".password.EmailToSignIn" />
+        <activity android:name=".mailbox.recieved.member.m_Activity" />
+        <activity android:name=".mailbox.recieved.letter.list.l_contentsActivity" />
+        <activity android:name=".mailbox.recieved.letter.scrap.s_Activity" />
+        <activity android:name=".mailbox.recieved.letter.list.l_Activity" />
     </application>
 
 </manifest>

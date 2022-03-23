@@ -5,10 +5,12 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.common.internal.ImagesContract
 import com.swu.doran.mailbox.recieved.member.m_Activity
 import java.text.SimpleDateFormat
 import java.util.*
@@ -24,6 +26,12 @@ class MainActivity : AppCompatActivity() {
         val currentDate = findViewById<TextView>(R.id.currentDate)
         val sdf = SimpleDateFormat("yyyy년 MM월")
         currentDate.text = sdf.format(Date())
+
+        val chatBtn = findViewById<ImageButton>(R.id.chatBtn)
+        chatBtn.setOnClickListener({
+            val intent = Intent(this, ChatActivity::class.java)
+            startActivity(intent)
+        })
 
     }
 

@@ -146,7 +146,8 @@
                     android:orientation="vertical"
                     android:padding="15dp">
 
-                    <ImageView
+                    <ImageButton
+                        android:id="@+id/chatBtn"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
