@@ -32,7 +32,7 @@ class MainDayActivity : AppCompatActivity() {
 
 
 
-        viewManager_day = LinearLayoutManager(this, HORIZONTAL, true)
+        viewManager_day = LinearLayoutManager(this, RecyclerView.HORIZONTAL, true)
         viewAdapter_day = MainDayAdapter()
         recyclerView_day = findViewById<RecyclerView>(R.id.recyclerview_day).apply{
             setHasFixedSize(true)
@@ -40,7 +40,7 @@ class MainDayActivity : AppCompatActivity() {
             adapter = viewAdapter_day
         }
 
-        viewManager_family = LinearLayoutManager(this, HORIZONTAL, true)
+        viewManager_family = LinearLayoutManager(this, RecyclerView.HORIZONTAL, true)
         viewAdapter_family = MainfamilyAdapter()
         recyclerView_family = findViewById<RecyclerView>(R.id.recyclerview_family).apply{
             setHasFixedSize(true)
@@ -48,7 +48,7 @@ class MainDayActivity : AppCompatActivity() {
             adapter = viewAdapter_family
         }
 
-        viewManager_game = LinearLayoutManager(this, HORIZONTAL, true)
+        viewManager_game = LinearLayoutManager(this, RecyclerView.HORIZONTAL, true)
         viewAdapter_game = MaingameAdapter()
         recyclerView_game = findViewById<RecyclerView>(R.id.recyclerview_game).apply{
             setHasFixedSize(true)
