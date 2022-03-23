@@ -31,6 +31,7 @@ class MainDayActivity : AppCompatActivity() {
         setContentView(R.layout.main_day)
 
 
+
         viewManager_day = LinearLayoutManager(this, HORIZONTAL, true)
         viewAdapter_day = MainDayAdapter()
         recyclerView_day = findViewById<RecyclerView>(R.id.recyclerview_day).apply{
@@ -59,6 +60,10 @@ class MainDayActivity : AppCompatActivity() {
         val familyBtn = findViewById<ImageButton>(R.id.familyBtn)
         val gameBtn = findViewById<ImageButton>(R.id.gameBtn)
         val icon_back =findViewById<ImageButton>(R.id.back)
+        val schedule_check = findViewById<ImageButton>(R.id.schedule_checked)
+
+        //schedule_check.setOnClickListener{
+        //   schedule_check.isSelected = true}
 
         val date = findViewById<TextView>(R.id.clickDate)
 
