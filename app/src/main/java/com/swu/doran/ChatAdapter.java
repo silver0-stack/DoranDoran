@@ -1,5 +1,9 @@
 package com.swu.doran;
 
+import static androidx.core.app.ActivityCompat.startActivityForResult;
+import static androidx.core.content.ContextCompat.startActivity;
+
+import android.content.Intent;
 import android.os.Build;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -7,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -45,6 +50,19 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
 
             itemView.setEnabled(true);
             itemView.setClickable(true);
+
+            msgText.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    //Toast.makeText(v.getContext() , "click" , Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(v.getContext(), PopupActivity.class);
+                    intent.putExtra("data", msgText.getText());
+                    v.getContext().startActivity(intent);
+
+                    return false;
+                }
+            });
         }
     }
 

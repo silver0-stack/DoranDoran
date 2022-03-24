@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Doran">
         <activity
+            android:name=".PopupActivity"
+            android:theme="@android:style/Theme.Dialog"
+            android:exported="false"/>
+        <activity
             android:name=".ChatActivity"
             android:exported="false" />
         <activity

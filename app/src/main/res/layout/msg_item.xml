@@ -15,11 +15,16 @@
         android:textSize="14sp"
         android:textStyle="bold"/>
 
-    <TextView
+    <Button
         android:id="@+id/msgText"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:textAllCaps="false"
+        android:textAlignment="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
+        android:textSize="20sp"
+        android:textColor="#3B3326"
         android:paddingVertical="10dp"
         android:paddingHorizontal="20dp"
         android:background="@drawable/chatbox_background"/>
