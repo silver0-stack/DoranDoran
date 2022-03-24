@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
 
     //가족톡
     fun toFamilyTalk(view: android.view.View) {
-
+        startActivity(Intent(this, ChatActivity::class.java))
     }
 
     //우체통통
