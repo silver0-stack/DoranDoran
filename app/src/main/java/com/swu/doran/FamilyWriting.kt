@@ -12,6 +12,7 @@ class FamilyWriting : AppCompatActivity() {
         setContentView(R.layout.family_writing)
 
         val backBtn = findViewById<ImageButton>(R.id.backBtn)
+        val familyUpdateBtn = findViewById<ImageButton>(R.id.family_update_btn)
 
         backBtn.setOnClickListener{
             val intent = Intent(this, MainDayActivity::class.java)

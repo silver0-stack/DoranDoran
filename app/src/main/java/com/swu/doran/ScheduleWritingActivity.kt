@@ -45,7 +45,9 @@ class ScheduleWritingActivity : AppCompatActivity() {
         }
 
         time_before1.setOnClickListener{
-            time_before1?.isSelected = !time_before1.isSelected
+            if (time_before1 != null) {
+                time_before1.isSelected = !time_before1.isSelected;
+            }
 
         }
     }
