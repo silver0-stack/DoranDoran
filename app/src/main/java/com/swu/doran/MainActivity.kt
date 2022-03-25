@@ -23,15 +23,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        val currentDate = findViewById<TextView>(R.id.currentDate)
-//        val sdf = SimpleDateFormat("yyyy년 MM월")
-//        currentDate.text = sdf.format(Date())
-//
+        val currentDate = findViewById<TextView>(R.id.currentDate)
+        val sdf = SimpleDateFormat("yyyy년 MM월")
+        currentDate.text = sdf.format(Date())
+
 //        val chatBtn = findViewById<ImageButton>(R.id.chatBtn)
-//        chatBtn.setOnClickListener({
+//        chatBtn.setOnClickListener{
 //            val intent = Intent(this, ChatActivity::class.java)
 //            startActivity(intent)
-//        })
+//        }
 
     }
 

@@ -137,7 +137,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="0개"
+                    android:text="99개 +"
                     android:textColor="#F5C364"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -175,7 +175,7 @@
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="3"
+                android:layout_weight="3.5"
                 android:background="@drawable/main_calview">
 
                 <LinearLayout
@@ -333,19 +333,27 @@
                         android:textColor="@color/black"
                         android:textSize="15sp" />
                 </LinearLayout>
-
-                <TextView
-                    android:id="@+id/fullCal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:onClick="fullCal"
-                    android:text="▲ 전체 달력 보기"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
             </TableLayout>
+
         </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:text="전체 달력 보기"
+                android:onClick="fullCal"
+                android:background="@drawable/back_btn"
+                android:textColor="@color/white"
+                android:contentDescription="@string/submit" />
+
+        </FrameLayout>
 
         <LinearLayout
             android:id="@+id/settingsMenu"
@@ -360,8 +368,8 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
                 android:layout_gravity="left"
+                android:layout_marginTop="40dp"
                 android:onClick="clearMenu"
                 android:src="@drawable/main_list" />
 
@@ -382,8 +390,8 @@
                 android:layout_marginTop="15dp"
                 android:drawableLeft="@drawable/main_chat"
                 android:drawablePadding="5dip"
-                android:text="가족 톡"
                 android:onClick="toFamilyTalk"
+                android:text="가족 톡"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
 
@@ -393,8 +401,8 @@
                 android:layout_marginTop="15dp"
                 android:drawableLeft="@drawable/main_mailbox"
                 android:drawablePadding="5dip"
-                android:text="우체통"
                 android:onClick="toMailbox"
+                android:text="우체통"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
 
