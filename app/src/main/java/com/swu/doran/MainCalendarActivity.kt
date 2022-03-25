@@ -66,6 +66,7 @@ class MainCalendarActivity : AppCompatActivity() {
             intent.putExtra("month", (month + 1).toString())
             intent.putExtra("day", day.toString())
             addIssue.text = "${month + 1} 월 ${day}일 추억남기기"
+
         }
 
         val month = intent.getStringExtra("month")
@@ -77,6 +78,8 @@ class MainCalendarActivity : AppCompatActivity() {
             intent.putExtra("day", day.toString())
             startActivity(intent)
         }
+
+
 
     }
 

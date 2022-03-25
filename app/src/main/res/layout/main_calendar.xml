@@ -16,7 +16,7 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:onClick="settingsMenu"
-            android:src="@drawable/settings" />
+            android:src="@drawable/main_list2" />
 
         <View
             android:layout_width="0dp"
@@ -28,7 +28,7 @@
             android:id="@+id/images"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:src="@drawable/images" />
+            android:src="@drawable/main_bell" />
     </LinearLayout>
 
 
@@ -37,6 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/background_calendar"
+            android:selectedDateVerticalBar="@color/black"
             android:elevation="5dp" />
 
     <LinearLayout

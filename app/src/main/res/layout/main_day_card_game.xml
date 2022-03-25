@@ -6,8 +6,8 @@
     android:layout_height="wrap_content"
     card_view:cardCornerRadius="20dp"
     android:layout_margin="10dp"
-    android:outlineSpotShadowColor="#1DAAA1"
-    android:outlineAmbientShadowColor="#1DAAA1"
+    android:outlineSpotShadowColor="#79A6B4"
+    android:outlineAmbientShadowColor="#79A6B4"
     android:orientation="vertical">
 
     <LinearLayout
@@ -19,22 +19,47 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_margin="15dp">
-
-            <TextView
-                android:id="@+id/game_name"
+            android:layout_margin="20dp">
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="김지원 10키로 다이어트"
-                android:textColor="@color/black"/>
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/game_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="김지원 10키로 다이어트"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black">
+                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="D - 32"
+                        android:textStyle="bold"
+                        android:textColor="#79A6B4"
+                        android:textSize="14dp">
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/icon_game"
+                    android:src="@drawable/bet_day"
                     android:layout_marginRight="10dp"/>
                 <TextView
                     android:id="@+id/game_date"
@@ -45,11 +70,12 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/icon_game"
+                    android:src="@drawable/ourday_bet"
                     android:layout_marginRight="10dp"/>
                 <TextView
                     android:id="@+id/game_text"
@@ -65,9 +91,10 @@
         </LinearLayout>
 
         <View
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="1dp"
-            android:background="#33C4C4C4"/>
+            android:layout_gravity="center"
+            android:background="#79A6B4"/>
 
         <LinearLayout
             android:layout_width="wrap_content"

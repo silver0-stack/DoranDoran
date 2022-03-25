@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#F0F0F0"
     android:orientation="vertical">
 
@@ -16,7 +18,8 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:onClick="settingsMenu"
-            android:src="@drawable/settings" />
+            android:src="@drawable/main_list2"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <View
             android:layout_width="0dp"
@@ -28,7 +31,7 @@
             android:id="@+id/images"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:src="@drawable/images" />
+            android:src="@drawable/main_bell" />
     </LinearLayout>
 
 
@@ -37,35 +40,53 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/background_calendar"
+
         android:elevation="5dp" />
+
+
+    <!--
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/calendarView"
+            android:layout_weight="1"
+            app:mcv_selectionColor="#FEC24F"
+            android:background="@drawable/background_calendar"
+            app:mcv_showOtherDates="all">
+        </com.prolificinteractive.materialcalendarview.MaterialCalendarView>
+
+    </LinearLayout>
+    -->
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginBottom="50dp"
-        android:layout_marginTop="200dp">
-
+        android:gravity="bottom"
+       >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_margin="50dp"
             android:text="우리 가족의 추억을 남겨주세요요" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
 
         <TextView
             android:id="@+id/thisdayIssue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@drawable/main_bg"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/main_bg2"
             android:textColor="@color/white"
-            android:padding="10dp"
-            android:text="MM월 dd일 추억남기기"
+            android:padding="15dp"
+            android:text="우리의 하루 보기"
+            android:textStyle="bold"
             android:onClick="addIssue"/>
     </LinearLayout>
 
