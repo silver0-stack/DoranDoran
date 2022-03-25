@@ -42,53 +42,6 @@ class SendEmojiActivity : AppCompatActivity() {
         emoji3 = findViewById(R.id.emoji_3)
         emoji4 = findViewById(R.id.emoji_4)
 
-//
-//        emoji1.setOnClickListener {
-//            Intent(this, L_Activity::class.java).apply {
-//                emoji1.isSelected = !emoji1.isSelected;
-//                putExtra("emoji", Emoji_Data(emoji1))
-//                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-//            }.run {
-////                startActivity(this)
-//                Toast.makeText(this@SendEmojiActivity,"이모지1 클릭", Toast.LENGTH_SHORT).show()
-//            }
-//
-//        }
-//        emoji2.setOnClickListener {
-//            Intent(this, L_Activity::class.java).apply {
-//                emoji2.isSelected = !emoji2.isSelected;
-//                putExtra("emoji", Emoji_Data(emoji2))
-//                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-//            }.run {
-////                startActivity(this)
-//                Toast.makeText(this@SendEmojiActivity,"이모지2 클릭", Toast.LENGTH_SHORT).show()
-//            }
-//
-//        }
-//        emoji3.setOnClickListener {
-//            Intent(this, L_Activity::class.java).apply {
-//                emoji3.isSelected = !emoji3.isSelected;
-//                putExtra("emoji", Emoji_Data(emoji3))
-//                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-//            }.run {
-////                startActivity(this)
-//                Toast.makeText(this@SendEmojiActivity,"이모지3 클릭", Toast.LENGTH_SHORT).show()
-//            }
-//
-//        }
-//        emoji4.setOnClickListener {
-//            Intent(this, L_Activity::class.java).apply {
-//                emoji4.isSelected = !emoji4.isSelected;
-//                putExtra("emoji", Emoji_Data(emoji4))
-//                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-//            }.run {
-////                startActivity(this)
-//                Toast.makeText(this@SendEmojiActivity,"이모지4 클릭", Toast.LENGTH_SHORT).show()
-//            }
-//
-//        }
-
-
     }
 
     fun back(view: View) {
@@ -108,7 +61,7 @@ class SendEmojiActivity : AppCompatActivity() {
                 addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             }.run {
 //                startActivity(this)
-                Toast.makeText(this@SendEmojiActivity,"$view 클릭", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@SendEmojiActivity,"${view.accessibilityClassName} 클릭", Toast.LENGTH_SHORT).show()
             }
 
         }
