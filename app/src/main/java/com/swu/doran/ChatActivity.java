@@ -43,24 +43,21 @@ public class ChatActivity extends AppCompatActivity {
         chatText = findViewById(R.id.chatText);
         sendButton = findViewById(R.id.sendButton);
 
-        sendButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //입력창에 메시지를 입력 후 버튼클릭했을 때
-                String msg = chatText.getText().toString();
+        sendButton.setOnClickListener(v -> {
+            //입력창에 메시지를 입력 후 버튼클릭했을 때
+            String msg = chatText.getText().toString();
 
-                if(msg != null){
-                    Chat chat = new Chat();
-                    chat.setName(nickname);
-                    chat.setMsg(msg);
+            if(msg != null){
+                Chat chat = new Chat();
+                chat.setName(nickname);
+                chat.setMsg(msg);
 
-                    //메시지를 파이어베이스에 보냄.
-                    myRef.push().setValue(chat);
+                //메시지를 파이어베이스에 보냄.
+                myRef.push().setValue(chat);
 
-                    chatText.setText("");
-                }
-
+                chatText.setText("");
             }
+
         });
 
         //리사이클러뷰에 어댑터 적용

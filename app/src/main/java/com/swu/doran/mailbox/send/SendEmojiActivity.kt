@@ -10,6 +10,7 @@ import com.bumptech.glide.Glide
 import com.swu.doran.mailbox.sent.letter.list.L_Activity
 import com.swu.doran.mailbox.sent.member.M_Data
 import android.view.View
+import android.widget.Toast
 import com.swu.doran.R
 import com.swu.doran.mailbox.sent.letter.list.L_ContentsActivity
 import com.swu.doran.mailbox.sent.letter.list.L_Data
@@ -78,7 +79,8 @@ class SendEmojiActivity : AppCompatActivity() {
                 putExtra("emoji", Emoji_Data(emoji4))
                 addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             }.run {
-                startActivity(this)
+//                startActivity(this)
+                Toast.makeText(this@SendEmojiActivity,"일단 이모지 보내기는 성공, 받기를 해야됨", Toast.LENGTH_SHORT).show()
             }
 
         }

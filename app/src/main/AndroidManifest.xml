@@ -60,9 +60,15 @@
         <activity android:name=".password.PasswordEmailActivity" />
         <activity android:name=".password.EmailToSignIn" />
         <activity android:name=".mailbox.recieved.member.m_Activity" />
-        <activity android:name=".mailbox.recieved.letter.list.l_contentsActivity" />
+        <activity android:name=".mailbox.recieved.letter.list.l_ContentsActivity" />
         <activity android:name=".mailbox.recieved.letter.scrap.s_Activity" />
         <activity android:name=".mailbox.recieved.letter.list.l_Activity" />
+        <activity android:name=".mailbox.sent.letter.list.L_Activity"/>
+        <activity android:name=".mailbox.sent.member.M_Activity"/>
+        <activity android:name=".mailbox.sent.letter.list.L_ContentsActivity"/>
+        <activity android:name=".mailbox.send.SendActivity"/>
+        <activity android:name=".mailbox.send.SendEmojiActivity"/>
+        <activity android:name=".mailbox.send.SendLetterActivity"/>
     </application>
 
 </manifest>
