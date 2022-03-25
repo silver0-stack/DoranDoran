@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:src="@drawable/emoji_father"
+            android:src="@drawable/emoji1_selected"
             android:onClick="send_emoji"/>
         <ImageView
             android:id="@+id/emoji_2"
@@ -93,7 +93,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:src="@drawable/emoji_mother"
+            android:src="@drawable/emoji2_selected"
             android:onClick="send_emoji"/>
         <ImageView
             android:id="@+id/emoji_3"
@@ -101,14 +101,14 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:src="@drawable/emoji_daughter_1"
+            android:src="@drawable/emoji3_selected"
             android:onClick="send_emoji"/>
         <ImageView
             android:id="@+id/emoji_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/emoji_son_1"
+            android:src="@drawable/emoji4_selected"
             android:onClick="send_emoji"/>
     </LinearLayout>
 

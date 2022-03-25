@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.swu.doran.R
 import com.swu.doran.mailbox.sent.letter.list.L_Activity
+import com.swu.doran.mailbox.sent.letter.list.L_ContentsActivity
 
 class M_Adapter(private val context: Context) : RecyclerView.Adapter<M_Adapter.ViewHolder>() {
 
@@ -35,6 +36,12 @@ class M_Adapter(private val context: Context) : RecyclerView.Adapter<M_Adapter.V
                     addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 }.run {
                     context.startActivity(this)
+                }
+                Intent(context, L_ContentsActivity::class.java).apply {
+                    putExtra("data", item)
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                }.run {
+
                 }
             }
         }

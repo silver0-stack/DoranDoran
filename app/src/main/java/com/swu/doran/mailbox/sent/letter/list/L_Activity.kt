@@ -3,7 +3,6 @@ package com.swu.doran.mailbox.sent.letter.list
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -11,15 +10,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.swu.doran.R
-import com.swu.doran.mailbox.recieved.letter.list.l_Adapter
-import com.swu.doran.mailbox.recieved.letter.list.l_Data
-import com.swu.doran.mailbox.recieved.letter.scrap.s_Activity
-import com.swu.doran.mailbox.recieved.member.m_Data
+import com.swu.doran.mailbox.send.Emoji_Data
 import com.swu.doran.mailbox.send.SendActivity
 import com.swu.doran.mailbox.sent.member.M_Data
 
-class L_Activity : AppCompatActivity() {
+class L_Activity : AppCompatActivity(){
     lateinit var datas: M_Data
+    lateinit var emoji_data: Emoji_Data
     lateinit var img: ImageView
     lateinit var name: TextView
     lateinit var accumulated: TextView
@@ -32,8 +29,9 @@ class L_Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sent_letter_list)
 
+        adapter = L_Adapter(this)
         datas = (intent.getSerializableExtra("data") as? M_Data?)!!
-
+        emoji_data = (intent.getSerializableExtra("emoji") as? Emoji_Data?)!!
         img = findViewById(R.id.img)
         name = findViewById(R.id.name)
         accumulated = findViewById(R.id.accumulated)
@@ -45,11 +43,11 @@ class L_Activity : AppCompatActivity() {
         recyclerview = findViewById(R.id.sent_letter_list)
         initRecycler()
 
+
     }
 
     @SuppressLint("NotifyDataSetChanged")
     private fun initRecycler() {
-        adapter = L_Adapter(this)
         layoutmanager = LinearLayoutManager(this)
         recyclerview.setHasFixedSize(true)
         recyclerview.layoutManager = layoutmanager
@@ -57,6 +55,13 @@ class L_Activity : AppCompatActivity() {
 
 
         L_datas.apply {
+            val selected = intent.getIntExtra("emoji", 0);
+//           when(selected){
+//               1->
+//                mHomeButton.setImageResource(R.drawable.blue);
+//
+//                case 2 ... and so on
+//            }
             add(
                 L_Data(
                     img = datas.img,
@@ -90,7 +95,7 @@ class L_Activity : AppCompatActivity() {
     //
     fun sendLetter(view: android.view.View) {
         Intent(this, SendActivity::class.java).apply {
-           putExtra("data",datas)
+            putExtra("data", datas)
             addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         }.run { startActivity(this) }
     }

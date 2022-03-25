@@ -23,4 +23,7 @@ class SendLetterActivity:AppCompatActivity() {
         Glide.with(this).load(datas.img).into(img)
         name.text = datas.name
     }
+
+    //보내기 버튼
+    fun sendEmoji(view: android.view.View) {}
 }

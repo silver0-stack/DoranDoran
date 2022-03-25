@@ -34,30 +34,30 @@ class MainCalendarActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.calendar_add)
-//
-//        viewManager_day = LinearLayoutManager(this, RecyclerView.HORIZONTAL, true)
-//        viewAdapter_day = MainDayAdapter()
-//        recyclerView_day = findViewById<RecyclerView>(R.id.recyclerview_day).apply {
-//            setHasFixedSize(true)
-//            layoutManager = viewManager_day
-//            adapter = viewAdapter_day
-//        }
-//
-//        viewManager_family = LinearLayoutManager(this, RecyclerView.HORIZONTAL, true)
-//        viewAdapter_family = MainfamilyAdapter()
-//        recyclerView_family = findViewById<RecyclerView>(R.id.recyclerview_family).apply {
-//            setHasFixedSize(true)
-//            layoutManager = viewManager_family
-//            adapter = viewAdapter_family
-//        }
-//
-//        viewManager_game = LinearLayoutManager(this, RecyclerView.HORIZONTAL, true)
-//        viewAdapter_game = MaingameAdapter()
-//        recyclerView_game = findViewById<RecyclerView>(R.id.recyclerview_game).apply {
-//            setHasFixedSize(true)
-//            layoutManager = viewManager_game
-//            adapter = viewAdapter_game
-//        }
+
+        viewManager_day = LinearLayoutManager(this, RecyclerView.HORIZONTAL, true)
+        viewAdapter_day = MainDayAdapter()
+        recyclerView_day = findViewById<RecyclerView>(R.id.recyclerview_day).apply {
+            setHasFixedSize(true)
+            layoutManager = viewManager_day
+            adapter = viewAdapter_day
+        }
+
+        viewManager_family = LinearLayoutManager(this, RecyclerView.HORIZONTAL, true)
+        viewAdapter_family = MainfamilyAdapter()
+        recyclerView_family = findViewById<RecyclerView>(R.id.recyclerview_family).apply {
+            setHasFixedSize(true)
+            layoutManager = viewManager_family
+            adapter = viewAdapter_family
+        }
+
+        viewManager_game = LinearLayoutManager(this, RecyclerView.HORIZONTAL, true)
+        viewAdapter_game = MaingameAdapter()
+        recyclerView_game = findViewById<RecyclerView>(R.id.recyclerview_game).apply {
+            setHasFixedSize(true)
+            layoutManager = viewManager_game
+            adapter = viewAdapter_game
+        }
 
         val calendarView = findViewById<CalendarView>(R.id.calendarView)
         val addIssue = findViewById<TextView>(R.id.thisdayIssue)

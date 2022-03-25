@@ -7,9 +7,12 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.swu.doran.R
+import com.swu.doran.mailbox.sent.letter.list.L_Data
 import com.swu.doran.mailbox.sent.member.M_Data
 
 class SendActivity:AppCompatActivity() {
+    lateinit var l_datas: L_Data
+
     lateinit var datas: M_Data
     lateinit var img: ImageView
     lateinit var name: TextView
@@ -23,6 +26,7 @@ class SendActivity:AppCompatActivity() {
 
         Glide.with(this).load(datas.img).into(img)
         name.text = datas.name
+
     }
 
     fun back(view: android.view.View) {

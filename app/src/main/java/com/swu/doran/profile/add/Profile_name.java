@@ -18,9 +18,11 @@ public class Profile_name extends AppCompatActivity {
         setContentView(R.layout.profile_name);
 
         next_btn = findViewById(R.id.next_btn);
-        next_btn.setOnClickListener(view -> {
-           Intent intent = new Intent(getApplicationContext(),Profile_emoji.class);
-           startActivity(intent);
+        next_btn.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+               Intent intent = new Intent(getApplicationContext(),Profile_emoji.class);
+               startActivity(intent);
+            }
         });
 
     }

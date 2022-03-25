@@ -2,7 +2,6 @@ package com.swu.doran.mailbox.recieved.letter.list
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.graphics.Insets.add
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView

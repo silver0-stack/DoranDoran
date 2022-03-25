@@ -22,21 +22,29 @@
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/main_day_card_game.xml" value="0.33152173913043476" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/main_day_card_schedule.xml" value="0.33152173913043476" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/DoranDoran/app/src/main/res/layout/schedule_writing.xml" value="0.4557291666666667" />
+        <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/drawable/emoji2_selected.xml" value="0.23385416666666667" />
+        <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/drawable/emoji3_selected.xml" value="0.23385416666666667" />
+        <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/drawable/emoji4_selected.xml" value="0.23385416666666667" />
+        <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/drawable/emoji_selected.xml" value="0.23385416666666667" />
         <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/drawable/send_emoji.xml" value="0.20170940170940171" />
         <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/drawable/send_letter.xml" value="0.20170940170940171" />
+        <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/layout/activity_main.xml" value="0.128" />
         <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/layout/letter_list_item.xml" value="0.1918803418803419" />
         <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/layout/mailbox_member_item.xml" value="0.1918803418803419" />
+        <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/layout/main_calendar.xml" value="0.2" />
         <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/layout/received_letter_contents.xml" value="0.1918803418803419" />
         <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/layout/recieved_letter_list.xml" value="0.13974358974358975" />
         <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/layout/recieved_mailbox.xml" value="0.176" />
-        <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/layout/send_emoji.xml" value="0.18846153846153846" />
+        <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/layout/send_emoji.xml" value="0.264" />
         <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/layout/send_letter.xml" value="0.2" />
+        <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/layout/send_message.xml" value="0.2" />
         <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/layout/sent_letter_contents.xml" value="0.2047008547008547" />
         <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/layout/sent_letter_list.xml" value="0.2047008547008547" />
         <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/layout/sent_letter_scrap.xml" value="0.2047008547008547" />
         <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/layout/sent_list_item.xml" value="0.1918803418803419" />
         <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/layout/sent_mailbox.xml" value="0.2047008547008547" />
         <entry key="..\:/Users/qmfps/AndroidStudioProjects/DoranDoran-main/app/src/main/res/layout/sent_member_item.xml" value="0.1918803418803419" />
+        <entry key="..\:/Users/qmfps/AndroidStudioProjects/hollys_doran/app/src/main/res/layout/family_writing.xml" value="0.109375" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/drawable/edittext_bg.xml" value="0.17777777777777778" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/drawable/edittext_rightcheck.xml" value="0.2307017543859649" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran/app/src/main/res/drawable/edittext_wrongcheck.xml" value="0.17777777777777778" />

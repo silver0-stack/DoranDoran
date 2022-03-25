@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg_main"
-        tools:ignore="UselessParent">
+        tools:ignore="UselessParent"
+        android:background="@drawable/bg_main">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -52,9 +52,9 @@
                 android:id="@+id/parent1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
                 android:layout_margin="20dp"
-                android:background="@drawable/main_bg"
+                android:layout_gravity="right"
+               android:background="@drawable/main_bg"
                 android:orientation="vertical"
                 android:padding="15dp">
 
@@ -72,9 +72,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="D-9"
+                    android:textStyle="bold"
                     android:textColor="#222222"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -89,26 +89,26 @@
                 android:id="@+id/parent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
                 android:layout_margin="20dp"
-                android:background="@drawable/main_bg"
-                android:orientation="vertical"
-                android:padding="15dp">
+                android:padding="15dp"
+                android:layout_gravity="right"
+              android:background="@drawable/main_bg"
+                android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="50dp"
-                    android:layout_height="50dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/flag" />
+                    android:layout_height="50dp"
+                    android:src="@drawable/flag"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="D-9"
+                    android:textStyle="bold"
                     android:textColor="#292929"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -140,8 +140,8 @@
                 android:layout_marginBottom="30dp"
                 android:padding="1dp"
                 android:text="오늘 하루 우리 가족의 소통은 어땠나요?"
-                android:textColor="#000000"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="#000000" />
 
             <TableLayout
                 android:layout_width="match_parent"
@@ -345,29 +345,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="100dp"
-                android:text="⚙️프로필"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="15sp" />
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:onClick="toFamilyTalk"
-                android:text="⚙️가족톡"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="15sp" />
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:onClick="toMailbox"
-                android:text="⚙️우체통"
+                android:text="⚙️프로필 설정"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="15sp" />
@@ -376,7 +354,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="⚙️ 가족규칙"
+                android:text="⚙️알림"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="15sp" />
@@ -385,7 +363,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="⚙️ 설정"
+                android:text="⚙️채팅"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="⚙️출석달력"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="⚙️ 로그아웃"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="15sp" />

@@ -18,9 +18,12 @@ public class Profile_select_emoji extends AppCompatActivity {
         setContentView(R.layout.profile_select_emoji);
 
         next_btn = findViewById(R.id.next_btn);
-        next_btn.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(),Profile_emoji.class);
-            startActivity(intent);
+        next_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Profile_emoji.class);
+                startActivity(intent);
+            }
         });
     }
 }

@@ -21,15 +21,21 @@ public class Profile_emoji extends AppCompatActivity {
 
 
         select_emoji_btn = findViewById(R.id.select_emoji_btn);
-        select_emoji_btn.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(),Profile_select_emoji.class);
-            startActivity(intent);
+        select_emoji_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Profile_select_emoji.class);
+                startActivity(intent);
+            }
         });
 
         next_btn = findViewById(R.id.next_btn);
-        next_btn.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(),Profile_birthday.class);
-            startActivity(intent);
+        next_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Profile_birthday.class);
+                startActivity(intent);
+            }
         });
 
     }
