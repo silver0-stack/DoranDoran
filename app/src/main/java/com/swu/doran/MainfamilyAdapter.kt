@@ -11,9 +11,9 @@ import androidx.recyclerview.widget.RecyclerView
 class MainfamilyAdapter() :
     RecyclerView.Adapter<MainfamilyAdapter.MyViewHolder>() {
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        public var familyname: TextView = itemView.findViewById(R.id.family_name)
+        public var familyname: TextView = itemView.findViewById(R.id.family_card_title)
         public var familydate: TextView = itemView.findViewById(R.id.family_date)
-        public var familytext: TextView = itemView.findViewById(R.id.family_text)
+        public var familytext: TextView = itemView.findViewById(R.id.family_card_content)
 
     }
 

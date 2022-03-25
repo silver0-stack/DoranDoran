@@ -20,7 +20,11 @@ class ScheduleWritingActivity : AppCompatActivity() {
         val backBtn = findViewById<ImageButton>(R.id.backBtn)
         val time_start_btn = findViewById<Button>(R.id.time_start_btn);
         val time_end_btn = findViewById<Button>(R.id.time_end_btn);
+
         val time_before1 = findViewById<TextView>(R.id.time_before1);
+        val time_before2 = findViewById<TextView>(R.id.time_before2);
+        val time_before3 = findViewById<TextView>(R.id.time_before3);
+        val time_before4 = findViewById<TextView>(R.id.time_before4);
 
             backBtn.setOnClickListener{
                 val intent = Intent(this, MainDayActivity::class.java)
@@ -45,10 +49,21 @@ class ScheduleWritingActivity : AppCompatActivity() {
             TimePickerDialog(this, timeSetListener, cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE),true).show()
         }
 
-        time_before1.isSelected=true
         time_before1.setOnClickListener{
-            time_before1?.isSelected = !time_before1.isSelected
-
+            if (time_before1 != null) {
+                time_before1.isSelected = !time_before1.isSelected; }
+        }
+        time_before2.setOnClickListener{
+            if (time_before2 != null) {
+                time_before2.isSelected = !time_before2.isSelected; }
+        }
+        time_before3.setOnClickListener{
+            if (time_before3 != null) {
+                time_before3.isSelected = !time_before3.isSelected; }
+        }
+        time_before4.setOnClickListener{
+            if (time_before4 != null) {
+                time_before4.isSelected = !time_before4.isSelected; }
         }
     }
 }
