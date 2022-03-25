@@ -12,31 +12,24 @@ import com.swu.doran.R;
 
 public class Profile_emoji extends AppCompatActivity {
 
-    TextView select_emoji_btn;
-    TextView next_btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_emoji);
 
 
-        select_emoji_btn = findViewById(R.id.select_emoji_btn);
-        select_emoji_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Profile_select_emoji.class);
-                startActivity(intent);
-            }
-        });
+    }
 
-        next_btn = findViewById(R.id.next_btn);
-        next_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Profile_birthday.class);
-                startActivity(intent);
-            }
-        });
+    public void next(View view) {
+        startActivity(new Intent(this, Profile_birthday.class));
+    }
 
+    public void back(View view) {
+        super.onBackPressed();
+    }
+
+    //프사 선택
+    public void selectImg(View view) {
+        startActivity(new Intent(this, Profile_select_emoji.class));
     }
 }

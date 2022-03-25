@@ -1,90 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".profile.add.Profile_emoji"
     android:orientation="vertical">
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:gravity="center"
         android:layout_height="wrap_content"
+        android:background="@drawable/top_menubar"
+        android:padding="25dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:onClick="back"
+            android:text="이전"
+            android:textSize="15sp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:onClick="next"
+            android:text="다음"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="30dp">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#000000"
+            android:text="저희 서비스에서 사용할\n프로필 이미지를 선택해주세요."
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:textSize="15dp"
-            android:text="이전">
+            android:textColor="#F5C364"
+            android:padding="5dp"/>
 
-        </TextView>
-        <TextView
-            android:id="@+id/next_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:textSize="15dp"
-            android:text="다음"
-            android:layout_marginLeft="330dp"
-            >
 
-        </TextView>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="50dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="저희 서비스에서 사용할 "
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:textColor="#000000"
+            android:text="나를 잘 표현할 수 있는\n이미지이면 좋을 것 같아요!"
+            android:textSize="14sp"
+            android:textColor="@color/black"
             android:padding="5dp"
-            android:layout_marginLeft="25dp">
+            android:layout_marginTop="10dp"/>
 
-        </TextView>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="프로필 이미지를 선택해주세요"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            android:padding="5dp"
-            android:layout_marginLeft="25dp"
-            >
-        </TextView>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="나를 잘 표현할 수 있는"
-            android:textSize="14dp"
-            android:textStyle="normal"
-            android:textColor="#858585"
-            android:padding="5dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="10dp"
-            >
-        </TextView>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="이미지이면 좋을 것 같아요!"
-            android:textSize="14dp"
-            android:textStyle="normal"
-            android:textColor="#858585"
-            android:padding="5dp"
-            android:layout_marginLeft="25dp"
-            >
-        </TextView>
 
     </LinearLayout>
 
@@ -92,7 +69,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="150dp">
 
         <ImageView
             android:layout_width="90dp"
@@ -100,35 +77,30 @@
             android:background="@drawable/emoji_daughter_1"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:layout_gravity="center"
-            >
-        </ImageView>
+            android:layout_gravity="center"/>
+
         <TextView
-            android:id="@+id/select_emoji_btn"
+            android:layout_marginTop="20dp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="normal"
-            android:text="이미지 선택하기 >"
-            android:textSize="15dp"
-            android:textColor="#000000">
-        </TextView>
+            android:text="이미지 선택하기"
+            android:onClick="selectImg"
+            android:textSize="15sp"
+            android:textColor="#F5C364"/>
+
 
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:gravity="bottom"
-        android:layout_marginBottom="40dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"/>
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2 / 4"
-            android:textStyle="normal"
-            android:textColor="#8A8A8A"
-            >
-
-        </TextView>
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="2 / 3"
+            android:layout_gravity="center"
+            android:textColor="@color/black"/>
     </LinearLayout>
-</LinearLayout>

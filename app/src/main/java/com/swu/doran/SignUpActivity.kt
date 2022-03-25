@@ -20,11 +20,10 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var Email: EditText
     private lateinit var PW: EditText
     private lateinit var PW_confirm: EditText
-    private lateinit var nickname: EditText
     private lateinit var emailCheck: TextView
     private lateinit var pwCheck: TextView
     private lateinit var pw_confirmCheck: TextView
-    private lateinit var nicknameCheck: TextView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -121,12 +120,11 @@ class SignUpActivity : AppCompatActivity() {
             Email.text.toString().trim(),
             PW.text.toString().trim(),
             PW_confirm.text.toString().trim(),
-            nickname.text.toString().trim()
         )
     }
 
-    private fun createAccount(email: String, pw: String, pw_confirm: String, nickname: String) {
-        if (email.isNotEmpty() && pw.isNotEmpty() && pw_confirm.isNotEmpty() && nickname.isNotEmpty()) {
+    private fun createAccount(email: String, pw: String, pw_confirm: String) {
+        if (email.isNotEmpty() && pw.isNotEmpty() && pw_confirm.isNotEmpty()) {
             mAuth.createUserWithEmailAndPassword(email, pw)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {

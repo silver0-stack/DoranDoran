@@ -13,6 +13,7 @@ import com.bumptech.glide.Glide
 import com.swu.doran.R
 import com.swu.doran.mailbox.send.SendActivity
 import com.swu.doran.mailbox.sent.member.M_Data
+import com.swu.doran.profile.start.ProfileMenuActivity
 
 //쪽지를 보냈으면 쪽지내용을 받을게 아니라 타이틀이 출력되야 함
 //
@@ -54,7 +55,10 @@ class L_Activity_X : AppCompatActivity(){
     }
 
     fun send_letter(view: View) {
-        Intent(this,SendActivity::class.java)
+        Intent(this, SendActivity::class.java).apply {
+            putExtra("data", datas)
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        }.run { startActivity(this) }
     }
 
 }

@@ -24,6 +24,7 @@ class PasswordAppActivity : AppCompatActivity() {
         newpw = findViewById(R.id.newpw)
         checkpw = findViewById(R.id.checkpw)
         btn = findViewById(R.id.app_pw)
+
         //비밀번호 일치 여부 확인하기
         newpw.addTextChangedListener(object : TextWatcher {
             // EditText에 문자 입력 전
@@ -44,7 +45,6 @@ class PasswordAppActivity : AppCompatActivity() {
                             R.drawable.edittext_rightcheck
                         )
                     )
-                    btn.isEnabled=true
                 } else {
                     newpw.setBackgroundDrawable(
                         ContextCompat.getDrawable(

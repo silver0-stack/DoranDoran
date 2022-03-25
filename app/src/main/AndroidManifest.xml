@@ -19,9 +19,6 @@
             android:name=".ChatActivity"
             android:exported="false" />
         <activity
-            android:name=".profile.add.Profile_personality"
-            android:exported="true" />
-        <activity
             android:name=".profile.add.Profile_birthday"
             android:exported="true" />
         <activity
@@ -69,6 +66,7 @@
         <activity android:name=".mailbox.send.SendActivity"/>
         <activity android:name=".mailbox.send.SendEmojiActivity"/>
         <activity android:name=".mailbox.send.SendLetterActivity"/>
+        <activity android:name=".mailbox.sent.letter.list.L_Activity_O"/>
     </application>
 
 </manifest>

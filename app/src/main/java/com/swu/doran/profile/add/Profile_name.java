@@ -17,13 +17,13 @@ public class Profile_name extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_name);
 
-        next_btn = findViewById(R.id.next_btn);
-        next_btn.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view){
-               Intent intent = new Intent(getApplicationContext(),Profile_emoji.class);
-               startActivity(intent);
-            }
-        });
+    }
 
+    public void back(View view) {
+        super.onBackPressed();
+    }
+
+    public void next(View view) {
+        startActivity(new Intent(this, Profile_emoji.class));
     }
 }

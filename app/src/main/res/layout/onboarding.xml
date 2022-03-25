@@ -25,7 +25,7 @@
             android:background="@drawable/button_bg"
             android:onClick="signIn"
             android:text="로그인"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="16sp" />
 
 
@@ -38,19 +38,13 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="새로운 계정을 만드시겠습니까?"
-                android:textColor="@color/black" />
-
-            <TextView
                 android:id="@+id/signUp_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:onClick="signUp"
-                android:text="회원가입"
-                android:textColor="@color/black"
+                android:text="신규계정 만들기"
+                android:textColor="#F5C364"
                 android:textStyle="bold" />
 
         </LinearLayout>

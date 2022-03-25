@@ -8,22 +8,22 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.swu.doran.R;
+import com.swu.doran.profile.start.ProfileMenuActivity;
 
 public class Profile_birthday extends AppCompatActivity {
 
-    TextView next_btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_birthday);
+    }
 
-        next_btn=findViewById(R.id.next_btn);
-        next_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Profile_personality.class);
-                startActivity(intent);
-            }
-        });
+    public void back(View view) {
+        super.onBackPressed();
+    }
+
+    //프로필 설정 완료 버튼
+    public void complete(View view) {
+        startActivity(new Intent(this, ProfileMenuActivity.class));
     }
 }

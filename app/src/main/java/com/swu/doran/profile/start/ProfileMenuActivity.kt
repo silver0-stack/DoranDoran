@@ -36,16 +36,16 @@ open class ProfileMenuActivity : AppCompatActivity() {
             val intent=Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-        val emoji_2 = findViewById<ImageView>(R.id.emoji_2)
-        emoji_2.setOnClickListener{
-            val intent=Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
-        val emoji_3 = findViewById<ImageView>(R.id.emoji_3)
-        emoji_3.setOnClickListener{
-            val intent=Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+//        val emoji_2 = findViewById<ImageView>(R.id.emoji_2)
+//        emoji_2.setOnClickListener{
+//            val intent=Intent(this, MainActivity::class.java)
+//            startActivity(intent)
+//        }
+//        val emoji_3 = findViewById<ImageView>(R.id.emoji_3)
+//        emoji_3.setOnClickListener{
+//            val intent=Intent(this, MainActivity::class.java)
+//            startActivity(intent)
+//        }
     }
     /*
     lateinit var inflater: LayoutInflater

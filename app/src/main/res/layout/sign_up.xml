@@ -33,6 +33,7 @@
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
+
                     <TextView
                         android:id="@+id/emailCheck"
                         android:layout_width="wrap_content"
@@ -46,8 +47,15 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="5dp"
                     android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:textStyle="bold"
+                        android:text="* 비밀번호 변경 시 필요한 이메일입니다.\n실제로 사용 중인 이메일을 입력해주세요."
+                        android:textColor="#F5C364"/>
 
                     <EditText
                         android:id="@+id/userEmail"
@@ -166,7 +174,7 @@
                         android:background="@drawable/button_bg"
                         android:onClick="signUpComplete"
                         android:text="회원가입"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="15sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -180,21 +188,13 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="계정이 이미 있으십니까?"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
-
-                    <TextView
                         android:id="@+id/signUp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:text="로그인 하러가기"
-                        android:textColor="@color/black"
+                        android:textColor="#F5C364"
                         android:textSize="14sp"
-                        android:textStyle="bold"
                         android:onClick="signUp"/>
 
 

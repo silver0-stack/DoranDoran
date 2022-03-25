@@ -55,7 +55,7 @@
             android:layout_height="55dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/edittext_bg"
-            android:hint="비밀번를 입력하세요"
+            android:hint="비밀번호를 입력하세요"
             android:textColor="@color/black"
             android:inputType="textEmailAddress"
             android:paddingStart="15dp"
@@ -70,7 +70,7 @@
             android:gravity="right"
             android:text="비밀번호 변경"
             android:textStyle="bold"
-            android:textColor="@color/black"
+            android:textColor="#F5C364"
             android:textSize="14sp"
             android:onClick="change_pw"/>
 
@@ -82,7 +82,7 @@
             android:layout_marginTop="25dp"
             android:background="@drawable/button_bg"
             android:text="로그인"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="16sp"
             android:onClick="signInComplete"/>
 
@@ -94,21 +94,13 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="새로운 계정을 만드시겠습니까?"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-
-            <TextView
                 android:id="@+id/signUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="회원가입"
-                android:textColor="@color/black"
+                android:text="신규계정 만들기"
+                android:textColor="#F5C364"
                 android:textSize="14sp"
-                android:textStyle="bold"
                 android:onClick="signUp"/>
 
 
