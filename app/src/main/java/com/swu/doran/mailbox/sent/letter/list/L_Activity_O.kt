@@ -10,13 +10,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.swu.doran.R
-import com.swu.doran.mailbox.send.Emoji_Data
 import com.swu.doran.mailbox.send.SendActivity
 import com.swu.doran.mailbox.sent.member.M_Data
 
-class L_Activity : AppCompatActivity(){
+class L_Activity_O:AppCompatActivity(){
     lateinit var datas: M_Data
-    lateinit var emoji_data: Emoji_Data
+    //    lateinit var emoji_data: Emoji_Data
     lateinit var img: ImageView
     lateinit var name: TextView
     lateinit var accumulated: TextView
@@ -24,14 +23,13 @@ class L_Activity : AppCompatActivity(){
     private lateinit var adapter: L_Adapter //adapter 객체 먼저 선언해주기!
     private var layoutmanager: RecyclerView.LayoutManager? = null
     val L_datas = mutableListOf<L_Data>()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.sent_letter_list)
+        setContentView(R.layout.sent_letter_list_o)
 
         adapter = L_Adapter(this)
         datas = (intent.getSerializableExtra("data") as? M_Data?)!!
-        emoji_data = (intent.getSerializableExtra("emoji") as? Emoji_Data?)!!
+//        emoji_data = (intent.getSerializableExtra("emoji") as? Emoji_Data?)!!
         img = findViewById(R.id.img)
         name = findViewById(R.id.name)
         accumulated = findViewById(R.id.accumulated)
@@ -88,11 +86,6 @@ class L_Activity : AppCompatActivity(){
         }
     }
 
-    fun back(view: android.view.View) {
-        super.onBackPressed()
-    }
-
-    //
     fun sendLetter(view: android.view.View) {
         Intent(this, SendActivity::class.java).apply {
             putExtra("data", datas)

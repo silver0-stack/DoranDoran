@@ -5,13 +5,12 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.swu.doran.R
-import com.swu.doran.mailbox.sent.letter.list.L_Activity
+import com.swu.doran.mailbox.sent.letter.list.L_Activity_X
 import com.swu.doran.mailbox.sent.letter.list.L_ContentsActivity
 
 class M_Adapter(private val context: Context) : RecyclerView.Adapter<M_Adapter.ViewHolder>() {
@@ -31,7 +30,7 @@ class M_Adapter(private val context: Context) : RecyclerView.Adapter<M_Adapter.V
             //멤버 아이템 클릭 리스너
             //멤버데이터에서 이미지,이름,누적개수,뱃지 추출
             itemView.setOnClickListener {
-                Intent(context, L_Activity::class.java).apply {
+                Intent(context, L_Activity_X::class.java).apply {
                     putExtra("data", item)
                     addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 }.run {

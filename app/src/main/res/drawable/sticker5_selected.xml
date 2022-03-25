@@ -2,7 +2,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:state_selected="true"
-        android:drawable="@drawable/emoji_daughter_1" />
+        android:drawable="@drawable/sticker5_o" />
     <item
-        android:drawable="@drawable/emoji_son_1" />
+        android:drawable="@drawable/sticker5_x" />
 </selector>

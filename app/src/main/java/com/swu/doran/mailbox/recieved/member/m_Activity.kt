@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.swu.doran.R
-import com.swu.doran.mailbox.sent.letter.list.L_Activity
 import com.swu.doran.mailbox.sent.member.M_Activity
 
 class m_Activity : AppCompatActivity() {

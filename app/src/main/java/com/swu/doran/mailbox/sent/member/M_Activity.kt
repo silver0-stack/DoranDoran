@@ -36,9 +36,9 @@ class M_Activity:AppCompatActivity() {
 
 
         M_datas.apply {
-            add(M_Data(img = R.drawable.emoji_mother, name = "엄마", accumulated = 10))
-            add(M_Data(img = R.drawable.emoji_father, name = "아빠", accumulated = 7))
-            add(M_Data(img = R.drawable.emoji_daughter_1, name = "언니", accumulated = 5))
+            add(M_Data(img = R.drawable.emoji_mother, name = "엄마", accumulated = 0))
+            add(M_Data(img = R.drawable.emoji_father, name = "아빠", accumulated = 0))
+            add(M_Data(img = R.drawable.emoji_daughter_1, name = "언니", accumulated = 0))
             adapter.datas =  M_datas
             adapter.notifyDataSetChanged()
         }

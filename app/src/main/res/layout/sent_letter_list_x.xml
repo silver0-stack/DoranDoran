@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -28,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
-                android:text="이모티콘 보내기"
+                android:text="보낸 편지함"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -57,6 +59,15 @@
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
+            <TextView
+                android:id="@+id/accumulated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                android:text="n"
+                android:textSize="15sp" />
+
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -67,86 +78,44 @@
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_gravity="center"
-                android:src="@drawable/message"
-                android:onClick="sendEmoji"/>
+                android:onClick="sendLetter"
+                android:src="@drawable/message" />
         </LinearLayout>
 
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:orientation="horizontal">
-        <ImageView
-            android:id="@+id/emoji_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:src="@drawable/sticker1_selected"
-            android:onClick="send_emoji"/>
-        <ImageView
-            android:id="@+id/emoji_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:src="@drawable/sticker2_selected"
-            android:onClick="send_emoji"/>
-        <ImageView
-            android:id="@+id/emoji_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:src="@drawable/sticker3_selected"
-            android:onClick="send_emoji"/>
-        <ImageView
-            android:id="@+id/emoji_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/sticker4_selected"
-            android:onClick="send_emoji"/>
-    </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:orientation="horizontal">
-        <ImageView
-            android:id="@+id/emoji_5"
+        android:layout_gravity="center"
+        android:layout_marginTop="250dp"
+        android:orientation="vertical">
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:src="@drawable/sticker5_selected"
-            android:onClick="send_emoji"/>
-        <ImageView
-            android:id="@+id/emoji_6"
+            android:textAlignment="center"
+            android:text="아직 보낸 편지가 없어요!\n가족들에게 감정을 표현해 보세요."
+            android:textColor="@color/black" />
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:src="@drawable/sticker6_selected"
-            android:onClick="send_emoji"/>
-        <ImageView
-            android:id="@+id/emoji_7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:src="@drawable/sticker7_selected"
-            android:onClick="send_emoji"/>
-        <ImageView
-            android:id="@+id/emoji_8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/sticker8_selected"
-            android:onClick="send_emoji"/>
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="편지 보내기"
+            android:onClick="send_letter"
+            android:textSize="16sp"
+            android:textColor="#F5C364" />
     </LinearLayout>
 
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sent_letter_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <!--    tools:listitem="@layout/sent_list_item"-->
 </LinearLayout>
