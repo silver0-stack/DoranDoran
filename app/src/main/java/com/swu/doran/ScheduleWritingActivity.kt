@@ -45,7 +45,8 @@ class ScheduleWritingActivity : AppCompatActivity() {
         }
 
         time_before1.setOnClickListener{
-           // time_before1.background = drawable
+            time_before1?.isSelected = !time_before1.isSelected
+
         }
     }
 }

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/back_btn" android:state_selected="true" />
+    <item
+        android:state_selected="true"
+        android:drawable="@drawable/back_btn"
+       />
 
-    <!-- View가 눌리지 않았을 때 @android:drawable/star_big_off 를 보여준다.-->
-    <item android:drawable="@drawable/back_btn_w" android:state_selected="false" />
+    <item
+        android:state_selected="false"
+        android:drawable="@drawable/back_btn_w"
+        />
 </selector>
