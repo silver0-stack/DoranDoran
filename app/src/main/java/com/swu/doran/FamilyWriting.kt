@@ -19,8 +19,8 @@ import java.util.Currency.getInstance
 class FamilyWriting : AppCompatActivity() {
 
     private lateinit var database: DatabaseReference
-    private lateinit var title: String
-    private lateinit var content:String
+    private lateinit var title: String //제목
+    private lateinit var content:String //내용
 
     private var uid:String = ""
 
@@ -52,9 +52,11 @@ class FamilyWriting : AppCompatActivity() {
                 familyTitle.text.toString(),
                 familyContnet.text.toString()
             )
-            myRef.child(uid).push().setValue(dataInput)
+            myRef.child("day").child("family").child(uid).push().setValue(dataInput)
 
 
+            val intent = Intent(this, MainDayActivity::class.java)
+            startActivity(intent)
         }
 
 
