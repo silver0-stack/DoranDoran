@@ -74,9 +74,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="50dp"
-            android:text="우리 가족의 추억을 남겨주세요요" />
+            android:text="우리 가족의 추억을 남겨주세요" />
 
-        <TextView
+        <Button
             android:id="@+id/thisdayIssue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

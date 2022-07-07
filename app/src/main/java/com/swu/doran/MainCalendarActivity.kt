@@ -99,6 +99,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.FirebaseDatabase
 import java.lang.String.format
 import java.text.SimpleDateFormat
 
@@ -115,6 +116,13 @@ class MainCalendarActivity : AppCompatActivity() {
     private lateinit var recyclerView_game: RecyclerView
     private lateinit var viewAdapter_game: RecyclerView.Adapter<*>
     private lateinit var viewManager_game: RecyclerView.LayoutManager
+
+    //변수
+    var userID: String = "userID"
+    lateinit var fname: String
+    lateinit var str:String
+
+
 
     @SuppressLint("InflateParams", "WrongConstant")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -145,13 +153,17 @@ class MainCalendarActivity : AppCompatActivity() {
 //            adapter = viewAdapter_game
 //        }
 
-        val calendarView = findViewById<CalendarView>(R.id.calendarView)
-        val addIssue = findViewById<TextView>(R.id.thisdayIssue)
+        val calendarView = findViewById<CalendarView>(R.id.calendarView)  //캘린더뷰
+        val addIssue = findViewById<TextView>(R.id.thisdayIssue)   //오늘의 하루 보기 버튼
+
+
         //날짜 클릭 이벤트 리스너
         calendarView.setOnDateChangeListener { view, year, month, day ->
             intent.putExtra("month", (month + 1).toString())
             intent.putExtra("day", day.toString())
             addIssue.text = "${month + 1}월 ${day}일 추억남기기"
+
+
         }
 
         val month = intent.getStringExtra("month")
@@ -162,6 +174,19 @@ class MainCalendarActivity : AppCompatActivity() {
             intent.putExtra("month", month.toString())
             intent.putExtra("day", day.toString())
             startActivity(intent)
+
+            //val database = FirebaseDatabase.getInstance()
+            //val myRef = database.getReference()
+
+            //val dataInput = Date(
+            //    addIssue.text.toString()
+            //)
+
+            //myRef.child("day").child("game").push().setValue(dataInput)
+
+
+
+
         }
 
     }

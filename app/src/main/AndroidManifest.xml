@@ -32,15 +32,17 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:usesCleartextTraffic="true" />
-        <activity
-            android:name=".OnBoardingActivity"
+            android:usesCleartextTraffic="true"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".OnBoardingActivity"
+            >
+
         </activity>
         <activity android:name=".SignInActivity" />
         <activity android:name=".SignUpActivity" />
