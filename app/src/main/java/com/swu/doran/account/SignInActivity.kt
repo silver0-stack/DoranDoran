@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.swu.doran.R
-import com.swu.doran.password.PasswordEmailActivity
 import com.swu.doran.profile.start.ProfileMenuActivity
 
 class SignInActivity : AppCompatActivity() {
@@ -34,11 +33,11 @@ class SignInActivity : AppCompatActivity() {
 
     // 유저정보 넘겨주고 메인 액티비티 호출
     private fun moveMainPage(currentUser: FirebaseUser?) {
-        if (currentUser != null) {
-            startActivity(Intent(this, ProfileMenuActivity::class.java))
+            val i = Intent(this, ProfileMenuActivity::class.java)
+            i.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             finish()
         }
-    }
+
 
     //비번잊음 메소드
     fun forgetPW(view:View) {

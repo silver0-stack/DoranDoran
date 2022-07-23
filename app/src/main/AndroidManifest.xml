@@ -55,9 +55,9 @@
         <activity android:name=".profile.edit.ProfileEditActivity" />
         <activity android:name=".profile.edit.ProfileSelectActivity" />
         <activity android:name=".AddIssueActivity" />
-        <activity android:name=".password.PasswordAppActivity" />
-        <activity android:name=".password.PasswordEmailActivity" />
-        <activity android:name=".password.EmailToSignIn" />
+        <activity android:name=".account.PasswordAppActivity" />
+        <activity android:name=".account.PasswordEmailActivity" />
+        <activity android:name=".account.EmailToSignIn" />
         <activity android:name=".mailbox.recieved.member.m_Activity" />
         <activity android:name=".mailbox.recieved.letter.list.l_ContentsActivity" />
         <activity android:name=".mailbox.recieved.letter.scrap.s_Activity" />

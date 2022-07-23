@@ -93,6 +93,7 @@
             android:background="@drawable/button_bg"
             android:onClick="app_pw"
             android:text="비밀번호 변경"
+            android:enabled="false"
             android:textColor="@color/white"
             android:textSize="15sp"
             android:textStyle="bold" />

@@ -1,4 +1,4 @@
-package com.swu.doran.password
+package com.swu.doran.account
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.swu.doran.R
-import com.swu.doran.account.SignInActivity
+
 ///
 class PasswordAppActivity : AppCompatActivity() {
     lateinit var newpw: EditText
@@ -45,6 +45,7 @@ class PasswordAppActivity : AppCompatActivity() {
                             R.drawable.edittext_rightcheck
                         )
                     )
+                    btn.isEnabled=true
                 } else {
                     newpw.setBackgroundDrawable(
                         ContextCompat.getDrawable(
@@ -62,7 +63,55 @@ class PasswordAppActivity : AppCompatActivity() {
             }
 
             // EditText 입력이 끝난 후
-            override fun afterTextChanged(s: Editable?) {}
+            override fun afterTextChanged(s: Editable?) {
+       
+            }
+        })
+
+
+
+
+        //비밀번호 "확인" 일치 여부 확인하기
+        checkpw.addTextChangedListener(object : TextWatcher {
+            // EditText에 문자 입력 전
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            // EditText에 변화가 있을 경우
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                if (newpw.text.toString().trim() == checkpw.text.toString().trim()) {
+                    newpw.setBackgroundDrawable(
+                        ContextCompat.getDrawable(
+                            this@PasswordAppActivity,
+                            R.drawable.edittext_rightcheck
+                        )
+                    )
+                    checkpw.setBackgroundDrawable(
+                        ContextCompat.getDrawable(
+                            this@PasswordAppActivity,
+                            R.drawable.edittext_rightcheck
+                        )
+                    )
+                    btn.isEnabled=true
+                } else {
+                    newpw.setBackgroundDrawable(
+                        ContextCompat.getDrawable(
+                            this@PasswordAppActivity,
+                            R.drawable.edittext_wrongcheck
+                        )
+                    )
+                    checkpw.setBackgroundDrawable(
+                        ContextCompat.getDrawable(
+                            this@PasswordAppActivity,
+                            R.drawable.edittext_wrongcheck
+                        )
+                    )
+                }
+            }
+
+            // EditText 입력이 끝난 후
+            override fun afterTextChanged(s: Editable?) {
+
+            }
         })
 
     }

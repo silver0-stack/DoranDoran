@@ -37,13 +37,14 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:layout_margin="20dp"
         android:layout_gravity="center"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="메일로 비밀번호 재설정 이메일을 보내드렸습니다!\n메일함을 확인하고\n새 비밀번호로 로그인해주세요."
+            android:text="메일로 비밀번호 재설정\n이메일을 보내드렸습니다!\n메일함을 확인하고\n새 비밀번호로 로그인해주세요."
             android:textSize="18dp"
             android:gravity="center"
             android:textColor="@color/black"/>
@@ -58,7 +59,6 @@
             android:background="@drawable/button_bg"
             android:onClick="emailToSignIn"
             android:text="로그인하러 가기"
-            android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold" />
 

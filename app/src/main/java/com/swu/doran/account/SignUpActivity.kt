@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.FirebaseDatabase
 import com.swu.doran.R
 
 
@@ -24,7 +25,9 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var emailCheck: TextView
     private lateinit var pwCheck: TextView
     private lateinit var pw_confirmCheck: TextView
-
+    private lateinit var signIn: TextView
+    //realtime 연동 변수
+    private var mDatabase: FirebaseDatabase? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +40,14 @@ class SignUpActivity : AppCompatActivity() {
         emailCheck = findViewById(R.id.emailCheck)
         pwCheck = findViewById(R.id.pwCheck)
         pw_confirmCheck = findViewById(R.id.pw_confirmCheck)
+        signIn=findViewById(R.id.signIn)
+        mDatabase = FirebaseDatabase.getInstance()
 
+
+        //로그인 화면 이동
+        signIn.setOnClickListener {
+            startActivity(Intent(this, SignInActivity::class.java))
+        }
 
         //이메일 확인하기
         Email.addTextChangedListener(object : TextWatcher {
@@ -160,8 +170,16 @@ class SignUpActivity : AppCompatActivity() {
             mAuth.createUserWithEmailAndPassword(email, pw)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
+                        //사용자 uid
+                        val uid = task.result.user!!.uid
+
+                        val registerUser:RegisterUser= RegisterUser(uid,email)
+                        registerUser.uid=uid
+                        registerUser.userEmail=email
+
                         Toast.makeText(this, "계정 생성 완료", Toast.LENGTH_SHORT)
                             .show();
+
                         moveMainPage(mAuth.currentUser)
                     } else {
                         Toast.makeText(this, "계정 생성 실패", Toast.LENGTH_SHORT)

@@ -1,10 +1,9 @@
-package com.swu.doran.password
+package com.swu.doran.account
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.swu.doran.R
-import com.swu.doran.account.SignInActivity
 
 class EmailToSignIn:AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.swu.doran.account.SignInActivity
+import com.swu.doran.account.SignUpActivity
 
 class OnBoardingActivity:AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

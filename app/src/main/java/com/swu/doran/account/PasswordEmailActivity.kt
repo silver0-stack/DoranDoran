@@ -1,4 +1,4 @@
-package com.swu.doran.password
+package com.swu.doran.account
 
 import android.content.Intent
 import android.os.Bundle
