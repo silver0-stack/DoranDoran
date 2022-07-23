@@ -4,7 +4,8 @@
     tools:showIn = "navigation_view"
     >
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+        android:color="@color/btn_repre">
         <item android:id="@+id/menu_profile"
             android:icon="@drawable/main_profile"
             android:title="프로필">

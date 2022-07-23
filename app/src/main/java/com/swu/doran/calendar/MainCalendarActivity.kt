@@ -84,27 +84,22 @@
 //    }
 //
 //}
-package com.swu.doran
+package com.swu.doran.calendar
 
-import android.annotation.SuppressLint
 import android.content.Intent
-import android.graphics.drawable.ClipDrawable
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
-import java.util.*
-import android.view.Gravity
-import android.widget.*
-import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
+import android.view.ViewGroup
+import android.widget.CalendarView
+import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.database.FirebaseDatabase
-import java.lang.String.format
-import java.text.SimpleDateFormat
+import com.swu.doran.MainDayActivity
+import com.swu.doran.R
 
 
-class MainCalendarActivity : AppCompatActivity() {
+class MainCalendarActivity : Fragment() {
     private lateinit var recyclerView_day: RecyclerView
     private lateinit var viewAdapter_day: RecyclerView.Adapter<*>
     private lateinit var viewManager_day: RecyclerView.LayoutManager
@@ -120,14 +115,51 @@ class MainCalendarActivity : AppCompatActivity() {
     //변수
     var userID: String = "userID"
     lateinit var fname: String
-    lateinit var str:String
+    lateinit var str: String
 
 
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    ): View? {
 
-    @SuppressLint("InflateParams", "WrongConstant")
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.calendar_add)
+        val view = inflater.inflate(R.layout.calendar_bottom_sheet, container, false)
+        val calendarView = view.findViewById<CalendarView>(R.id.calendarView)  //캘린더뷰
+        val addIssue = view.findViewById<TextView>(R.id.thisdayIssue)   //오늘의 하루 보기 버튼
+
+
+        //날짜 클릭 이벤트 리스너
+        calendarView.setOnDateChangeListener { view, year, month, day ->
+            activity?.intent?.putExtra("month", (month + 1).toString())
+            activity?.intent?.putExtra("day", day.toString())
+            addIssue.text = "${month + 1}월 ${day}일 추억남기기"
+
+
+        }
+
+        val month = activity?.intent?.getStringExtra("month")
+        val day = activity?.intent?.getStringExtra("day")
+
+        addIssue.setOnClickListener {
+            val intent = Intent(activity, MainDayActivity::class.java)
+            intent.putExtra("month", month.toString())
+            intent.putExtra("day", day.toString())
+            startActivity(intent)
+
+            //val database = FirebaseDatabase.getInstance()
+            //val myRef = database.getReference()
+
+            //val dataInput = Date(
+            //    addIssue.text.toString()
+            //)
+
+            //myRef.child("day").child("game").push().setValue(dataInput)
+
+
+        }
+
+        return view
+    }
+}
 
 //        viewManager_day = LinearLayoutManager(this, RecyclerView.HORIZONTAL, true)
 //        viewAdapter_day = MainDayAdapter()
@@ -153,42 +185,3 @@ class MainCalendarActivity : AppCompatActivity() {
 //            adapter = viewAdapter_game
 //        }
 
-        val calendarView = findViewById<CalendarView>(R.id.calendarView)  //캘린더뷰
-        val addIssue = findViewById<TextView>(R.id.thisdayIssue)   //오늘의 하루 보기 버튼
-
-
-        //날짜 클릭 이벤트 리스너
-        calendarView.setOnDateChangeListener { view, year, month, day ->
-            intent.putExtra("month", (month + 1).toString())
-            intent.putExtra("day", day.toString())
-            addIssue.text = "${month + 1}월 ${day}일 추억남기기"
-
-
-        }
-
-        val month = intent.getStringExtra("month")
-        val day = intent.getStringExtra("day")
-
-        addIssue.setOnClickListener {
-            val intent = Intent(this, MainDayActivity::class.java)
-            intent.putExtra("month", month.toString())
-            intent.putExtra("day", day.toString())
-            startActivity(intent)
-
-            //val database = FirebaseDatabase.getInstance()
-            //val myRef = database.getReference()
-
-            //val dataInput = Date(
-            //    addIssue.text.toString()
-            //)
-
-            //myRef.child("day").child("game").push().setValue(dataInput)
-
-
-
-
-        }
-
-    }
-
-}

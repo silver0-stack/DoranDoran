@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.swu.doran.R
-import com.swu.doran.SignInActivity
+import com.swu.doran.account.SignInActivity
 ///
 class PasswordAppActivity : AppCompatActivity() {
     lateinit var newpw: EditText
@@ -81,7 +81,7 @@ class PasswordAppActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     Toast.makeText(baseContext, "비밀번호 변경을 성공했습니다.", Toast.LENGTH_SHORT)
                         .show()
-                    startActivity(Intent(this,SignInActivity::class.java))
+                    startActivity(Intent(this, SignInActivity::class.java))
                 }else{
                     Toast.makeText(baseContext, "비밀번호 변경을 실패했습니다.", Toast.LENGTH_SHORT)
                         .show()

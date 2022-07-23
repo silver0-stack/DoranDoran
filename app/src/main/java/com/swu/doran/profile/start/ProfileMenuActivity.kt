@@ -1,22 +1,12 @@
 package com.swu.doran.profile.start
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
-import android.view.View
 import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.swu.doran.MainActivity
 import com.swu.doran.R
-import com.swu.doran.SignInActivity
 import com.swu.doran.profile.add.Profile_name
-import com.swu.doran.profile.edit.ProfileEditActivity
-import com.swu.doran.profile.edit.ProfileSelectActivity
 
 
 open class ProfileMenuActivity : AppCompatActivity() {

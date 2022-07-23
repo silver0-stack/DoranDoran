@@ -1,4 +1,4 @@
-package com.swu.doran
+package com.swu.doran.account
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.swu.doran.R
 import com.swu.doran.password.PasswordEmailActivity
 import com.swu.doran.profile.start.ProfileMenuActivity
 
@@ -25,11 +26,11 @@ class SignInActivity : AppCompatActivity() {
 
     }
 
-    // 로그아웃하지 않을 시 자동 로그인 , 회원가입시 바로 로그인 됨
-    public override fun onStart() {
-        super.onStart()
-        moveMainPage(mAuth.currentUser)
-    }
+//    // 로그아웃하지 않을 시 자동 로그인 , 회원가입시 바로 로그인 됨
+//    public override fun onStart() {
+//        super.onStart()
+//        moveMainPage(mAuth.currentUser)
+//    }
 
     // 유저정보 넘겨주고 메인 액티비티 호출
     private fun moveMainPage(currentUser: FirebaseUser?) {

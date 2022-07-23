@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.swu.doran.account.SignInActivity
 
 class OnBoardingActivity:AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,11 +16,11 @@ class OnBoardingActivity:AppCompatActivity() {
         val signUp_btn = findViewById<TextView>(R.id.signUp_btn)
 
         signIn_btn.setOnClickListener{
-            val intent= Intent(this,SignInActivity::class.java)
+            val intent= Intent(this, SignInActivity::class.java)
             startActivity(intent)
         }
         signUp_btn.setOnClickListener{
-            val intent= Intent(this,SignUpActivity::class.java)
+            val intent= Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
 

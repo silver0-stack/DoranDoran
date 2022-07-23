@@ -2,22 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/representative"
     android:orientation="vertical">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:background="@drawable/main_calview"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="600dp"
-            android:layout_marginTop="400dp"
-            android:background="@drawable/main_calview"
-            android:padding="30dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -34,9 +33,9 @@
             android:layout_marginTop="15dp"
             android:background="@drawable/edittext_bg"
             android:hint="이메일을 입력하세요"
-            android:textColor="@color/black"
             android:inputType="textEmailAddress"
             android:paddingStart="15dp"
+            android:textColor="@color/black"
             android:textColorHint="#A6A6A6"
             android:textSize="15sp" />
 
@@ -56,9 +55,9 @@
             android:layout_marginTop="15dp"
             android:background="@drawable/edittext_bg"
             android:hint="비밀번호를 입력하세요"
-            android:textColor="@color/black"
             android:inputType="textEmailAddress"
             android:paddingStart="15dp"
+            android:textColor="@color/black"
             android:textColorHint="#A6A6A6"
             android:textSize="15sp" />
 
@@ -68,11 +67,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="right"
+            android:onClick="change_pw"
             android:text="비밀번호 변경"
-            android:textStyle="bold"
-            android:textColor="#F5C364"
+            android:textColor="@color/btn_repre"
             android:textSize="14sp"
-            android:onClick="change_pw"/>
+            android:textStyle="bold" />
 
 
         <Button
@@ -81,31 +80,32 @@
             android:layout_height="60dp"
             android:layout_marginTop="25dp"
             android:background="@drawable/button_bg"
+            android:onClick="signInComplete"
             android:text="로그인"
             android:textColor="@color/white"
-            android:textSize="16sp"
-            android:onClick="signInComplete"/>
+            android:textSize="16sp" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/signUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
+                android:background="@drawable/textlines"
+                android:onClick="signUp"
                 android:text="신규계정 만들기"
-                android:textColor="#F5C364"
-                android:textSize="14sp"
-                android:onClick="signUp"/>
-
-
+                android:textColor="@color/btn_repre"
+                android:textSize="14sp" />
         </LinearLayout>
-        </TableLayout>
+
+
     </LinearLayout>
-    </ScrollView>
 </LinearLayout>

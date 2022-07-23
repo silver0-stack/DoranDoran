@@ -2,14 +2,13 @@ package com.swu.doran
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.graphics.drawable.ClipDrawable.HORIZONTAL
 import android.os.Bundle
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+
 //
 @SuppressLint("WrongViewCast")
 class MainDayActivity : AppCompatActivity() {
@@ -25,12 +24,17 @@ class MainDayActivity : AppCompatActivity() {
     private lateinit var viewAdapter_game: RecyclerView.Adapter<*>
     private  lateinit var viewManager_game: RecyclerView.LayoutManager
 
+    private lateinit var backBtn:ImageButton
     @SuppressLint("WrongConstant")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_day)
 
 
+        backBtn=findViewById(R.id.back)
+        backBtn.setOnClickListener {
+            super.onBackPressed();
+        }
 
         viewManager_day = LinearLayoutManager(this, RecyclerView.HORIZONTAL, true)
         viewAdapter_day = MainDayAdapter()
@@ -59,7 +63,6 @@ class MainDayActivity : AppCompatActivity() {
         val scheduleBtn = findViewById<ImageButton>(R.id.scheduleBtn)
         val familyBtn = findViewById<ImageButton>(R.id.familyBtn)
         val gameBtn = findViewById<ImageButton>(R.id.gameBtn)
-        val icon_back =findViewById<ImageButton>(R.id.back)
         val schedule_check = findViewById<ImageButton>(R.id.schedule_checked)
 
         //schedule_check.setOnClickListener{
@@ -87,10 +90,6 @@ class MainDayActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        icon_back.setOnClickListener{
-            val intent = Intent(this, MainCalendarActivity::class.java)
-            startActivity(intent)
-        }
 
 
 

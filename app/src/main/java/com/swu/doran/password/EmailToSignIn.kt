@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.swu.doran.R
-import com.swu.doran.SignInActivity
+import com.swu.doran.account.SignInActivity
 
 class EmailToSignIn:AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +14,7 @@ class EmailToSignIn:AppCompatActivity() {
     }
 
     fun emailToSignIn(view: android.view.View) {
-        startActivity(Intent(this,SignInActivity::class.java))
+        startActivity(Intent(this, SignInActivity::class.java))
     }
 
     fun back(view: android.view.View) {

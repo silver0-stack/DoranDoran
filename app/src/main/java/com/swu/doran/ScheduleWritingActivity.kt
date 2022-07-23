@@ -42,8 +42,7 @@ class ScheduleWritingActivity : AppCompatActivity() {
 
         //뒤로가기 버튼
             backBtn.setOnClickListener{
-                val intent = Intent(this, MainDayActivity::class.java)
-                startActivity(intent)
+                super.onBackPressed();
             }
 
         //시작 시간 타임 피커 대화상자

@@ -1,18 +1,19 @@
-package com.swu.doran
+package com.swu.doran.account
 
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Patterns
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import androidx.core.content.ContextCompat
-import com.swu.doran.profile.start.ProfileMenuActivity
+import com.swu.doran.R
 
 
 class SignUpActivity : AppCompatActivity() {
@@ -66,9 +67,18 @@ class SignUpActivity : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if (PW.length() >= 6) {
                     pwCheck.visibility = View.VISIBLE
-                    PW.setBackgroundDrawable(ContextCompat.getDrawable(this@SignUpActivity, R.drawable.edittext_rightcheck))
-                }
-                else PW.setBackgroundDrawable(ContextCompat.getDrawable(this@SignUpActivity, R.drawable.edittext_wrongcheck))
+                    PW.setBackgroundDrawable(
+                        ContextCompat.getDrawable(
+                            this@SignUpActivity,
+                            R.drawable.edittext_rightcheck
+                        )
+                    )
+                } else PW.setBackgroundDrawable(
+                    ContextCompat.getDrawable(
+                        this@SignUpActivity,
+                        R.drawable.edittext_wrongcheck
+                    )
+                )
             }
 
             // EditText 입력이 끝난 후
@@ -86,10 +96,20 @@ class SignUpActivity : AppCompatActivity() {
             // EditText에 변화가 있을 경우
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if (PW.text.toString().trim() == PW_confirm.text.toString().trim()) {
-                    PW_confirm.setBackgroundDrawable(ContextCompat.getDrawable(this@SignUpActivity, R.drawable.edittext_rightcheck))
+                    PW_confirm.setBackgroundDrawable(
+                        ContextCompat.getDrawable(
+                            this@SignUpActivity,
+                            R.drawable.edittext_rightcheck
+                        )
+                    )
                     pw_confirmCheck.visibility = View.VISIBLE
                 } else {
-                   PW_confirm.setBackgroundDrawable(ContextCompat.getDrawable(this@SignUpActivity, R.drawable.edittext_wrongcheck))
+                    PW_confirm.setBackgroundDrawable(
+                        ContextCompat.getDrawable(
+                            this@SignUpActivity,
+                            R.drawable.edittext_wrongcheck
+                        )
+                    )
                 }
             }
 
@@ -102,14 +122,26 @@ class SignUpActivity : AppCompatActivity() {
 
     fun checkEmail(): Boolean {
         val email = Email.text.toString().trim() //공백제거
-        val emailValidation =
-            "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$".toRegex()
-         if (email.matches(emailValidation)) {
-             Email.setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.edittext_rightcheck))
+
+        //이메일 정규식
+        val pattern = Patterns.EMAIL_ADDRESS
+
+        if (pattern.matcher(email).matches()) {
+            Email.setBackgroundDrawable(
+                ContextCompat.getDrawable(
+                    this,
+                    R.drawable.edittext_rightcheck
+                )
+            )
             emailCheck.visibility = View.VISIBLE
             return true
         } else {
-            Email.setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.edittext_wrongcheck))
+            Email.setBackgroundDrawable(
+                ContextCompat.getDrawable(
+                    this,
+                    R.drawable.edittext_wrongcheck
+                )
+            )
         }
         return false
     }
@@ -141,7 +173,7 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun moveMainPage(currentUser: FirebaseUser?) {
         if (currentUser != null) {
-            startActivity(Intent(this, ProfileMenuActivity::class.java))
+            startActivity(Intent(this, SignInActivity::class.java))
             finish()
         }
     }
