@@ -33,14 +33,15 @@ class SignInActivity : AppCompatActivity() {
 
     // 유저정보 넘겨주고 메인 액티비티 호출
     private fun moveMainPage(currentUser: FirebaseUser?) {
-            val i = Intent(this, ProfileMenuActivity::class.java)
-            i.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            finish()
-        }
+        val i = Intent(this, ProfileMenuActivity::class.java)
+        i.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(i)
+        finish()
+    }
 
 
     //비번잊음 메소드
-    fun forgetPW(view:View) {
+    fun forgetPW(view: View) {
 
     }
 
@@ -58,17 +59,21 @@ class SignInActivity : AppCompatActivity() {
                             .show()
                         moveMainPage(mAuth.currentUser)
                     } else {
-                        Toast.makeText(baseContext, "로그인에 실패하셨습니다.", Toast.LENGTH_SHORT)
+                        Toast.makeText(baseContext, "아이디와 비밀번호를 확인해주세요.", Toast.LENGTH_SHORT)
                             .show()
-                        moveMainPage(null)
+                     
                     }
                 }
+        }else{
+            Toast.makeText(baseContext, "이메일과 비밀번호를 입력해주세요", Toast.LENGTH_SHORT)
+                .show()
         }
+
 
     }
 
     //회원가입 메소드
-    fun signUp(view:View) {
+    fun signUp(view: View) {
         startActivity(Intent(this, SignUpActivity::class.java))
     }
 

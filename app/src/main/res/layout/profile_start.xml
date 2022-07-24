@@ -1,82 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Doran\n  Doran"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/add_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="추가"
+            android:layout_marginEnd="15dp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/edit_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="편집"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
-        android:text="프로필을 선택하세요"
+        android:text="프로필을 선택해주세요"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <!---
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/profile_rv"
+        app:spanCount="3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
-        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         tools:listitem="@layout/profile_item" />
-         - -->
-
-    <LinearLayout
-        android:gravity="center"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
-        android:padding="10dp">
-
-        <ImageView
-            android:id="@+id/emoji_1"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:background="@drawable/emoji_father"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            >
-        </ImageView>
-        <ImageView
-            android:id="@+id/emoji_2"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:background="@drawable/emoji_mother"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            >
-        </ImageView>
-        <ImageView
-            android:id="@+id/emoji_3"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:background="@drawable/emoji_son_1"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            >
-        </ImageView>
-        <ImageView
-            android:id="@+id/profile_add"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:background="@drawable/icon_profile_add"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            >
-        </ImageView>
-
-
-
-    </LinearLayout>
 
 
 
 
-
-</FrameLayout>
+</LinearLayout>

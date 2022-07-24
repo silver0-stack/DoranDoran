@@ -177,6 +177,9 @@ class SignUpActivity : AppCompatActivity() {
                         registerUser.uid=uid
                         registerUser.userEmail=email
 
+                        //리얼타임에 계정 저장
+                        mDatabase?.reference?.child("Account")?.child(uid)?.setValue(registerUser)
+
                         Toast.makeText(this, "계정 생성 완료", Toast.LENGTH_SHORT)
                             .show();
 
