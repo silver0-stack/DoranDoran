@@ -1,35 +1,29 @@
-package com.swu.doran.profile.add;
+package com.swu.doran.profile.add
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.swu.doran.R
+import android.content.Intent
+import android.view.View
+import com.swu.doran.profile.add.Profile_birthday
+import com.swu.doran.profile.add.Profile_select_emoji
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-
-import com.swu.doran.R;
-
-public class Profile_emoji extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.profile_emoji);
-
-
+class Profile_emoji : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.profile_emoji)
     }
 
-    public void next(View view) {
-        startActivity(new Intent(this, Profile_birthday.class));
+    fun next(view: View?) {
+        startActivity(Intent(this, Profile_birthday::class.java))
     }
 
-    public void back(View view) {
-        super.onBackPressed();
+    fun back(view: View?) {
+        super.onBackPressed()
     }
 
     //프사 선택
-    public void selectImg(View view) {
-        startActivity(new Intent(this, Profile_select_emoji.class));
+    fun selectImg(view: View?) {
+        startActivity(Intent(this, Profile_select_emoji::class.java))
     }
 }

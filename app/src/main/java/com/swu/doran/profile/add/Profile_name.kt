@@ -1,7 +1,4 @@
-package com.swu.d
-
-import com.swu.doran.profile.add.Profile_emoji
-
+package com.swu.doran.profile.add
 
 
 import android.content.Intent
@@ -20,12 +17,7 @@ class Profile_name : AppCompatActivity() {
     //realtime
     // var uid: String? = null
 
-    //realtime
-    var uid: String? = null
-    var user: FirebaseUser? = null
-    var firebaseDatabase = FirebaseDatabase.getInstance()
-    var accountReference = firebaseDatabase.getReference("Account")
-    lateinit var profileRef: DatabaseReference
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,11 +26,7 @@ class Profile_name : AppCompatActivity() {
 
         userName = findViewById(R.id.userName)
 
-        user = FirebaseAuth.getInstance().currentUser
-        assert(user != null)
-        uid = user!!.uid
 
-        profileRef = accountReference.child(uid!!).child("profile")
 
 
     }
@@ -47,29 +35,19 @@ class Profile_name : AppCompatActivity() {
         super.onBackPressed()
     }
 
+    //이름,user Number를 intent 넘김
     fun next(view: View?) {
         val intent = intent
         var userN = intent.getIntExtra("user_number", 0)
 
-        profileRef
-            .child("User$userN")
-            .addListenerForSingleValueEvent(object : ValueEventListener {
-                override fun onDataChange(snapshot: DataSnapshot) {
-                    for (dataSnapshot in snapshot.children) {
 
-                        var profileName=snapshot.child("profile_name").getValue(String::class.java)
-                       // userName.value
-                    }
+        val input_name= userName?.text.toString()
+        val intent_put=Intent(this, Profile_emoji::class.java)
 
-
-                }
-
-                override fun onCancelled(error: DatabaseError) {
-                    TODO("Not yet implemented")
-                }
-
-
-            })
-        startActivity(Intent(this, Profile_emoji::class.java))
+        //유저 넘버 넘김
+        intent_put.putExtra("user_number",userN)
+        //입력한 이름 넘기기
+        intent_put.putExtra("input_name",input_name)
+        startActivity(intent)
     }
 }

@@ -12,7 +12,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.swu.d.Profile_name
+import com.swu.doran.profile.add.Profile_name
 import com.swu.doran.R
 
 class ProfileAdapter(private val context: Context, private val dataList: ArrayList<ProfileData>) :

@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:icon="@drawable/noti"
+        android:icon="@drawable/main_bell"
         android:title="notification"
         android:id="@+id/noti"
         app:showAsAction="ifRoom" />
 
-    <item
-        android:icon="@drawable/img"
-        android:title="img"
-        android:id="@+id/img"
-        app:showAsAction="always" />
+<!--    <item-->
+<!--        android:icon="@drawable/img"-->
+<!--        android:title="img"-->
+<!--        android:id="@+id/img"-->
+<!--        app:showAsAction="always" />-->
 </menu>
