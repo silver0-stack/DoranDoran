@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.util.Patterns
 import android.view.View
 import android.widget.EditText
@@ -173,9 +174,11 @@ class SignUpActivity : AppCompatActivity() {
                         //사용자 uid
                         val uid = task.result.user!!.uid
 
-                        val registerUser:RegisterUser= RegisterUser(uid,email)
+                        val registerUser = RegisterUser(uid,email)
                         registerUser.uid=uid
                         registerUser.userEmail=email
+
+                        Log.d("uid",uid)
 
                         //리얼타임에 계정 저장
                         mDatabase?.reference?.child("Account")?.child(uid)?.setValue(registerUser)

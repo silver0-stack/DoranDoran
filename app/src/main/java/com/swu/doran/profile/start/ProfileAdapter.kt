@@ -12,8 +12,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.swu.d.Profile_name
 import com.swu.doran.R
-import com.swu.doran.profile.add.Profile_name
 
 class ProfileAdapter(private val context: Context, private val dataList: ArrayList<ProfileData>) :
     RecyclerView.Adapter<ProfileAdapter.ItemViewHolder>() {
@@ -51,12 +51,8 @@ class ProfileAdapter(private val context: Context, private val dataList: ArrayLi
 
         fun bind(profiledata: ProfileData, context: Context) {
             if (profiledata.profile_img != "") {
-                val resourceId =
-                    context.resources.getIdentifier(
-                        profiledata.profile_img,
-                        "drawable",
-                        context.packageName
-                    )
+                val resourceId = context.resources.getIdentifier(profiledata.profile_img, "drawable", context.packageName)
+
                 if (resourceId > 0) {
                     userImg.setImageResource(R.drawable.user)
 
@@ -91,7 +87,7 @@ class ProfileAdapter(private val context: Context, private val dataList: ArrayLi
 
             //프로필 설정 액티비티 intent
             val intent = Intent(context, Profile_name::class.java)
-            intent.putExtra("profile_number", position)
+            intent.putExtra("user_number", position)
             context.startActivity(intent)
         }
 
