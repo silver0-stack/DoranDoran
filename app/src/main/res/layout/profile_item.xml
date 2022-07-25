@@ -9,7 +9,7 @@
             android:id="@+id/profileImg"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/emoji_daughter_1"
+            android:src="@drawable/girl_20s_01"
             android:layout_gravity="center" />
 
         <TextView

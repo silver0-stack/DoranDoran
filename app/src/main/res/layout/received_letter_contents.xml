@@ -45,7 +45,7 @@
                 android:id="@+id/img"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/emoji_mother" />
+                android:src="@drawable/grandfather01" />
 
             <TextView
                 android:id="@+id/name"

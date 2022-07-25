@@ -20,6 +20,7 @@
             android:exported="false" />
         <activity
             android:name=".profile.add.Profile_birthday"
+            android:theme="@style/AppTheme"
             android:exported="true" />
         <activity
             android:name=".profile.add.Profile_select_emoji"

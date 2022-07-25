@@ -107,19 +107,19 @@
             android:id="@+id/day_image1"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/emoji_father"
+            android:src="@drawable/dad02"
             android:layout_marginLeft="10dp"/>
         <ImageView
             android:id="@+id/day_image2"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/emoji_mother"
+            android:src="@drawable/mom01"
             android:layout_marginLeft="10dp"/>
         <ImageView
             android:id="@+id/day_image3"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/emoji_son_1"
+            android:src="@drawable/boy_10s_02"
             android:layout_marginLeft="10dp"/>
 
     </LinearLayout>

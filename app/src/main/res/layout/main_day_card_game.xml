@@ -106,12 +106,12 @@
                 android:id="@+id/game_image1"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:background="@drawable/emoji_daughter_1"/>
+                android:src="@drawable/girl_20s_02"/>
             <ImageView
                 android:id="@+id/game_image2"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:background="@drawable/emoji_father"
+                android:src="@drawable/girl_5s_02"
                 android:layout_marginLeft="10dp"/>
         </LinearLayout>
 

@@ -8,8 +8,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.swu.doran.R
 import com.swu.doran.mailbox.recieved.member.m_Activity
-import com.swu.doran.mailbox.recieved.member.m_Adapter
-import com.swu.doran.mailbox.recieved.member.m_Data
 
 class M_Activity:AppCompatActivity() {
     lateinit var recyclerview: RecyclerView
@@ -36,9 +34,9 @@ class M_Activity:AppCompatActivity() {
 
 
         M_datas.apply {
-            add(M_Data(img = R.drawable.emoji_mother, name = "엄마", accumulated = 0))
-            add(M_Data(img = R.drawable.emoji_father, name = "아빠", accumulated = 0))
-            add(M_Data(img = R.drawable.emoji_daughter_1, name = "언니", accumulated = 0))
+            add(M_Data(img = R.drawable.mom01, name = "엄마", accumulated = 0))
+            add(M_Data(img = R.drawable.dad01, name = "아빠", accumulated = 0))
+            add(M_Data(img = R.drawable.girl_10s_02, name = "언니", accumulated = 0))
             adapter.datas =  M_datas
             adapter.notifyDataSetChanged()
         }

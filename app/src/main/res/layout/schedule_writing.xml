@@ -240,11 +240,11 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/emoji_father"/>
+                        android:src="@drawable/dad02"/>
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/emoji_son_1"
+                        android:src="@drawable/boy_10s_01"
                         android:layout_marginHorizontal="10dp"/>
                 </LinearLayout>
             </LinearLayout>

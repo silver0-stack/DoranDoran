@@ -1,21 +1,30 @@
 package com.swu.doran.profile.add
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.swu.doran.R
 import android.content.Intent
-import android.graphics.Color
-import android.view.TextureView
+import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.DatePicker
 import android.widget.TextView
+import android.widget.Toast
+import androidx.annotation.Nullable
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.button.MaterialButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
+import com.swu.doran.R
 import com.swu.doran.profile.start.ProfileMenuActivity
+import java.util.*
 
-class Profile_birthday : AppCompatActivity() {
-    lateinit var lunar: TextView
-    lateinit var solar: TextView
+class Profile_birthday : AppCompatActivity(), View.OnClickListener {
+    lateinit var lunar: MaterialButton
+    lateinit var solar: MaterialButton
+
+    lateinit var complete: TextView
+    lateinit var back: TextView
+
+    lateinit var msg: String
 
     //realtime
     var uid: String? = null
@@ -24,12 +33,43 @@ class Profile_birthday : AppCompatActivity() {
     var accountReference = firebaseDatabase.getReference("Account")
     lateinit var profileRef: DatabaseReference
 
+    lateinit var lunar_or_solar:String
+
+    @Nullable
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.profile_birthday)
 
-        lunar = findViewById(R.id.Lunar)
-        solar = findViewById(R.id.Solar)
+
+        back=findViewById(R.id.back)
+        complete=findViewById(R.id.complete)
+
+        back.setOnClickListener{
+            super.onBackPressed()
+        }
+
+        val datePicker = findViewById<View>(R.id.dataPicker) as DatePicker
+        val today = Calendar.getInstance()
+        datePicker.init(
+            today.get(Calendar.YEAR), today.get(Calendar.MONTH), today.get(Calendar.DAY_OF_MONTH)
+        ) { view, year, month, day ->
+            val month_ = month + 1
+            msg = "$year/$month_/$day"
+            Toast.makeText(applicationContext, "$msg 를 선택하셨습니다", Toast.LENGTH_SHORT).show()
+
+        }
+        //datePicker.setOnDateChangedListener(this);
+        val listener = DatePicker.OnDateChangedListener { view, year, monthOfYear, dayOfMonth ->
+
+        }
+
+
+        lunar = findViewById(R.id.lunar)
+        solar = findViewById(R.id.solar)
+
+
+        lunar.setOnClickListener(this)
+        solar.setOnClickListener(this)
 
         user = FirebaseAuth.getInstance().currentUser
         assert(user != null)
@@ -37,60 +77,116 @@ class Profile_birthday : AppCompatActivity() {
 
         profileRef = accountReference.child(uid!!).child("profile")
 
-    }
-
-    fun back(view: View?) {
-        super.onBackPressed()
-    }
-
-    //프로필 설정 완료 버튼
-    fun complete(view: View?) {
-
-        //유저넘버, 인풋 네임 받기
         val intent = intent
-        val user_number = intent.getIntExtra("user_number", 0)
-        val input_name=intent.getStringExtra("input_name")
+        //유저네임,인풋네임,프필 이미지 받기
+        val profile_num = intent.getIntExtra("user_number", 0)
+        val profile_name = intent.getStringExtra("input_name")
+        val profile_img = intent.getStringExtra("profile_img")
 
 
-        //유저네임, 이미지, 생일 설정
-        profileRef
-            .child("User$userN")
-            .addListenerForSingleValueEvent(object : ValueEventListener {
-                override fun onDataChange(snapshot: DataSnapshot) {
-                    for (dataSnapshot in snapshot.children) {
+        Log.d("profile_name", profile_name.toString())
+        //완료버튼
+        complete.setOnClickListener {
 
-                        // var profileName=snapshot.child("profile_name").getValue(String::class.java)
-                        snapshot.child("profile_name").ref.setValue(userName?.text.toString())
+
+            //유저네임, 이미지, 생일 설정
+            profileRef
+                .child("User$profile_num")
+                .addListenerForSingleValueEvent(object : ValueEventListener {
+                    override fun onDataChange(snapshot: DataSnapshot) {
+                        for (dataSnapshot in snapshot.children) {
+
+                            // var profileName=snapshot.child("profile_name").getValue(String::class.java)
+                            snapshot.child("profile_name").ref.setValue(profile_name.toString())
+                            snapshot.child("profile_img").ref.setValue(profile_img.toString())
+                            snapshot.child("profile_birth").ref.setValue(msg)
+                            snapshot.child("profile_LunarOrSolar").ref.setValue(lunar_or_solar)
+                        }
+
+
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+                        TODO("Not yet implemented")
                     }
 
 
-                }
-
-                override fun onCancelled(error: DatabaseError) {
-                    TODO("Not yet implemented")
-                }
+                })
+            startActivity(Intent(this, ProfileMenuActivity::class.java))
+        }
 
 
-            })
-        startActivity(Intent(this, ProfileMenuActivity::class.java))
     }
 
-    fun LunarOrSolar(view: View?) {
-        if (view != null) {
-            when (view.id) {
+
+    override fun onClick(p0: View?) {
+
+        if (p0 != null) {
+            when (p0.id) {
                 //음력 클릭
-                R.id.Lunar -> {
-                    lunar.setTextColor(Color.parseColor("#F5C364"))
-                    solar.setTextColor(Color.parseColor("#737171"))
+                R.id.lunar -> {
+                    lunar_or_solar=lunar.text.toString()
+//                    lunar.setTextColor(Color.parseColor("#F5C364"))
+//                    solar.setTextColor(Color.parseColor("#737171"))
                 }
 
                 //양력 클릭
-                R.id.Solar -> {
-                    lunar.setTextColor(Color.parseColor("#737171"))
-                    solar.setTextColor(Color.parseColor("#F5C364"))
+                R.id.solar -> {
+                    lunar_or_solar=solar.text.toString()
+//                    lunar.setTextColor(Color.parseColor("#737171"))
+//                    solar.setTextColor(Color.parseColor("#F5C364"))
 
                 }
+
             }
         }
+
+
+//    fun LunarOrSolar(view: View?) {
+//        if (view != null) {
+//            when (view.id) {
+//                //음력 클릭
+//                R.id.Lunar -> {
+//                    lunar.setTextColor(Color.parseColor("#F5C364"))
+//                    solar.setTextColor(Color.parseColor("#737171"))
+//                }
+//
+//                //양력 클릭
+//                R.id.Solar -> {
+//                    lunar.setTextColor(Color.parseColor("#737171"))
+//                    solar.setTextColor(Color.parseColor("#F5C364"))
+//
+//                }
+//            }
+//        }
+//    }
+//
+//    override fun onClick(v: View?) {
+//        if (v != null) {
+//            when (v) {
+//                lunar -> if (lunar.isChecked) {
+//                    lunar.isChecked = true
+//                    Toast.makeText(applicationContext, "음력 클릭", Toast.LENGTH_SHORT).show()
+//
+//                    solar.isChecked = false
+//
+//                } else {
+//                    lunar.isChecked = false
+//                }
+//
+//                solar -> if (solar.isChecked) {
+//                    solar.isChecked = true
+//                    Toast.makeText(applicationContext, "양력 클릭", Toast.LENGTH_SHORT).show()
+//
+//                    lunar.isChecked = false
+//
+//                } else {
+//                    solar.isChecked = false
+//                }
+//
+//            }
+//        }
+//    }
+
     }
 }

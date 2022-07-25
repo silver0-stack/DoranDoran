@@ -5,5 +5,6 @@ data class ProfileData(
     var key: String? = "",
     val profile_img: String? = "",
     var profile_name: String? = "",
-    var profile_birth:String?=""
+    var profile_birth:String?="",
+    var profile_LunarOrSolar:String?=""
 )

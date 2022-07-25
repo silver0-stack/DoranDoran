@@ -231,11 +231,11 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/emoji_daughter_2"/>
+                        android:src="@drawable/boy_30s_02"/>
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/emoji_mother"
+                        android:src="@drawable/grandfather01"
                         android:layout_marginHorizontal="10dp"/>
                 </LinearLayout>
             </LinearLayout>

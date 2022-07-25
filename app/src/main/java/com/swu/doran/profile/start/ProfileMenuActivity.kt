@@ -86,7 +86,7 @@ open class ProfileMenuActivity : AppCompatActivity() {
                     }
 
 
-                    userData = ProfileData(key, icon.toString(), "User$default","yy.mm.dd")
+                    userData = ProfileData(key, icon.toString(), "User$default","yy.mm.dd","LunarOrSolar")
                     Log.d("TAG", userData.toString())
                     //userAdapter.addItem(ProfileData(icon.toString(), "user$i"))
                     profileRef.child(userData.profile_name!!).setValue(userData)

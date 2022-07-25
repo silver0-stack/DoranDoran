@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".profile.add.Profile_birthday">
 
@@ -19,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:onClick="back"
+            android:id="@+id/back"
             android:text="이전"
             android:textSize="15sp"/>
 
@@ -29,11 +30,11 @@
             android:layout_weight="1"/>
 
         <TextView
+            android:id="@+id/complete"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:onClick="complete"
             android:text="다음"
             android:textSize="15sp" />
 
@@ -81,38 +82,39 @@
         android:orientation="vertical">
 
         <DatePicker
+            android:id="@+id/dataPicker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:calendarViewShown="false"
             android:datePickerMode="spinner" />
 
-        <LinearLayout
+
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleButton"
+            app:singleSelection="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/Solar"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/solar"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="양력"
-                android:onClick="LunarOrSolar"
-                android:textSize="15sp"/>
+                android:text="양력" />
 
-            <TextView
-                android:id="@+id/Lunar"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/lunar"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:onClick="LunarOrSolar"
-                android:text="음력"
-                android:textSize="15sp"/>
-        </LinearLayout>
+                android:text="음력" />
 
-
+        </com.google.android.material.button.MaterialButtonToggleGroup>
     </LinearLayout>
+
+
+
 
     <View
         android:layout_width="match_parent"

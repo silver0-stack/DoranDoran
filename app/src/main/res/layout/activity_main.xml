@@ -75,7 +75,7 @@
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:layout_width="70dp"
                             android:layout_height="70dp"
-                            android:src="@drawable/emoji_daughter_2" />
+                            android:src="@drawable/mom02" />
 
                         <TextView
                             android:layout_width="wrap_content"
