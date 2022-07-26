@@ -1,6 +1,8 @@
 package com.swu.doran.profile.add
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -60,9 +62,15 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
     var storage: FirebaseStorage = FirebaseStorage.getInstance()
     var storageRef: StorageReference = storage.reference //뽑아오는 스토리지
 
+
+    lateinit var shared : SharedPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.profile_select_emoji)
+
+
+        shared = getSharedPreferences("profile_info" , Context.MODE_PRIVATE)
 
         complete = findViewById(R.id.complete)
         gf01 = findViewById(R.id.gf01)
@@ -133,7 +141,9 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         if (v != null) {
+            val edit = shared.edit()
             when (v) {
+
                 gf01 -> if (gf01.isChecked) {
                     gf01.isChecked = true
                     Toast.makeText(applicationContext, "gf01 클릭", Toast.LENGTH_SHORT).show()
@@ -152,10 +162,12 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                         .addOnSuccessListener (object :OnSuccessListener<Uri> {
                             override fun onSuccess(p0: Uri?) {
                                 //성공시
-                                Log.d("uri 로그찍기", "1")
                                 val uri_ = p0.toString()
-                                Log.d("uri_put", "" + uri_)
-                                put_intent.putExtra("profile_img", uri_)
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
 
@@ -204,13 +216,28 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, "gf02 클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/grandfather02.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
 
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
 
                     gf01.isChecked = false
                     gm01.isChecked = false
@@ -244,12 +271,28 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, "gm01 클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/grandmather01.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
+
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
 
 
                     gf01.isChecked = false
@@ -285,12 +328,28 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, "gm02 클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/grandmather02.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
+
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
 
                     gf01.isChecked = false
                     gf02.isChecked = false
@@ -326,13 +385,28 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, "mom01 클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/mom01.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
 
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
                     gf01.isChecked = false
                     gf02.isChecked = false
                     gm01.isChecked = false
@@ -366,12 +440,28 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, "mom02  클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/mom02.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
+
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
 
                     gf01.isChecked = false
                     gf02.isChecked = false
@@ -406,13 +496,28 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, "dad01 클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/dad01.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
 
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
                     gf01.isChecked = false
                     gf02.isChecked = false
                     gm01.isChecked = false
@@ -446,12 +551,29 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, "dad02 클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/dad02.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
+
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
+
 
                     gf01.isChecked = false
                     gf02.isChecked = false
@@ -486,12 +608,29 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, "boy_5s_01 클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/5sboy01.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
+
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
+
 
                     gf01.isChecked = false
                     gf02.isChecked = false
@@ -526,12 +665,30 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, "boy_5s_02 클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/5sboy02.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
+
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
+
+
 
                     gf01.isChecked = false
                     gf02.isChecked = false
@@ -566,12 +723,30 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, "boy_10s_01 클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/10sboy01.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
+
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
+
+
 
                     gf01.isChecked = false
                     gf02.isChecked = false
@@ -606,12 +781,30 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, "boy_10s_02 클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/10sboy02.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
+
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
+
+
 
                     gf01.isChecked = false
                     gf02.isChecked = false
@@ -646,12 +839,29 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, "boy_20s_01 클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/20sboy01.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
+
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
+
 
                     gf01.isChecked = false
                     gf02.isChecked = false
@@ -686,12 +896,29 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, " boy_20s_02 클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/20sboy02.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
+
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
+
 
                     gf01.isChecked = false
                     gf02.isChecked = false
@@ -726,12 +953,31 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, "boy_30s_01 클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/30sboy01.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
+
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
+
+
+
 
                     gf01.isChecked = false
                     gf02.isChecked = false
@@ -766,12 +1012,30 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, "boy_30s_02 클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/30sboy02.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
+
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
+
+
 
                     gf01.isChecked = false
                     gf02.isChecked = false
@@ -806,12 +1070,31 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, " girl_5s_01 클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/5sgirl01.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
+
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
+
+
+
 
                     gf01.isChecked = false
                     gf02.isChecked = false
@@ -846,12 +1129,31 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, " girl_5s_02 클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/5sgirl02.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
+
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
+
+
+
 
                     gf01.isChecked = false
                     gf02.isChecked = false
@@ -886,12 +1188,31 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, "girl_10s_01 클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/10sgirl01.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
+
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
+
+
+
 
                     gf01.isChecked = false
                     gf02.isChecked = false
@@ -926,12 +1247,30 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, "girl_10s_02 클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/10sgirl02.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
+
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
+
+
 
                     gf01.isChecked = false
                     gf02.isChecked = false
@@ -966,12 +1305,29 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, "girl_20s_01 클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/20sgirl01.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
+
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
+
 
                     gf01.isChecked = false
                     gf02.isChecked = false
@@ -1006,12 +1362,30 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, "girl_20s_02 클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/20sgirl02.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
+
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
+
+
 
                     gf01.isChecked = false
                     gf02.isChecked = false
@@ -1046,12 +1420,30 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, "girl_30s_01 클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/30sgirl01.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
+
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
+
+
 
                     gf01.isChecked = false
                     gf02.isChecked = false
@@ -1086,12 +1478,30 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(applicationContext, "girl_30s_02 클릭", Toast.LENGTH_SHORT).show()
 
                     storageRef.child("profileImg/30sgirl02.png").downloadUrl
-                        .addOnSuccessListener { uri ->
-                            put_intent.putExtra("profile_img", uri)
-
-                        }.addOnFailureListener { err ->
-                            err.printStackTrace()
+                        .addOnSuccessListener (object :OnSuccessListener<Uri> {
+                            override fun onSuccess(p0: Uri?) {
+                                //성공시
+                                val uri_ = p0.toString()
+                                edit.putString("profile_img" , uri_)
+                                //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
+                                edit.apply()
+                                complete.isClickable=true
+//                                put_intent.putExtra("profile_img", uri_)
+                            }
                         }
+
+
+                        )
+
+                        .addOnFailureListener(object : OnFailureListener {
+                            override fun onFailure(p0: Exception) {
+                                Toast.makeText(applicationContext, "이미지 업로드 실패", Toast.LENGTH_SHORT).show()
+                                p0.printStackTrace()
+                            }
+                        }
+                        )
+
+
 
                     gf01.isChecked = false
                     gf02.isChecked = false

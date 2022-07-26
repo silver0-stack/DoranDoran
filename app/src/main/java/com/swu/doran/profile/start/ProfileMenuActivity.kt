@@ -1,7 +1,9 @@
 package com.swu.doran.profile.start
 
 import android.annotation.SuppressLint
-import android.graphics.BitmapFactory
+import android.content.ContentResolver
+import android.content.res.Resources
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
@@ -12,7 +14,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
-import com.swu.doran.R
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 
 
 open class ProfileMenuActivity : AppCompatActivity() {
@@ -25,6 +28,10 @@ open class ProfileMenuActivity : AppCompatActivity() {
     lateinit var userList: ArrayList<ProfileData>
 
 
+    var storage: FirebaseStorage = FirebaseStorage.getInstance()
+    var storageRef: StorageReference = storage.reference //뽑아오는 스토리지
+
+
     //realtime
     var uid: String? = null
     var user: FirebaseUser? = null
@@ -35,6 +42,7 @@ open class ProfileMenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(com.swu.doran.R.layout.profile_start)
+
 
 
 
@@ -51,9 +59,7 @@ open class ProfileMenuActivity : AppCompatActivity() {
         recyclerv.layoutManager = gridLayoutManager
         recyclerv.setHasFixedSize(true)
 
-        val icon = BitmapFactory.decodeResource(resources, R.drawable.user)
-
-
+        // val icon = BitmapFactory.decodeResource(resources, R.drawable.user)
 
 
         user = FirebaseAuth.getInstance().currentUser
@@ -66,30 +72,48 @@ open class ProfileMenuActivity : AppCompatActivity() {
         val profileRef: DatabaseReference = accountReference.child(uid!!).child("profile")
 
 
-        var default = -1
+        var default = 0
 
 
         /*프로필 추가 이벤트*/
-        //앱을 껐다키면 i가 다시
         add_profile.setOnClickListener {
-            default++
-            profileRef.addListenerForSingleValueEvent(object : ValueEventListener {
 
+            profileRef.addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     for (dataSnapshot in snapshot.children) {
                         /*해당 프로필이 존재한다면*/
-                        while (dataSnapshot.key.equals("User$default")) {
+//                        Log.d("snapshot: ", snapshot.toString())
+//                        Log.d("dataSnapshot.key: ", dataSnapshot.key.toString())
+
+                        val arr = dataSnapshot.key.toString().split("r")
+
+                        Log.d("arr[1] : ", arr[1])
+
+                        //작거나 같을 때 증가
+                        if (default <= arr[1].toInt()) {
                             default++
                         }
-                        Log.d("datasnap", dataSnapshot.toString())
-                        Log.d("snapshot", snapshot.toString())
+
+
                     }
+                    val resources: Resources = resources
 
+                    val default_img = Uri.parse(
+                        ContentResolver.SCHEME_ANDROID_RESOURCE
+                                + "://" + resources.getResourcePackageName(com.swu.doran.R.drawable.mom01)
+                                + '/' + resources.getResourceTypeName(com.swu.doran.R.drawable.mom01)
+                                + '/' + resources.getResourceEntryName(com.swu.doran.R.drawable.mom01)
+                    )
 
-                    userData = ProfileData(key, icon.toString(), "User$default","yy.mm.dd","LunarOrSolar")
-                    Log.d("TAG", userData.toString())
-                    //userAdapter.addItem(ProfileData(icon.toString(), "user$i"))
+                    userData = ProfileData(
+                        key,
+                        default_img.toString(),
+                        "User$default",
+                        "yy.mm.dd",
+                        "LunarOrSolar"
+                    )
                     profileRef.child(userData.profile_name!!).setValue(userData)
+
 
                 }
 
