@@ -72,6 +72,7 @@ class MainDayActivity : AppCompatActivity() {
 
         val date = findViewById<TextView>(R.id.clickDate)
 
+        //오늘날짜 받아옴
         val day = intent.getStringExtra("day")
         //val day = intent.getStringExtra("day")
 
@@ -89,6 +90,8 @@ class MainDayActivity : AppCompatActivity() {
 
         gameBtn.setOnClickListener{
             val intent = Intent(this, GameWriting::class.java)
+            //오늘날짜 담아서 가져가
+            intent.putExtra("day", day)
             startActivity(intent)
         }
 

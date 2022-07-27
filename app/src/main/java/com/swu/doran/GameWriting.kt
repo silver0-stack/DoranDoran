@@ -90,8 +90,15 @@ class GameWriting : AppCompatActivity() {
         if(intent.hasExtra("uid")){
             uid = intent.getStringExtra("uid").toString()
         }
+
+
+
+
         //올리기 버튼
         updateBtn.setOnClickListener{
+            //오늘날짜 받아옴
+            val instance = intent.getStringExtra("day")
+
             val database = FirebaseDatabase.getInstance()
             val myRef = database.getReference()
 
@@ -101,11 +108,14 @@ class GameWriting : AppCompatActivity() {
                 date_end_btn.text.toString(),
                 reward.text.toString()
             )
-            myRef.child("day").child("game").child(uid).push().setValue(dataInput)
+            if (instance != null) {
+                myRef.child("day").child(instance).child("game").child(uid).setValue(dataInput)
+            }
 
+            onBackPressed()
 
-            val intent = Intent(this, MainDayActivity::class.java)
-            startActivity(intent)
+            //val intent = Intent(this, MainDayActivity::class.java)
+            //startActivity(intent)
         }
 
 

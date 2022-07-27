@@ -168,7 +168,7 @@ class MainCalendarActivity : Fragment() {
             val dataInput = thisdate(
                 value
             )
-            myRef.child("day").child(uid).push().setValue(dataInput)
+            myRef.child("day").child(value).child(uid).setValue(dataInput)
 
 
 
