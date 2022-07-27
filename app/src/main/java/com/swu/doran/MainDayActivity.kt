@@ -8,10 +8,12 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.DatabaseReference
 
 //
 @SuppressLint("WrongViewCast")
 class MainDayActivity : AppCompatActivity() {
+    private lateinit var database: DatabaseReference
     private lateinit var recyclerView_day: RecyclerView
     private lateinit var viewAdapter_day: RecyclerView.Adapter<*>
     private  lateinit var viewManager_day: RecyclerView.LayoutManager
@@ -70,10 +72,10 @@ class MainDayActivity : AppCompatActivity() {
 
         val date = findViewById<TextView>(R.id.clickDate)
 
-        val month = intent.getStringExtra("month")
         val day = intent.getStringExtra("day")
+        //val day = intent.getStringExtra("day")
 
-        date.text = month+"월 "+day+"일"
+        date.text = day
 
         scheduleBtn.setOnClickListener{
             val intent = Intent(this, ScheduleWritingActivity::class.java)

@@ -33,15 +33,17 @@
             android:name=".profile.edit.Profile_name"
             android:exported="true" />
         <activity android:name=".MainActivity"
-            android:exported="true" />
-
-
-        <activity android:name=".mailbox.recieved.member.MailboxActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+
+        <activity android:name=".mailbox.recieved.member.MailboxActivity"
+            android:exported="true">
+
         </activity>
 
 

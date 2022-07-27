@@ -95,8 +95,14 @@ import android.widget.CalendarView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.swu.doran.MainDayActivity
 import com.swu.doran.R
+import com.swu.doran.game
+import com.swu.doran.thisdate
+import java.util.*
+import java.util.Currency.getInstance
 
 
 class MainCalendarActivity : Fragment() {
@@ -118,6 +124,10 @@ class MainCalendarActivity : Fragment() {
     lateinit var str: String
 
 
+    private var uid:String = ""
+    private lateinit var date:String
+    private lateinit var database: DatabaseReference
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
@@ -136,13 +146,33 @@ class MainCalendarActivity : Fragment() {
 
         }
 
-        val month = activity?.intent?.getStringExtra("month")
-        val day = activity?.intent?.getStringExtra("day")
+
 
         addIssue.setOnClickListener {
-            val intent = Intent(activity, MainDayActivity::class.java)
-            intent.putExtra("month", month.toString())
-            intent.putExtra("day", day.toString())
+            //정규식으로 앞부분만 뽑아내기
+            val instance = "(.+)월 (.+)일".toRegex()
+            val day = addIssue.text
+
+            //정규식과 일치하는 부분만 저장
+            val matchResult : MatchResult? = instance.find(day)
+            val value : String = matchResult!!.value
+
+
+            val intent = Intent(activity , MainDayActivity::class.java)
+            //intent.putExtra("month", month.toString())
+            //intent.putExtra("day", day.toString())
+
+            val database = FirebaseDatabase.getInstance()
+            val myRef = database.getReference()
+
+            val dataInput = thisdate(
+                value
+            )
+            myRef.child("day").child(uid).push().setValue(dataInput)
+
+
+
+            intent.putExtra("day", value)
             startActivity(intent)
 
             //val database = FirebaseDatabase.getInstance()
@@ -153,6 +183,9 @@ class MainCalendarActivity : Fragment() {
             //)
 
             //myRef.child("day").child("game").push().setValue(dataInput)
+
+
+
 
 
         }
