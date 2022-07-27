@@ -2,6 +2,7 @@ package com.swu.doran.profile.start
 
 import android.annotation.SuppressLint
 import android.content.ContentResolver
+import android.content.Intent
 import android.content.res.Resources
 import android.net.Uri
 import android.os.Bundle
@@ -16,12 +17,13 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
+import com.swu.doran.profile.edit.ProfileEditActivity
 
 
 open class ProfileMenuActivity : AppCompatActivity() {
 
     lateinit var edit_profile: TextView
-    lateinit var add_profile: TextView
+    public lateinit var add_profile: TextView
     lateinit var recyclerv: RecyclerView
     lateinit var userData: ProfileData
     lateinit var userAdapter: ProfileAdapter
@@ -130,7 +132,7 @@ open class ProfileMenuActivity : AppCompatActivity() {
 
         /*프로필 편집 이벤트*/
         edit_profile.setOnClickListener {
-
+            startActivity(Intent(this, ProfileEditActivity::class.java))
         }
 
 
@@ -190,7 +192,7 @@ open class ProfileMenuActivity : AppCompatActivity() {
 
     }
 
-    private fun ReadProfile() {
+    fun ReadProfile() {
         accountReference.child(uid!!).child("profile")
             .addValueEventListener(object : ValueEventListener {
 

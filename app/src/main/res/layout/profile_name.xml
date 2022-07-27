@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".profile.add.Profile_name">
+    tools:context=".profile.edit.Profile_name">
 
     <LinearLayout
         android:layout_width="match_parent"

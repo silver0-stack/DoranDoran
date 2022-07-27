@@ -185,7 +185,7 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/app_pw.xml" value="0.22760416666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/calendar_add.xml" value="0.26875" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/calendar_bottom_sheet.xml" value="0.25" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/drawer_header.xml" value="0.22" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/drawer_header.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/edit_profile.xml" value="0.34270833333333334" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/email_pw.xml" value="0.35052083333333334" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/email_to_signin.xml" value="0.34270833333333334" />
@@ -197,7 +197,9 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/main_day_card_game.xml" value="0.24497648567764002" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/main_day_card_schedule.xml" value="0.24497648567764002" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/msg_item.xml" value="0.24497648567764002" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/onboarding.xml" value="0.2874630645842127" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/profile_birthday.xml" value="0.2620778110303549" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/profile_edit.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/profile_emoji.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/profile_item.xml" value="0.22" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/profile_name.xml" value="0.25" />

@@ -10,4 +10,7 @@
     <color name="representative">#F5FAFF</color>
     <color name="btn_repre">#0F4E9E</color>
     <color name="red">#FF0000</color>
+    <color name="bright_yellow">#F5C364</color>
+    <color name="light_yellow">#FCFBF7</color>
+
 </resources>

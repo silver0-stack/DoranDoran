@@ -1,8 +1,9 @@
-package com.swu.doran.profile.start
+package com.swu.doran.profile.edit
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.content.SharedPreferences
 import android.util.Log
@@ -17,12 +18,14 @@ import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.swu.doran.MainActivity
 import com.swu.doran.R
-import com.swu.doran.profile.start.ProfileAdapter.ItemViewHolder
+import com.swu.doran.profile.start.ProfileData
 
-class ProfileAdapter(private val context: Context, private val dataList: ArrayList<ProfileData>) :
-    RecyclerView.Adapter<ItemViewHolder>() {
+class ProfileEditAdapter(
+    private val context: Context,
+    private val dataList: ArrayList<ProfileData>
+) :
+    RecyclerView.Adapter<ProfileEditAdapter.ItemViewHolder>() {
 
     var mPosition = 0
 
@@ -33,7 +36,7 @@ class ProfileAdapter(private val context: Context, private val dataList: ArrayLi
     var accountReference = firebaseDatabase.getReference("Account")
     lateinit var profileRef: DatabaseReference
 
-    lateinit var shared : SharedPreferences
+    lateinit var shared: SharedPreferences
 
     lateinit var img: String
     lateinit var name: String
@@ -72,7 +75,7 @@ class ProfileAdapter(private val context: Context, private val dataList: ArrayLi
             Log.d("mPosition: ", mPosition.toString())
             Glide.with(context).load(profiledata.profile_img).into(userImg)
             userName.text = profiledata.profile_name
-       }
+        }
 
     }
 
@@ -98,16 +101,16 @@ class ProfileAdapter(private val context: Context, private val dataList: ArrayLi
                 .show()
 
 
-//            shared = context.getSharedPreferences("profile_info" , Context.MODE_PRIVATE)
-//            val edit = shared.edit()
-//            edit.putInt("profile_number" , position)
-//            Toast.makeText(context , "$position Was Saved" , Toast.LENGTH_SHORT).show()
-//            edit.apply()
+            shared = context.getSharedPreferences("profile_info", Context.MODE_PRIVATE)
+            val edit = shared.edit()
+            edit.putInt("profile_number", position)
+            Toast.makeText(context, "$position Was Saved", Toast.LENGTH_SHORT).show()
+            edit.apply()
 
 
-            //MainActivity intent
-            val intent = Intent(context, MainActivity::class.java)
-            intent.putExtra("profile_number",position)
+            //프로필 설정 액티비티 intent
+            val intent = Intent(context, Profile_name::class.java)
+//            intent.putExtra("user_number", position)
             context.startActivity(intent)
         }
 
@@ -115,22 +118,22 @@ class ProfileAdapter(private val context: Context, private val dataList: ArrayLi
         val builder = AlertDialog.Builder(context)
 
 
-//        //프로필 길게 클릭 이벤트
-//        holder.itemView.setOnLongClickListener {
-//            setPosition(position)
-//
-//            //Alert Dialog show
-//            builder.setTitle("프로필 삭제")
-//                .setMessage("${dataList[position].profile_name} 프로필을 삭제하시겠습니까?")
-//                .setPositiveButton("삭제하기") { dialogInterface: DialogInterface?, i: Int ->
-//                    removeItem(position)
-//                    this.notifyDataSetChanged();
-//                }.setNeutralButton("취소", null)
-//                .show()
-//
-//
-//            return@setOnLongClickListener true
-//        }
+        //프로필 길게 클릭 이벤트
+        holder.itemView.setOnLongClickListener {
+            setPosition(position)
+
+            //Alert Dialog show
+            builder.setTitle("프로필 삭제")
+                .setMessage("${dataList[position].profile_name} 프로필을 삭제하시겠습니까?")
+                .setPositiveButton("삭제하기") { dialogInterface: DialogInterface?, i: Int ->
+                    removeItem(position)
+                    this.notifyDataSetChanged();
+                }.setNeutralButton("취소", null)
+                .show()
+
+
+            return@setOnLongClickListener true
+        }
 
 
     }

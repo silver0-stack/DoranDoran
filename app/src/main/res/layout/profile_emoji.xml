@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".profile.add.Profile_emoji"
+    tools:context=".profile.edit.Profile_emoji"
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"

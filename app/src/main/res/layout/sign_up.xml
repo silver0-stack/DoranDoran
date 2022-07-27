@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/representative"
     android:orientation="vertical">
 
 
@@ -25,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:text="* 비밀번호 변경 시 필요한 이메일입니다.\n실제로 사용 중인 이메일을 입력해주세요."
-            android:textColor="@color/btn_repre"
+            android:textColor="@color/bright_yellow"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -192,7 +191,7 @@
             android:background="@drawable/textlines"
             android:onClick="signUp"
             android:text="로그인 하러가기"
-            android:textColor="@color/btn_repre"
+            android:textColor="@color/bright_yellow"
             android:textSize="14sp" />
 
 

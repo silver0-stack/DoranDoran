@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".PopupActivity"
             android:theme="@android:style/Theme.Dialog"
@@ -19,17 +20,17 @@
             android:name=".ChatActivity"
             android:exported="false" />
         <activity
-            android:name=".profile.add.Profile_birthday"
+            android:name=".profile.edit.Profile_birthday"
             android:theme="@style/AppTheme"
             android:exported="true" />
         <activity
-            android:name=".profile.add.Profile_select_emoji"
+            android:name=".profile.edit.Profile_select_emoji"
             android:exported="true" />
         <activity
-            android:name=".profile.add.Profile_emoji"
+            android:name=".profile.edit.Profile_emoji"
             android:exported="true" />
         <activity
-            android:name=".profile.add.Profile_name"
+            android:name=".profile.edit.Profile_name"
             android:exported="true" />
         <activity android:name=".MainActivity"
             android:exported="true" />
@@ -53,7 +54,6 @@
         <activity android:name=".GameWriting" />
         <activity android:name=".profile.start.ProfileMenuActivity" />
         <activity android:name=".profile.edit.ProfileEditActivity" />
-        <activity android:name=".profile.edit.ProfileSelectActivity" />
         <activity android:name=".AddIssueActivity" />
         <activity android:name=".account.PasswordAppActivity" />
         <activity android:name=".account.PasswordEmailActivity" />

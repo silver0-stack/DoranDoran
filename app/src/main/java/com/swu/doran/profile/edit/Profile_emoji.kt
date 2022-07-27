@@ -1,4 +1,4 @@
-package com.swu.doran.profile.add
+package com.swu.doran.profile.edit
 
 import android.content.Context
 import android.content.Intent
@@ -50,8 +50,8 @@ class Profile_emoji : AppCompatActivity() {
         //선택한 이미지로 반영
         Glide.with(this)
             .load(get_img)
-            .placeholder(R.drawable.mom01)// Glide 로 이미지 로딩을 시작하기 전에 보여줄 이미지
-            .fallback(R.drawable.mom01) //load할 url이 null인 경우 등 비어있을 때
+            .placeholder(R.drawable.loading)// Glide 로 이미지 로딩을 시작하기 전에 보여줄 이미지
+            .fallback(R.drawable.loading) //load할 url이 null인 경우 등 비어있을 때
             .into(editImg)
 
 

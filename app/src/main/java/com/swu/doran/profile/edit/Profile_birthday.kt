@@ -1,4 +1,4 @@
-package com.swu.doran.profile.add
+package com.swu.doran.profile.edit
 
 import android.content.Context
 import android.content.Intent
@@ -16,7 +16,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
 import com.swu.doran.R
-import com.swu.doran.profile.start.ProfileMenuActivity
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 class Profile_birthday : AppCompatActivity(), View.OnClickListener {
@@ -26,7 +27,7 @@ class Profile_birthday : AppCompatActivity(), View.OnClickListener {
     lateinit var complete: TextView
     lateinit var back: TextView
 
-    lateinit var msg: String
+    var msg: String? = null;
 
     //realtime
     var uid: String? = null
@@ -55,27 +56,50 @@ class Profile_birthday : AppCompatActivity(), View.OnClickListener {
             super.onBackPressed()
         }
 
+
         val datePicker = findViewById<View>(R.id.dataPicker) as DatePicker
         val today = Calendar.getInstance()
-        datePicker.init(
-            today.get(Calendar.YEAR), today.get(Calendar.MONTH), today.get(Calendar.DAY_OF_MONTH)
-        ) { view, year, month, day ->
-            val month_ = month + 1
+
+        //datepicker 날짜 디폴트 시 오늘 날짜가 생일임
+        val todayDate = LocalDate.now().toString()
+        val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
+        val formatted = todayDate.format(formatter)
+        Log.d("date", formatted)
+
+        msg = formatted
+
+        val listener = DatePicker.OnDateChangedListener { view, year, monthOfYear, dayOfMonth ->
+            val month_ = monthOfYear + 1
+            var month_get=""
+            var day_get=""
             //안 움직이고 오늘 날짜로 하니까 msg 미초기화 에러 발생
-            msg = "$year/$month_/$day"
 
 
+            if(month_ < 10){
+                month_get = "0$month_"
+            }else{
+                month_get = "$month_"
+            }
+
+
+            if(dayOfMonth < 10){
+                day_get  = "0$dayOfMonth"
+            }else{
+                day_get  = "$dayOfMonth"
+            }
+            msg = "${year}-${month_get}-${day_get}"
             edit.putString("profile_birth", msg)
             Toast.makeText(this, "$msg Was Saved", Toast.LENGTH_SHORT).show()
             edit.apply()
-
-//            Toast.makeText(applicationContext, "$msg 를 선택하셨습니다", Toast.LENGTH_SHORT).show()
-
         }
+
+        datePicker.init(
+            today.get(Calendar.YEAR),
+            today.get(Calendar.MONTH),
+            today.get(Calendar.DAY_OF_MONTH),
+            listener
+        )
         //datePicker.setOnDateChangedListener(this);
-        val listener = DatePicker.OnDateChangedListener { view, year, monthOfYear, dayOfMonth ->
-
-        }
 
 
         lunar = findViewById(R.id.lunar)
@@ -105,7 +129,7 @@ class Profile_birthday : AppCompatActivity(), View.OnClickListener {
         //완료버튼
         complete.setOnClickListener {
 
-            val profile_number = shared.getInt("profile_number",0)
+            val profile_number = shared.getInt("profile_number", 0)
             val profile_name = shared.getString("profile_name", "no")
             val profile_img = shared.getString("profile_img", "no")
 
@@ -137,7 +161,7 @@ class Profile_birthday : AppCompatActivity(), View.OnClickListener {
 
 
                 })
-            startActivity(Intent(this, ProfileMenuActivity::class.java))
+            startActivity(Intent(this, ProfileEditActivity::class.java))
         }
 
 

@@ -1,4 +1,4 @@
-package com.swu.doran.profile.add
+package com.swu.doran.profile.edit
 
 import android.content.Context
 import android.content.Intent
@@ -166,7 +166,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -223,7 +223,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -278,7 +278,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -335,7 +335,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -392,7 +392,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -447,7 +447,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -503,7 +503,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -558,7 +558,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -615,7 +615,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -672,7 +672,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -730,7 +730,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -788,7 +788,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -846,7 +846,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -903,7 +903,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -960,7 +960,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -1019,7 +1019,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -1077,7 +1077,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -1136,7 +1136,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -1195,7 +1195,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -1254,7 +1254,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -1312,7 +1312,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -1369,7 +1369,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -1427,7 +1427,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }
@@ -1485,7 +1485,7 @@ class Profile_select_emoji : AppCompatActivity(), View.OnClickListener {
                                 edit.putString("profile_img" , uri_)
                                 //Toast.makeText(applicationContext , "$uri_ Was Saved" , Toast.LENGTH_SHORT).show()
                                 edit.apply()
-                                complete.isClickable=true
+                                complete.isEnabled=true
 //                                put_intent.putExtra("profile_img", uri_)
                             }
                         }

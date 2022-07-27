@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".profile.add.Profile_select_emoji">
+    tools:context=".profile.edit.Profile_select_emoji">
 
 
     <ScrollView
@@ -49,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="확인"
-                    android:clickable="false"
+                    android:enabled="false"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 

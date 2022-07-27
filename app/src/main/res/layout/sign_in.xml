@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/representative"
     android:orientation="vertical">
 
     <View
@@ -69,7 +68,7 @@
             android:gravity="right"
             android:onClick="change_pw"
             android:text="비밀번호 변경"
-            android:textColor="@color/btn_repre"
+            android:textColor="@color/bright_yellow"
             android:textSize="14sp"
             android:textStyle="bold" />
 
@@ -102,7 +101,7 @@
                 android:background="@drawable/textlines"
                 android:onClick="signUp"
                 android:text="신규계정 만들기"
-                android:textColor="@color/btn_repre"
+                android:textColor="@color/bright_yellow"
                 android:textSize="14sp" />
         </LinearLayout>
 
