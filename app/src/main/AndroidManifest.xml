@@ -36,7 +36,7 @@
             android:exported="true" />
 
 
-        <activity android:name=".account.SignUpActivity"
+        <activity android:name=".mailbox.recieved.member.MailboxActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -58,7 +58,7 @@
         <activity android:name=".account.PasswordAppActivity" />
         <activity android:name=".account.PasswordEmailActivity" />
         <activity android:name=".account.EmailToSignIn" />
-        <activity android:name=".mailbox.recieved.member.m_Activity" />
+        <activity android:name=".account.SignUpActivity"/>
         <activity android:name=".mailbox.recieved.letter.list.l_ContentsActivity" />
         <activity android:name=".mailbox.recieved.letter.scrap.s_Activity" />
         <activity android:name=".mailbox.recieved.letter.list.l_Activity" />

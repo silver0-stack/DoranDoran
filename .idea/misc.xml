@@ -147,9 +147,11 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/drawable/outline_green.xml" value="0.231" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/drawable/schedule_checked.xml" value="0.231" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/drawable/send_emoji.xml" value="0.231" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/drawable/sent_member_list.xml" value="0.193" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/drawable/sticker1_selected.xml" value="0.231" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/drawable/sticker2_selected.xml" value="0.231" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/drawable/sticker3_selected.xml" value="0.231" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/drawable/sticker8_selected.xml" value="0.2295" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/drawable/textlines.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/drawable/toggle_10s_boy_01.xml" value="0.367" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/drawable/toggle_10s_boy_02.xml" value="0.366" />
@@ -191,6 +193,9 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/email_to_signin.xml" value="0.34270833333333334" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/family_writing.xml" value="0.24497648567764002" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/game_writing.xml" value="0.24497648567764002" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/mailbox.xml" value="0.2877297990594271" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/mailbox_member_item.xml" value="0.2877297990594271" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/mailbox_member_list.xml" value="0.2877297990594271" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/main_calendar.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/main_day.xml" value="0.35052083333333334" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/main_day_card_family.xml" value="0.24497648567764002" />
@@ -208,6 +213,8 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/profile_start.xml" value="0.22" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/received_letter_contents.xml" value="0.24497648567764002" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/received_list_item.xml" value="0.24497648567764002" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/received_member_item.xml" value="0.33" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/received_member_list.xml" value="0.10089781958101753" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/recieved_letter_list.xml" value="0.24497648567764002" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/recieved_letter_scrap.xml" value="0.24497648567764002" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/recieved_mailbox.xml" value="0.24497648567764002" />
@@ -223,6 +230,7 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/sent_list_item.xml" value="0.24497648567764002" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/sent_mailbox.xml" value="0.24497648567764002" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/sent_member_item.xml" value="0.24497648567764002" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/sent_member_list.xml" value="0.284086112283664" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/sign_in.xml" value="0.22" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/layout/sign_up.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/DoranDoran_restart/app/src/main/res/menu/drawer_menu.xml" value="0.27291666666666664" />
