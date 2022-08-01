@@ -97,12 +97,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.swu.doran.MainDayActivity
 import com.swu.doran.R
-import com.swu.doran.game
-import com.swu.doran.thisdate
-import java.util.*
-import java.util.Currency.getInstance
 
 
 class MainCalendarActivity : Fragment() {

@@ -156,7 +156,7 @@ class Profile_birthday : AppCompatActivity(), View.OnClickListener {
                     }
 
                     override fun onCancelled(error: DatabaseError) {
-                        TODO("Not yet implemented")
+
                     }
 
 

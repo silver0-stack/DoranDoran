@@ -145,23 +145,23 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp">
-                    <Button
+                    <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/time_start_btn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/white"
-                        android:text="시작시간을 설정해주세요"
+                        android:text="시작 시간"
                         android:textSize="14dp"
                         android:onClick="onBtnClick"
                         android:textColor="#8C8C8C"
                         android:textColorHint="@color/black"
                         android:layout_weight="1"/>
-                    <Button
+                    <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/time_end_btn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/white"
-                        android:text="종료시간을 설정해주세요"
+                        android:text="종료 시간"
                         android:textSize="14dp"
                         android:textColor="#8C8C8C"
                         android:layout_weight="1"/>
@@ -238,6 +238,11 @@
                     android:layout_margin="10dp"
                     android:orientation="horizontal">
                     <ImageView
+                        android:id="@+id/mention"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/icon_check"/>
+                    <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/dad02"/>
@@ -281,50 +286,54 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="#FFFFFF">
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatToggleButton
                         android:id="@+id/time_before1"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:background="@drawable/selector_time"
-                        android:text="10분 전"
+                        android:textOn="10분 전"
+                        android:textOff="10분 전"
                         android:textAlignment="center"
                         android:layout_gravity="center"
                         android:textColor="#8C8C8C"
                         android:layout_weight="1"
                         android:padding="10dp"
                         android:layout_margin="2dp"/>
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatToggleButton
                         android:id="@+id/time_before2"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:background="@drawable/selector_time"
-                        android:text="1시간 전"
+                        android:textOn="1시간 전"
+                        android:textOff="1시간 전"
                         android:textAlignment="center"
                         android:layout_gravity="center"
                         android:textColor="#8C8C8C"
                         android:layout_weight="1"
                         android:padding="10dp"
                         android:layout_margin="2dp"/>
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatToggleButton
                         android:id="@+id/time_before3"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:background="@drawable/selector_time"
                         android:textAlignment="center"
                         android:layout_gravity="center"
-                        android:text="12시간 전"
+                        android:textOn="12시간 전"
+                        android:textOff="12시간 전"
                         android:textColor="#8C8C8C"
                         android:layout_weight="1"
                         android:padding="10dp"
                         android:layout_margin="2dp"/>
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatToggleButton
                         android:id="@+id/time_before4"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:background="@drawable/selector_time"
                         android:textAlignment="center"
                         android:layout_gravity="center"
-                        android:text="24시간 전"
+                        android:textOn="24시간 전"
+                        android:textOff="24시간 전"
                         android:textColor="#8C8C8C"
                         android:layout_weight="1"
                         android:padding="10dp"

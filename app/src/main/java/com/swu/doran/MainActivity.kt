@@ -159,8 +159,7 @@ class MainActivity : AppCompatActivity() {
 //            }
 //        })
         user = FirebaseAuth.getInstance().currentUser
-        assert(user != null)
-        uid = user!!.uid
+        uid = user?.uid
 
         //네비게이션뷰의 아이템 클릭시
         profileRef = accountReference.child(uid!!).child("profile")

@@ -1,12 +1,12 @@
-package com.swu.doran
+package com.swu.doran.calendar
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.swu.doran.R
 
 class MaingameAdapter() :
     RecyclerView.Adapter<MaingameAdapter.MyViewHolder>() {
@@ -21,7 +21,7 @@ class MaingameAdapter() :
 
     // 1. Create new views (invoked by the layout manager)
     override fun onCreateViewHolder(parent: ViewGroup,
-                                    viewType: Int): MaingameAdapter.MyViewHolder {
+                                    viewType: Int): MyViewHolder {
         // create a new view
         val cardView = LayoutInflater.from(parent.context)
             .inflate(R.layout.main_day_card_game, parent, false)

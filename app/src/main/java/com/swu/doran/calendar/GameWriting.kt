@@ -1,7 +1,6 @@
-package com.swu.doran
+package com.swu.doran.calendar
 
 import android.app.DatePickerDialog
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -10,6 +9,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.swu.doran.R
 import java.util.*
 
 class GameWriting : AppCompatActivity() {

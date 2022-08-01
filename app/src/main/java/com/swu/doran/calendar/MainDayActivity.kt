@@ -1,4 +1,4 @@
-package com.swu.doran
+package com.swu.doran.calendar
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.DatabaseReference
+import com.swu.doran.*
 
 //
 @SuppressLint("WrongViewCast")
@@ -39,7 +40,7 @@ class MainDayActivity : AppCompatActivity() {
         }
 
         viewManager_day = LinearLayoutManager(this, RecyclerView.HORIZONTAL, true)
-        viewAdapter_day = MainDayAdapter()
+        viewAdapter_day = MainScheduleAdapter()
         recyclerView_day = findViewById<RecyclerView>(R.id.recyclerview_day).apply{
             setHasFixedSize(true)
             layoutManager = viewManager_day

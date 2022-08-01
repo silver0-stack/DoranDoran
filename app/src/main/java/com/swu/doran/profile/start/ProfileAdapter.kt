@@ -98,11 +98,11 @@ class ProfileAdapter(private val context: Context, private val dataList: ArrayLi
                 .show()
 
 
-//            shared = context.getSharedPreferences("profile_info" , Context.MODE_PRIVATE)
-//            val edit = shared.edit()
-//            edit.putInt("profile_number" , position)
-//            Toast.makeText(context , "$position Was Saved" , Toast.LENGTH_SHORT).show()
-//            edit.apply()
+            shared = context.getSharedPreferences("profile_info" , Context.MODE_PRIVATE)
+            val edit = shared.edit()
+            edit.putInt("profile_number" , position)
+            Toast.makeText(context , "$position Was Saved" , Toast.LENGTH_SHORT).show()
+            edit.apply()
 
 
             //MainActivity intent
