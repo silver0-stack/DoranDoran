@@ -9,6 +9,8 @@ import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
@@ -16,6 +18,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.swu.doran.R
 import com.swu.doran.account.RegisterUser
 import java.util.*
+import kotlin.collections.ArrayList
 
 
 //TODO:멘션 바텀시트 리사이클러뷰로 설정 후 유저 정보들 넣기
@@ -45,10 +48,16 @@ class ScheduleWritingActivity : AppCompatActivity(), View.OnClickListener {
 
     lateinit var shared: SharedPreferences
 
-    lateinit var checkedTB:String
+    lateinit var checkedTB: String
 
-    lateinit var mention_iv:ImageView
+    lateinit var mention_iv: ImageView
 
+    lateinit var recycler_m: RecyclerView
+    lateinit var mentionResultAdapter: MentionResultAdapter
+    lateinit var mentionSelectAdapter: MentionSelectAdapter
+    lateinit var mentionAL: ArrayList<MentionResult>
+    lateinit var mentionselect: ArrayList<MentionSelect>
+    lateinit var mentionResult: MentionResult
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,11 +69,29 @@ class ScheduleWritingActivity : AppCompatActivity(), View.OnClickListener {
         shared = getSharedPreferences("profile_info", Context.MODE_PRIVATE)
         val edit = shared.edit()
 
+        recycler_m = findViewById(R.id.mention_result)
 
+        mentionAL = ArrayList()
+
+        mentionselect = ArrayList()
+
+        mentionResultAdapter = MentionResultAdapter(this, mentionAL)
+
+        val img = shared.getString("mention_profile_image", "")
+
+
+        Log.d("get_img: ",""+ img.toString())
+
+        mentionResult = MentionResult(img.toString())
+        mentionAL.add(mentionResult)
+
+        recycler_m.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+
+        recycler_m.adapter = mentionResultAdapter //리사이클러뷰에 어댑터 저장
 
         profileRef = accountReference.child(uid!!).child("profile")
 
-        mention_iv=findViewById(R.id.mention)
+        mention_iv = findViewById(R.id.mention)
 
         val backBtn = findViewById<ImageButton>(R.id.backBtn) //뒤로가기 버튼
         val schedule = findViewById<EditText>(R.id.schedule_text); //날짜(일정)
@@ -79,6 +106,8 @@ class ScheduleWritingActivity : AppCompatActivity(), View.OnClickListener {
 
         val scheduleUpdateBtn = findViewById<ImageButton>(R.id.schedule_update_btn);  //업로드 버튼
 
+        //mentionSelectAdapter= MentionSelectAdapter(this,mentionselect)
+
         //뒤로가기 버튼
         backBtn.setOnClickListener {
             super.onBackPressed();
@@ -87,9 +116,9 @@ class ScheduleWritingActivity : AppCompatActivity(), View.OnClickListener {
 
         //멘션 이미지 클릭
         mention_iv.setOnClickListener {
-            startActivity(Intent(this,ProfileMentionActivity::class.java))
-//            val bottomSheet =MentionBottomsheet(this)
-//            bottomSheet.show(supportFragmentManager, bottomSheet.tag)
+            // startActivity(Intent(this,ProfileMentionActivity::class.java))
+            val bottomSheet = MentionBottomsheet(this)
+            bottomSheet.show(supportFragmentManager, bottomSheet.tag)
         }
 
         time_before1.setOnClickListener(this)
@@ -173,7 +202,8 @@ class ScheduleWritingActivity : AppCompatActivity(), View.OnClickListener {
                     time_end_btn.text.toString(),
                     loca.text.toString(),
                     "mention",
-                    checkedTB)
+                    checkedTB
+                )
 
 
                 //리얼타임에 계정 저장
@@ -207,7 +237,7 @@ class ScheduleWritingActivity : AppCompatActivity(), View.OnClickListener {
                     time_before3.isChecked = false
                     time_before4.isChecked = false
 
-                    checkedTB=time_before1.text.toString()
+                    checkedTB = time_before1.text.toString()
                 } else {
                     time_before1.isChecked = false
                 }
@@ -219,7 +249,7 @@ class ScheduleWritingActivity : AppCompatActivity(), View.OnClickListener {
                     time_before3.isChecked = false
                     time_before4.isChecked = false
 
-                    checkedTB=time_before2.text.toString()
+                    checkedTB = time_before2.text.toString()
                 } else {
                     time_before2.isChecked = false
                 }
@@ -231,7 +261,7 @@ class ScheduleWritingActivity : AppCompatActivity(), View.OnClickListener {
                     time_before1.isChecked = false
                     time_before4.isChecked = false
 
-                    checkedTB=time_before3.text.toString()
+                    checkedTB = time_before3.text.toString()
                 } else {
                     time_before3.isChecked = false
                 }
@@ -243,7 +273,7 @@ class ScheduleWritingActivity : AppCompatActivity(), View.OnClickListener {
                     time_before3.isChecked = false
                     time_before1.isChecked = false
 
-                    checkedTB=time_before4.text.toString()
+                    checkedTB = time_before4.text.toString()
                 } else {
                     time_before4.isChecked = false
                 }

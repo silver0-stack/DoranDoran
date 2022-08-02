@@ -102,7 +102,7 @@ class GameWriting : AppCompatActivity() {
             val database = FirebaseDatabase.getInstance()
             val myRef = database.getReference()
 
-            val dataInput = game(
+            val dataInput = Game(
                 title.text.toString(),
                 date_start_btn.text.toString(),
                 date_end_btn.text.toString(),

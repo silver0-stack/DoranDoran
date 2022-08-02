@@ -160,7 +160,7 @@ class MainCalendarActivity : Fragment() {
             val database = FirebaseDatabase.getInstance()
             val myRef = database.getReference()
 
-            val dataInput = thisdate(
+            val dataInput = Thisdate(
                 value
             )
             myRef.child("day").child(value).child(uid).setValue(dataInput)

@@ -1,12 +1,8 @@
 package com.swu.doran.calendar
 
 import android.annotation.SuppressLint
-import android.content.ContentResolver
 import android.content.Intent
-import android.content.res.Resources
-import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -17,18 +13,15 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
-import com.swu.doran.profile.edit.ProfileEditActivity
-import com.swu.doran.profile.start.ProfileAdapter
-import com.swu.doran.profile.start.ProfileData
 import com.swu.doran.R
 
 class ProfileMentionActivity : AppCompatActivity() {
     lateinit var cancel: TextView
     lateinit var ok: TextView
     lateinit var recyclerv: RecyclerView
-    lateinit var userData: ProfileData
-    lateinit var userAdapter: ProfileAdapter
-    lateinit var userList: ArrayList<ProfileData>
+    lateinit var userData: MentionSelect
+    lateinit var userAdapter: MentionSelectAdapter
+    lateinit var userList: ArrayList<MentionSelect>
 
 
     var storage: FirebaseStorage = FirebaseStorage.getInstance()
@@ -55,7 +48,7 @@ class ProfileMentionActivity : AppCompatActivity() {
         recyclerv = findViewById(com.swu.doran.R.id.profile_rv)
 
         userList = ArrayList()
-        userAdapter = ProfileAdapter(this, userList)
+        userAdapter = MentionSelectAdapter(this, userList)
         recyclerv.adapter = userAdapter
 
         val gridLayoutManager = GridLayoutManager(applicationContext, 3)
@@ -101,7 +94,7 @@ class ProfileMentionActivity : AppCompatActivity() {
                 //Log.d("TAG", String.valueOf(snapshot));
                 for (dataSnapshot in snapshot.children) {
                     //val data_name = dataSnapshot.key
-                    val read_p: ProfileData? = dataSnapshot.getValue(ProfileData::class.java)
+                    val read_p: MentionSelect? = dataSnapshot.getValue(MentionSelect::class.java)
                     //read_p?.key = data_name
 
                     userList.add(read_p!!)
