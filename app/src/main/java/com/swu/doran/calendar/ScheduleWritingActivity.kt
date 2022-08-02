@@ -87,8 +87,9 @@ class ScheduleWritingActivity : AppCompatActivity(), View.OnClickListener {
 
         //멘션 이미지 클릭
         mention_iv.setOnClickListener {
-            val bottomSheet =MentionBottomsheet(this)
-            bottomSheet.show(supportFragmentManager, bottomSheet.tag)
+            startActivity(Intent(this,ProfileMentionActivity::class.java))
+//            val bottomSheet =MentionBottomsheet(this)
+//            bottomSheet.show(supportFragmentManager, bottomSheet.tag)
         }
 
         time_before1.setOnClickListener(this)

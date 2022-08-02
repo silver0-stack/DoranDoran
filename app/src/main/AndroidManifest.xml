@@ -50,7 +50,7 @@
 
         <activity android:name=".MainActivity" />
         <activity android:name=".OnBoardingActivity" />
-
+        <activity android:name=".calendar.ProfileMentionActivity" />
         <activity android:name=".account.SignInActivity" />
         <activity android:name=".calendar.MainDayActivity" />
         <activity android:name=".calendar.ScheduleWritingActivity" />
@@ -62,7 +62,7 @@
         <activity android:name=".account.PasswordAppActivity" />
         <activity android:name=".account.PasswordEmailActivity" />
         <activity android:name=".account.EmailToSignIn" />
-<!--        <activity android:name=".account.SignUpActivity" />-->
+        <!--        <activity android:name=".account.SignUpActivity" />-->
         <activity android:name=".mailbox.recieved.letter.list.l_ContentsActivity" />
         <activity android:name=".mailbox.recieved.letter.scrap.s_Activity" />
         <activity android:name=".mailbox.recieved.letter.list.l_Activity" />

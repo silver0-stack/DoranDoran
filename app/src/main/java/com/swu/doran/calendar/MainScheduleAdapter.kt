@@ -1,5 +1,6 @@
 package com.swu.doran.calendar
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,6 +33,7 @@ class MainScheduleAdapter() :
     }
 
     // 2. Replace the contents of a view (invoked by the layout manager)
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
