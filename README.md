@@ -111,6 +111,6 @@ If you prefer to build the app yourself:
 ## Requirements
 
 - Android Studio Arctic Fox or later
-- JDK 11
+- JDK 11 (or JDK 8 minimum - the app is compiled to Java 8 bytecode)
 - Android SDK API 28 or higher
 - Gradle 7.0.2
